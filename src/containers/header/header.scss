@@ -1,0 +1,167 @@
+@import "../../styles/variables";
+
+.header {
+	background-color: map-get($colors, default-white);
+}
+
+.navigation {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: $navigation-shadow;
+
+	&__logo {
+		margin: 0 0 0 2.5rem;
+
+		&-link-img {
+			width: 9rem;
+			height: 3.5rem;
+			display: block;
+			margin: 0.75rem 0 0.75rem 0;
+		}
+	}
+
+	&__nav {
+		margin: 0 2.5rem 0 0;
+		display: flex;
+		align-content: center;
+		height: 5rem;
+
+		&-lang {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-left: 1rem;
+			width: 8.75rem;
+
+			& > div {
+				width: 100%;
+			}
+
+			& .qv-object-simple-list {
+				margin: auto;
+			}
+
+			.lui-buttongroup {
+				.lui-button {
+					transition: background-color .3s;
+					cursor: pointer;
+
+					&.selected {
+						background-color: map-get($colors, default-blue) !important;
+					}
+
+					&:not(.selected):hover {
+						background-color: map-get($colors, blue-light) !important;
+					}
+				}
+			}
+		}
+
+		&-list {
+			&-item {
+				display: flex;
+				padding: 0 2rem 0 1rem;
+				align-items: center;
+				cursor: pointer;
+				position: relative;
+				transition: all .3s;
+
+				&:hover {
+					background-color: map-get($colors, default-blue);
+					color: #fff;
+
+					.navigation__nav-list-item-icon {
+						fill: white !important;
+					}
+
+					.navigation__nav-list-item-title {
+						color: #fff !important;
+					}
+				}
+
+				&.finance:hover .navigation__dropdown-content,
+				&.dataBase:hover .navigation__dropdown-content {
+					display: block;
+				}
+
+				&-icon {
+					margin-right: 0.5rem;
+					fill: #747474;
+				}
+
+				&-title {
+					color: map_get($colors, default-text);
+					font-size: 1rem;
+					padding-right: .5rem;
+				}
+
+				&.dropdownDecor:hover:after {
+					transform: rotate(90deg);
+				}
+
+				&.dropdownDecor:after {
+					content: "\2039";
+					position: absolute;
+					right: 1rem;
+					top: calc(50% - 10px);
+					font-size: 1.5rem;
+					line-height: 1.25rem;
+					transform: rotate(-90deg);
+				}
+			}
+		}
+
+		&-link {
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+
+			&.active {
+				.navigation__nav-list-item-icon {
+					fill: map-get($colors, default-blue);
+				}
+
+				.navigation__nav-list-item-title {
+					color: map-get($colors, default-blue);
+				}
+			}
+		}
+	}
+
+	&__dropdown-content {
+		position: absolute;
+		width: 100%;
+		z-index: 999;
+		border-radius: 0 0 0.25rem 0.25rem;
+		background: white;
+		top: 5rem;
+		left: 0;
+		display: none;
+		box-shadow: $dropdown-shadow;
+
+		&-link {
+			height: 2.75rem;
+			width: 15rem;
+			cursor: pointer;
+			font-size: 0.87rem;
+
+			&-title:hover {
+				background-color: map-get($colors, dropdown-hover);
+			}
+
+			&-title .qv-media-tool-html {
+				font-size: 0.875rem !important;
+				font-family: Roboto, sans-serif;
+
+				&:hover {
+					background: map_get($colors, dropdown-hover);
+					cursor: pointer;
+					height: 100%;
+				}
+			}
+		}
+	}
+
+
+}

@@ -1,0 +1,180 @@
+@import "../../styles/variables";
+
+.homepage__main {
+	margin-top: 4.4rem !important;
+
+	&-upper-wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&-title {
+		font-family: Roboto, sans-serif;
+		font-size: 1.5rem;
+		font-weight: bold;
+		line-height: 1;
+		letter-spacing: .05rem;
+		color: map-get($colors, default-text);
+		text-transform: uppercase;
+	}
+
+	&-filter {
+		display: flex;
+		justify-content: space-between;
+
+		& .lui-select {
+			border-radius: .25rem !important;
+			border: solid .06rem #eaeaea !important;
+			background-color: #ffffff !important;
+		}
+
+		&-dropdown {
+			width: 12.5rem;
+			margin-left: 2rem;
+		}
+	}
+}
+
+.homepage__main {
+	&-middle-wrapper {
+		margin: 2.5rem 0 0 0;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&-big-category {
+		position: relative;
+		width: 36.6rem;
+		padding: 2rem 1.25rem;
+		border-radius: .25rem;
+		box-shadow: 0 0 0.8rem 0 #dbdbdb;
+
+		&-icon {
+			position: absolute;
+			top: 4.5rem;
+			left: 16rem;
+		}
+
+		&.blue {
+			background-color: map-get($colors, default-blue);
+		}
+
+		&.orange {
+			background-color: map-get($colors, default-orange);
+		}
+
+		&-number {
+			margin-left: 1.25rem;
+		}
+
+		&-number font {
+			font-family: Roboto, sans-serif;
+			font-size: 4rem !important;
+			font-weight: bold;
+			letter-spacing: 0.25rem;
+			color: #ffffff;
+			display: block;
+			text-align: left;
+		}
+
+		&-title {
+			margin: 0 0 0 1.25rem;
+
+			div > div > .qv-object-wrapper {
+				height: 105px !important;
+			}
+		}
+
+		&-title font {
+			width: 12.7rem;
+			font-family: Roboto, sans-serif;
+			font-size: 1rem !important;
+			font-weight: 500;
+			line-height: 1.5;
+			color: #ffffff;
+			display: block;
+			text-align: left;
+			text-transform: uppercase;
+		}
+	}
+
+	&-small-category {
+		width: 23.8rem;
+		height: 10.6rem;
+		border-radius: .25rem;
+		box-shadow: 0 0 0.8rem 0 #dbd;
+		background-color: #fff;
+		margin: 1.9rem 0 0 0;
+		position: relative;
+
+		&-lIcon {
+			position: absolute;
+			width: 6rem;
+			height: 6rem;
+			top: 2.3rem;
+			left: 16rem;
+		}
+
+		&-sIcon {
+			position: absolute;
+			width: 2.4rem;
+			height: 2.4rem;
+			left: 19rem;
+			top: 6.5rem;
+		}
+
+		&-number {
+			margin: 2.3rem 0 0 1.3rem;
+		}
+
+		&-number font {
+			font-family: Roboto, sans-serif;
+			font-size: 3rem !important;
+			font-weight: bold;
+			line-height: 1;
+			letter-spacing: 0.2rem;
+			color: #242323;
+			text-align: left !important;
+			display: block;
+			width: 100%;
+		}
+
+		&-title {
+			margin: 0 0 0 1.25rem;
+			position: relative;
+			top: -1rem;
+
+			div > div > .qv-object-wrapper {
+				height: 70px !important;
+			}
+		}
+
+		&-title font {
+			width: 14.4rem;
+			font-family: Roboto, sans-serif;
+			font-size: 0.875rem !important;
+			line-height: 1.71;
+			letter-spacing: normal;
+			color: map-get($colors, default-text);
+			text-transform: uppercase;
+			display: block;
+			text-align: left;
+			font-weight: 500;
+		}
+	}
+}
+
+.homepage__main {
+	&-bottom-wrapper {
+		padding-top: 5rem;
+		margin-bottom: 3rem;
+		display: flex;
+		justify-content: space-between;
+
+		&-img {
+			width: 11rem;
+			height: 5rem;
+		}
+	}
+}

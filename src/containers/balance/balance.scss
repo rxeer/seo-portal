@@ -1,0 +1,152 @@
+@import "../../styles/variables";
+
+.balance__main {
+	width: 75rem;
+	margin: 4.4rem auto 0;
+
+	&-hiddenFilter {
+		display: none;
+	}
+
+	&-title .responsive-text {
+		font-family: Roboto, sans-serif;
+		font-size: 1.5rem !important;
+		font-weight: bold;
+		letter-spacing: 0.05rem;
+		color: map-get($colors, default-text);
+		text-transform: uppercase;
+	}
+
+	&-upperWrapper {
+		margin: 1.6rem 0 0 0;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		background-color: map-get($colors, default-blue);
+		border-radius: $default-border-radius;
+		box-shadow: $default-box-shadow;
+		padding: 1.25rem 0;
+
+		&-filter {
+			width: 17.5rem;
+
+			& .qv-collapsed-listbox {
+				background-color: map-get($colors, default-white) !important;
+			}
+
+			& .title-wrapper {
+				height: 2.4rem;
+			}
+
+			& .qv-state-count-bar {
+				height: 0.31rem;
+			}
+
+			& .title {
+				font-family: Roboto, sans-serif;
+				font-size: 0.87rem !important;
+				line-height: 1.43 !important;
+				font-weight: normal !important;
+				color: map-get($colors, default-text);
+			}
+		}
+	}
+
+	&-tableTitleWrapper {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		margin-top: 2.5rem;
+	}
+
+	&-tableTitle {
+		font-size: 1.25rem;
+		font-weight: bold;
+		line-height: 1.2;
+		letter-spacing: .04rem;
+		color: map-get($colors, default-text);
+		text-transform: uppercase;
+	}
+
+	&-filter {
+		width: 17.5rem;
+		margin-left: 4rem;
+
+		& .qv-collapsed-listbox {
+			background-color: map-get($colors, default-white) !important;
+		}
+
+		& .title-wrapper {
+			height: 2.4rem;
+		}
+
+		& .qv-state-count-bar {
+			height: 0.31rem;
+		}
+
+		& .title {
+			font-family: Roboto, sans-serif;
+			font-size: 0.87rem !important;
+			line-height: 1.43 !important;
+			font-weight: normal !important;
+			color: map-get($colors, default-text);
+		}
+	}
+
+	&-tableWrapper {
+		margin: 1.25rem 0 1.25rem;
+		box-shadow: $default-box-shadow;
+		border-radius: $default-border-radius;
+		background-color: map-get($colors, default-white);
+	}
+
+	&-table {
+		& .scrollbar-thumb {
+			background-color: map-get($colors, default-blue);
+		}
+
+		& th[ng-repeat="header in row.cells"] {
+			padding: 1.38rem 0 !important;
+			color: map-get($colors, default-text) !important;
+
+			& span {
+				font-size: 0.75rem !important;
+				font-weight: bold;
+				line-height: 1.43 !important;
+				font-family: Roboto, sans-serif !important;
+				display: block;
+				text-align: center;
+			}
+		}
+
+		& tr[ng-repeat="row in grid.rows"]:nth-child(2n) {
+			background-color: #f2f3f5 !important;
+		}
+
+		& td[ng-repeat="cell in row.cells"] {
+			padding: 1.38rem 0;
+
+			& span {
+				font-family: Roboto, sans-serif !important;
+				font-size: 0.87rem !important;
+				line-height: 1.43 !important;
+				color: map-get($colors, default-text);
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+
+	& .lui-button {
+		margin: 0 0 1rem 1rem;
+		height: 2rem;
+		border-radius: .25rem;
+		border: solid 1px map-get($colors, default-blue);
+		font-family: Roboto, sans-serif;
+		font-size: 1rem !important;
+		font-weight: 500;
+		line-height: 1.25;
+		text-align: center;
+		color: map-get($colors, default-blue);
+	}
+}

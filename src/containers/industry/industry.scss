@@ -1,0 +1,26 @@
+$table-border-color: #c6cbd4;
+
+.industry-container {
+	padding: 70px 0;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	.qv-object-content-container {
+		.qv-object-content table {
+			tr {
+				text-align: left !important;
+				background: #fff;
+
+				&:nth-child(2n) {
+					background: #f2f3f5;
+				}
+			}
+		}
+	}
+
+	.cell {
+		text-align: left !important;
+		padding: 22px 20px !important;
+		border-bottom: 1px solid $table-border-color;
+	}
+}

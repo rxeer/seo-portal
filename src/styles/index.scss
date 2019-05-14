@@ -1,0 +1,270 @@
+@import "normalize";
+@import "_variables";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif !important;
+	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+}
+
+ul {
+	list-style: none;
+	display: flex;
+}
+
+.link {
+	text-decoration: none;
+}
+
+
+.layout {
+	display: flex;
+	background-color: #fafafa;
+}
+
+.container {
+	max-width: 1220px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.page-title {
+	.page-title div > div > .qv-object-wrapper {
+		height: 35px !important;
+	}
+
+	.qv-interactive {
+		font-family: Roboto, sans-serif;
+		font-size: 24px;
+		font-weight: bold;
+		line-height: 1;
+		letter-spacing: 0.9px;
+		color: #414141;
+		text-transform: uppercase;
+	}
+}
+
+//.banner {width:100%; height:100%; max-width:810px; max-height: 250px;}
+// .qtd-button { padding: 5px 15px; border: 1px solid lightgray; }
+
+.pb5 {
+	padding-bottom: 5px !important;
+}
+
+.pb10 {
+	padding-bottom: 10px !important;
+}
+
+.pb15 {
+	padding-bottom: 15px !important;
+}
+
+.pb20 {
+	padding-bottom: 20px;
+}
+
+.pb25 {
+	padding-bottom: 25px;
+}
+
+.pb30 {
+	padding-bottom: 30px;
+}
+
+.pb40 {
+	padding-bottom: 40px;
+}
+
+.pb50 {
+	padding-bottom: 50px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.pt10 {
+	padding-top: 10px
+}
+
+.pt20 {
+	padding-top: 20px
+}
+
+.p0 {
+	padding: 0px;
+	margin: 0px
+}
+
+//BOOTSTRAP
+h3 {
+	font-size: 1.75rem;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	margin-bottom: 0.5rem;
+	// font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: 700;
+	line-height: 1.2;
+	color: inherit;
+}
+
+.container-fluid {
+	padding-left: 0px;
+	padding-right: 0px;
+
+	.row {
+		padding-bottom: 10px;
+	}
+
+	.row-header {
+		padding-bottom: 0px;
+		left: 0px;
+		right: 0px;
+		position: fixed;
+		top: 0;
+		z-index: 999;
+	}
+
+	//	.col-3 { padding-left: 2px; padding-right: 2px; }
+	.cntr {
+		text-align: center;
+	}
+
+	.mrg-25 {
+		margin-left: -25px;
+	}
+
+	.mrg-40 {
+		margin-left: -40px;
+	}
+}
+
+.lui-search {
+	width: '100%'
+}
+
+.qtd-table-header {
+	th {
+		text-align: left;
+	}
+}
+
+// Correction preloader ball
+.qtd-preloader {
+	.qtd-preloader-ball2 {
+		margin-top: 10px !important;
+	}
+}
+
+For NavBar
+#App {
+	font-family: sans-serif;
+	/* Give app full page to work with */
+	height: auto;
+}
+
+#page-wrap {
+	//  text-align: right;
+	/* Prevent sidebar from showing a scrollbar on page */
+	overflow: auto;
+	padding: 35px 15px 0px 60px;
+}
+
+/* Individual item */
+.bm-item {
+	display: inline-block;
+
+	/* Our sidebar item styling */
+	text-decoration: none;
+	margin-bottom: 10px;
+	color: #d1d1d1;
+	transition: color 0.2s;
+	height: 20px;
+}
+
+.bm-item .qv-object-text-image {
+	color: indianred !important;
+	transition: color 0.2s;
+}
+
+/* Change color on hover */
+.bm-item:hover {
+	color: white;
+}
+
+.bm-item .qv-object-text-image:hover {
+	//color: white !important;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+	position: fixed;
+	width: 36px;
+	height: 30px;
+	left: 12px;
+	top: 48px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+	background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+	height: 24px;
+	width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+	background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+	background: #373a47;
+	padding: 2.5em 1.5em 0;
+	font-size: 1.1em;
+	overflow: visible !important;
+}
+
+
+/* Wrapper for item list */
+.bm-item-list {
+	color: #b8b7ad;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.menu-icon {
+	position: relative;
+	z-index: 10;
+}
+
+.menu-text {
+	position: relative;
+	top: -21px;
+	left: 16px;
+}
+
+
+.qv-listbox.ng-scope {
+	display: flex !important;
+	flex-direction: column !important;
+}
+
