@@ -1,0 +1,19 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "PORT": "8081"
+  },
+  "formation": {
+  },
+  "name": "seo-portal",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
