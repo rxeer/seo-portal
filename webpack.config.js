@@ -14,7 +14,7 @@ module.exports = {
   },
   devServer: {
     contentBase: './build',
-    host: '127.0.0.1',
+    host: 'http://safe-coast-77037.herokuapp.com',
   },
   devtool: 'source-map',
   module: {
