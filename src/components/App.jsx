@@ -7,15 +7,15 @@ import {
   faFileDownload, faTable, faIndustry, faBuilding, faFileMedicalAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
+
 import Header from '../containers/header/Header';
 import Footer from '../containers/footer/footer';
-
 import Home from '../pages/home/home';
 import Country from '../pages/country/country';
 import Industry from '../pages/industry/Industry';
 import Ownership from '../pages/Ownership';
-import SOE from '../pages/SOE';
-import Risk from '../pages/Risk';
+import SOE from '../pages/seo/seo';
+import Risk from '../pages/risk/risk';
 import Balance from '../pages/balance/balance';
 import Finance from '../pages/finance/finance';
 import Analytics from '../pages/analytics/analytics';

@@ -153,7 +153,18 @@
 				background-color: map-get($colors, dropdown-hover);
 			}
 
+			&-title .media-tool-scrollbar {
+				display: flex;
+				align-items: center;
+				padding: 0 13px;
+				height: auto !important;
+				cursor: pointer;
+			}
+
 			&-title .qv-media-tool-html {
+				overflow: hidden;
+				display: flex;
+				align-items: center;
 				font-size: 0.875rem !important;
 				font-family: Roboto, sans-serif;
 

@@ -56,31 +56,7 @@ export default class Header extends Settings {
                   />
                 </svg>
                 <p className="navigation__nav-list-item-title dropdownDecor">ТОП-100</p>
-              </li>
-
-              <li className="navigation__nav-list-item finance dropdownDecor">
-                <svg
-                  className="navigation__nav-list-item-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M5.643 7.571v3.715H3.786V7.57h1.857zm2.786-3.714v7.429H6.57V3.857H8.43zm7.428 8.357v.929H1V2h.929v10.214h13.928zm-4.643-6.5v5.572H9.357V5.714h1.857zM14 2.93v8.357h-1.857V2.929H14z"
-                  />
-                </svg>
-                <p className="navigation__nav-list-item-title">
-                  Фінансова статистика
-                </p>
                 <div className="navigation__dropdown-content">
-                  <a className="navigation__dropdown-content-link" href="#/">
-                    <QdtComponent
-                      className="navigation__dropdown-content-link-title"
-                      type={this.vizMain.type}
-                      props={this.vizMain.props}
-                    />
-                  </a>
                   <a className="navigation__dropdown-content-link" href="#/country">
                     <QdtComponent
                       className="navigation__dropdown-content-link-title"
@@ -134,7 +110,75 @@ export default class Header extends Settings {
                   </a>
                 </div>
               </li>
-
+              <li className="navigation__nav-list-item finance dropdownDecor">
+                <svg
+                  className="navigation__nav-list-item-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5.643 7.571v3.715H3.786V7.57h1.857zm2.786-3.714v7.429H6.57V3.857H8.43zm7.428 8.357v.929H1V2h.929v10.214h13.928zm-4.643-6.5v5.572H9.357V5.714h1.857zM14 2.93v8.357h-1.857V2.929H14z"
+                  />
+                </svg>
+                <p className="navigation__nav-list-item-title">
+                  Фінансова статистика
+                </p>
+                <div className="navigation__dropdown-content">
+                  <a className="navigation__dropdown-content-link" href="#/country">
+                    <QdtComponent
+                      className="navigation__dropdown-content-link-title"
+                      type={this.vizCountryLevel.type}
+                      props={this.vizCountryLevel.props}
+                    />
+                  </a>
+                  <a
+                    className="navigation__dropdown-content-link"
+                    href="#/industry"
+                  >
+                    <QdtComponent
+                      className="navigation__dropdown-content-link-title"
+                      type={this.vizIndustryLevel.type}
+                      props={this.vizIndustryLevel.props}
+                    />
+                  </a>
+                  <a
+                    className="navigation__dropdown-content-link"
+                    href="#/ownership"
+                  >
+                    <QdtComponent
+                      className="navigation__dropdown-content-link-title"
+                      type={this.vizOwnershipLevel.type}
+                      props={this.vizOwnershipLevel.props}
+                    />
+                  </a>
+                  <a className="navigation__dropdown-content-link" href="#/SOE">
+                    <QdtComponent
+                      className="navigation__dropdown-content-link-title"
+                      type={this.vizSOELevel.type}
+                      props={this.vizSOELevel.props}
+                    />
+                  </a>
+                  <a className="navigation__dropdown-content-link" href="#/risk">
+                    <QdtComponent
+                      className="navigation__dropdown-content-link-title"
+                      type={this.vizRISK.type}
+                      props={this.vizRISK.props}
+                    />
+                  </a>
+                  <a
+                    className="navigation__dropdown-content-link"
+                    href="#/analytics"
+                  >
+                    <QdtComponent
+                      className="navigation__dropdown-content-link-title"
+                      type={this.vizAnalytics.type}
+                      props={this.vizAnalytics.props}
+                    />
+                  </a>
+                </div>
+              </li>
               <li className="navigation__nav-list-item dataBase dropdownDecor">
                 <svg
                   className="navigation__nav-list-item-icon"

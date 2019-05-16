@@ -73,43 +73,6 @@
 		background-color: map-get($colors, default-white);
 	}
 
-	&-table {
-		& .scrollbar-thumb {
-			background-color: map-get($colors, default-blue);
-		}
-
-		& th[ng-repeat="header in row.cells"] {
-			padding: 1.38rem 0 !important;
-			color: map-get($colors, default-text) !important;
-
-			& span {
-				font-size: 0.75rem !important;
-				font-weight: bold;
-				line-height: 1.43 !important;
-				font-family: Roboto, sans-serif !important;
-				display: block;
-				text-align: center;
-			}
-		}
-
-		& tr[ng-repeat="row in grid.rows"]:nth-child(2n) {
-			background-color: #f2f3f5 !important;
-		}
-
-		& td[ng-repeat="cell in row.cells"] {
-			padding: 1.38rem 0;
-
-			& span {
-				font-family: Roboto, sans-serif !important;
-				font-size: 0.87rem !important;
-				line-height: 1.43 !important;
-				color: map-get($colors, default-text);
-				display: block;
-				text-align: center;
-			}
-		}
-	}
-
 	& .lui-button {
 		margin: 0 0 1rem 1rem;
 		height: 2rem;

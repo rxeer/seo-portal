@@ -17,25 +17,25 @@ export class Finance extends Settings {
           props={this.vizFinance.props}
         />
         <div className="row finance__main-upperWrapper">
-          <div className="col-3 col-sm-6 col-12 col-lg-4 col-xl-4">
+          <div className="col-3 col-sm-6 col-12 col-lg-3">
             <Select
               type={this.vizPeriod.type}
               props={this.vizPeriod.props}
             />
           </div>
-          <div className="col-3 col-sm-6 col-12 col-lg-4 col-xl-4">
+          <div className="col-3 col-sm-6 col-12 col-lg-3">
             <Select
               type={this.vizIndustry.type}
               props={this.vizIndustry.props}
             />
           </div>
-          <div className="col-3 col-sm-6 col-12 col-lg-4 col-xl-4">
+          <div className="col-3 col-sm-6 col-12 col-lg-3">
             <Select
               type={this.vizOwnership.type}
               props={this.vizOwnership.props}
             />
           </div>
-          <div className="col-3 col-sm-6 col-12 col-lg-4 col-xl-4">
+          <div className="col-3 col-sm-6 col-12 col-lg-3">
             <Select
               type={this.vizSOE.type}
               props={this.vizSOE.props}

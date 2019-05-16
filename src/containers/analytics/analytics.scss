@@ -54,14 +54,15 @@
 
 	&-categoryWrapper {
 		display: flex;
-		justify-content: space-between;
+		flex-wrap: wrap;
 		margin-top: 1.9rem;
+		justify-content: space-between;
 	}
 
 	&-category {
 		padding: 1.25rem 0 0 1.25rem;
-		width: 17.3rem;
 		height: 6.4rem;
+		margin-bottom: 1rem;
 		box-shadow: $default-box-shadow;
 		border-radius: $default-border-radius;
 		background-color: map-get($colors, default-white);
@@ -119,6 +120,7 @@
 		justify-content: left;
 		align-items: center;
 		height: 4rem;
+		flex-wrap: wrap;
 		background-color: #f2f3f5;
 	}
 
@@ -133,7 +135,7 @@
 
 	&-graphFilter {
 		width: 22%;
-		margin-left: 1.6%;
+		margin: 0 1%;
 
 		& select {
 			border-radius: $default-border-radius !important;
@@ -163,12 +165,13 @@
 
 	&-chartsWrapper {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		width: 100%;
 	}
 
 	&-chartWrapper {
-		width: 48.5%;
+		margin-bottom: 1rem;
 		box-shadow: $default-box-shadow;
 		border-radius: $default-border-radius;
 		background-color: map-get($colors, default-white);
@@ -238,57 +241,19 @@
 		background-color: map-get($colors, default-white);
 	}
 
-	&-table {
-		& header {
-			display: none !important;
+	@media screen and (max-width: map-get($views, tablet-medium)){
+		&-graphTitleWrapper {
+			height: 9rem;
+			justify-content: center;
 		}
 
-		& .scrollbar-thumb {
-			background-color: map-get($colors, default-blue);
+		&-graphTitle {
+			text-align: center;
+			flex-basis: 100%;
 		}
 
-		& th[ng-repeat="header in row.cells"] {
-			padding: 1.38rem 0 !important;
-			color: map-get($colors, default-text) !important;
-
-			& span {
-				font-size: 0.75rem !important;
-				font-weight: bold;
-				line-height: 1.43 !important;
-				font-family: Roboto, sans-serif !important;
-				display: block;
-				text-align: center;
-			}
+		&-graphFilter {
+			flex-basis: 48%;
 		}
-
-		& tr[ng-repeat="row in grid.rows"]:nth-child(2n) {
-			background-color: #f2f3f5 !important;
-		}
-
-		& td[ng-repeat="cell in row.cells"] {
-			padding: 1.38rem 0;
-
-			& span {
-				font-family: Roboto, sans-serif !important;
-				font-size: 0.87rem !important;
-				line-height: 1.43 !important;
-				color: map-get($colors, default-text);
-				display: block;
-				text-align: center;
-			}
-		}
-	}
-
-	& .lui-button {
-		margin: 0 0 1rem 1rem;
-		height: 2rem;
-		border-radius: .25rem;
-		border: solid 1px map-get($colors, default-blue);
-		font-family: Roboto, sans-serif;
-		font-size: 1rem !important;
-		font-weight: 500;
-		line-height: 1.25;
-		text-align: center;
-		color: map-get($colors, default-blue);
 	}
 }

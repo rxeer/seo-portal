@@ -14,7 +14,7 @@ export default class Home extends Settings {
           <h2 className="homepage__main-title page-title">Державні підприємства</h2>
           <div className="homepage__main-filter">
             <QdtComponent
-              className="homepage__main-filter-dropdown dropdown"
+              className="homepage__main-filter-dropdown dropdown analytics__main-hiddenFilter"
               type={this.vizPeriodType.type}
               props={this.vizPeriodType.props}
             />
@@ -233,58 +233,84 @@ export default class Home extends Settings {
         <div className="homepage__main-bottom-wrapper">
           <ul>
             <li>
-              <img
-                className="homepage__main-bottom-wrapper-img"
-                src="../../assets/images/partners/logo-1.png"
-                srcSet="../../assets/images/partners/logo-1@2x.png 2x,
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="http://me.gov.ua"
+              >
+                <img
+                  title="Міністерство економічного розвитку і торгівлі"
+                  className="homepage__main-bottom-wrapper-img"
+                  src="../../assets/images/partners/logo-1.png"
+                  srcSet="../../assets/images/partners/logo-1@2x.png 2x,
              ../../images/partners/logo-1@3x.png 3x"
-                alt="partners"
-              />
+                  alt="Міністерство економічного розвитку і торгівлі"
+                />
+              </a>
             </li>
             <li>
-              <img
-                className="homepage__main-bottom-wrapper-img"
-                src="../../assets/images/partners/logo-2.png"
-                srcSet="../../assets/images/partners/logo-2@2x.png 2x,
-             ../../images/partners/logo-2@3x.png 3x"
-                alt="partners"
-              />
-            </li>
-            <li>
-              <img
-                className="homepage__main-bottom-wrapper-img"
-                src="../../assets/images/partners/logo-3.png"
-                srcSet="../../assets/images/partners/logo-3@2x.png 2x,
+              <a
+                href="https://opendatabot.ua"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  title="Оупендатабот"
+                  className="homepage__main-bottom-wrapper-img"
+                  src="../../assets/images/partners/logo-3.png"
+                  srcSet="../../assets/images/partners/logo-3@2x.png 2x,
              ../../images/partners/logo-3@3x.png 3x"
-                alt="partners"
-              />
+                  alt="Оупендатабот"
+                />
+              </a>
             </li>
             <li>
-              <img
-                className="homepage__main-bottom-wrapper-img"
-                src="../../assets/images/partners/logo-4.png"
-                srcSet="../../assets/images/partners/logo-4@2x.png 2x,
+              <a
+                href="https://www.giz.de"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  title="GIZ"
+                  className="homepage__main-bottom-wrapper-img"
+                  src="../../assets/images/partners/logo-4.png"
+                  srcSet="../../assets/images/partners/logo-4@2x.png 2x,
              ../../images/partners/logo-4@3x.png 3x"
-                alt="partners"
-              />
+                  alt="GIZ"
+                />
+              </a>
             </li>
             <li>
-              <img
-                className="homepage__main-bottom-wrapper-img"
-                src="../../assets/images/partners/logo-5.png"
-                srcSet="../../assets/images/partners/logo-5@2x.png 2x,
+              <a
+                href="https://www.qlik.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  title="Qlik"
+                  className="homepage__main-bottom-wrapper-img"
+                  src="../../assets/images/partners/logo-5.png"
+                  srcSet="../../assets/images/partners/logo-5@2x.png 2x,
              ../../images/partners/logo-5@3x.png 3x"
-                alt="partners"
-              />
+                  alt="Qlik"
+                />
+              </a>
             </li>
             <li>
-              <img
-                className="homepage__main-bottom-wrapper-img"
-                src="../../assets/images/partners/logo-6.png"
-                srcSet="../../assets/images/partners/logo-6@2x.png 2x,
+              <a
+                href="https://prozorro.sale/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  title="Prozorro.Sale"
+                  className="homepage__main-bottom-wrapper-img"
+                  src="../../assets/images/partners/logo-6.png"
+                  srcSet="../../assets/images/partners/logo-6@2x.png 2x,
              ../../images/partners/logo-6@3x.png 3x"
-                alt="partners"
-              />
+                  alt="Prozorro.Sale"
+                />
+              </a>
             </li>
           </ul>
         </div>

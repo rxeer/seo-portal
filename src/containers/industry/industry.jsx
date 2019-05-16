@@ -139,15 +139,11 @@ export class IndustryStatistics extends Settings {
             </div>
           </div>
         </div>
-        <div className="row justify-content-center">
-          <div className="col-12">
-            <QdtComponent
-              className="table"
-              type={this.vizTable.type}
-              props={this.vizTable.props}
-            />
-          </div>
-        </div>
+        <QdtComponent
+          className="table"
+          type={this.vizTable.type}
+          props={this.vizTable.props}
+        />
       </div>
     );
   }

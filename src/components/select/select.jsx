@@ -36,10 +36,15 @@ const Select = ({
 };
 
 Select.propTypes = {
+  className: PropTypes.string,
   type: PropTypes.string.isRequired,
   props: PropTypes.object.isRequired,
-  className: PropTypes.string.isRequired,
-  lineable: PropTypes.string.isRequired,
+  lineable: PropTypes.bool,
+};
+
+Select.defaultProps = {
+  className: '',
+  lineable: false,
 };
 
 export default Select;
