@@ -18,7 +18,7 @@ import SOE from '../pages/SOE';
 import Risk from '../pages/Risk';
 import Balance from '../pages/balance/balance';
 import Finance from '../pages/finance/finance';
-import Analytics from '../pages/Analytics';
+import Analytics from '../pages/analytics/analytics';
 
 library.add(faHome, faGlobeEurope, faIdCard, faChartBar, faDesktop, faFileExcel,
   faFileDownload, faTable, faIndustry, faBuilding, faFileMedicalAlt);

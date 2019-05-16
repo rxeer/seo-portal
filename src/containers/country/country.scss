@@ -2,7 +2,7 @@
 
 .country__main {
 	width: 75rem;
-	margin: 4.4rem auto 0;
+	margin-top: 4.4rem !important;
 
 	&-upperWrapper {
 		display: flex;
@@ -12,22 +12,15 @@
 		&-filterWrap {
 			display: flex;
 			justify-content: space-between;
+			align-items: center;
 		}
 
 		&-filter {
 			width: 17.5rem;
-
-			& .title {
-				font-family: Roboto, sans-serif;
-				font-size: 0.87rem !important;
-				font-weight: normal !important;
-				line-height: 1.43;
-				color: #414141;
-			}
 		}
 
 		&-title {
-			width: 25rem;
+			width: 26rem;
 
 			& .responsive-text {
 				font-family: Roboto, sans-serif;
@@ -36,6 +29,38 @@
 				letter-spacing: 0.06rem;
 				color: #414141;
 				text-transform: uppercase;
+			}
+
+			&-button {
+				width: 1.4rem;
+				height: 1.3rem;
+
+				& header {
+					display: none !important;
+				}
+
+				& .container,
+				button {
+					width: 1.25rem !important;
+					height: 1.25rem !important;
+					padding: 0 !important;
+					margin: 0 !important;
+					min-width: 0 !important;
+				}
+
+				& .lui-button {
+					color: #fff;
+					border-radius: 2px;
+					transition: all .3s;
+					background-color: #fff;
+					border: solid 1px #b7b7b7;
+
+					&[title="X"] {
+						border: 0;
+						background: map-get($colors, default-blue);
+						color: map-get($colors, default-blue);
+					}
+				}
 			}
 		}
 
@@ -48,33 +73,30 @@
 				line-height: 1.43;
 				letter-spacing: normal;
 				color: #414141;
-
 			}
 		}
 	}
 }
 
-
 .country__main {
 	&-chartWrapper {
 		width: 75rem;
 		margin: 2.5rem auto 0;
-		border-radius: .25rem;
-		box-shadow: 0 0 .25rem 0 rgba(0, 0, 0, .1);
+		border-radius: 0.25rem;
+		box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.1);
 		background-color: #ffffff;
-
 	}
 
 	&-chartTitle {
-		box-shadow: 0 0 .25rem 0 rgba(0, 0, 0, .1);
+		box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.1);
 		border-radius: 0.25rem;
 		background-color: #f2f3f5;
 
 		& font {
-			font-family: Roboto, sans-serif;
+			font-family: Roboto, sans-serif !important;
 			font-size: 1rem !important;
 			line-height: 1.5;
-			letter-spacing: normal;
+			font-weight: 500 !important;
 			color: #414141;
 			display: block;
 			text-align: left;
@@ -82,36 +104,73 @@
 		}
 	}
 
+	&-tableTitleWrapper {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		margin-top: 2.5rem;
+	}
+
+	&-tableTitle {
+		font-size: 1.25rem;
+		font-weight: bold;
+		line-height: 1.2;
+		letter-spacing: .04rem;
+		color: map-get($colors, default-text);
+		text-transform: uppercase;
+	}
+
+	&-filter {
+		width: 17.5rem;
+		margin-left: 4rem;
+
+		& .qv-collapsed-listbox {
+			background-color: map-get($colors, default-white) !important;
+		}
+
+		& .title-wrapper {
+			height: 2.4rem;
+		}
+
+		& .qv-state-count-bar {
+			height: 0.31rem;
+		}
+
+		& .title {
+			font-family: Roboto, sans-serif;
+			font-size: 0.87rem !important;
+			line-height: 1.43 !important;
+			font-weight: normal !important;
+			color: map-get($colors, default-text);
+		}
+	}
+
 	&-tableWrapper {
+		margin: 1.25rem 0 1.25rem;
 		box-shadow: $default-box-shadow;
 		border-radius: $default-border-radius;
 		background-color: map-get($colors, default-white);
 	}
 
 	&-table {
+		& header {
+			display: none !important;
+		}
+
 		& .scrollbar-thumb {
 			background-color: map-get($colors, default-blue);
 		}
 
-		& th {
-			padding: 1rem 0 !important;
-			color: map-get($colors, default-text) !important;
-
-			& span {
-				font-size: 0.87rem !important;
-				font-weight: bold;
-				line-height: 1.43 !important;
-				font-family: Roboto, sans-serif !important;
-				display: block;
-				text-align: center;
-			}
+		& th[tid="header.row.cell"] {
+			font-weight: bold !important;
 		}
 
-		& tr:nth-child(2n) {
+		& tr[ng-repeat="row in grid.rows"]:nth-child(2n) {
 			background-color: #f2f3f5 !important;
 		}
 
-		& td {
+		& td[ng-repeat="cell in row.cells"] {
+			padding: 1.38rem 0 !important;
 
 			& span {
 				font-family: Roboto, sans-serif !important;
@@ -120,16 +179,25 @@
 				color: map-get($colors, default-text);
 				display: block;
 				text-align: center;
-				padding: 1.38rem 0 !important;
+			}
+
+			& div {
+				font-family: Roboto, sans-serif !important;
 			}
 		}
-	}
-}
 
-
-.country__main {
-	&-tableWrapper {
-		margin: 3.75rem auto 0;
+		& .lui-button {
+			margin: 0 0 1rem 1rem;
+			height: 2rem;
+			border-radius: .25rem;
+			border: solid 1px map-get($colors, default-blue);
+			font-family: Roboto, sans-serif;
+			font-size: 1rem !important;
+			font-weight: 500;
+			line-height: 1.25;
+			text-align: center;
+			color: map-get($colors, default-blue);
+		}
 	}
 
 }

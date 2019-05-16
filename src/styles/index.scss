@@ -14,9 +14,6 @@ html {
 	overflow-x: hidden;
 }
 
-body {
-}
-
 ul {
 	list-style: none;
 	display: flex;
@@ -51,6 +48,104 @@ ul {
 		letter-spacing: 0.9px;
 		color: #414141;
 		text-transform: uppercase;
+	}
+}
+
+.dropdown {
+
+	& > div {
+		height: 45px;
+	}
+
+	.qv-inner-object,
+	.qv-inner-object .qv-object-simple-list {
+		overflow: visible !important;
+	}
+
+	.lui-select {
+		border-radius: .25rem !important;
+		border: solid .06rem #eaeaea !important;
+		background-color: #fff !important;
+	}
+
+	.lui-select.qui-select {
+		height: 45px !important;
+
+		option {
+			font-weight: 600 !important;
+		}
+	}
+}
+
+.table {
+	& > div {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: flex-end;
+
+		&:last-of-type button.lui-button {
+			height: 45px;
+			min-width: 200px;
+			border-radius: 4px;
+			font-weight: 500;
+			line-height: 1.25;
+			text-align: center;
+			margin-bottom: 1rem;
+			padding: 0;
+			font-size: 1rem !important;
+			transition: all .3s;
+			color: map-get($colors, default-blue);
+			border: solid 1px map-get($colors, default-blue);
+
+			&:before {
+				width: 16px;
+				height: 16px;
+				margin-right: 10px;
+				display: inline-block;
+				content: url("../assets/images/partners/download.svg");
+			}
+
+			&:hover {
+				background: map-get($colors, blue-light);
+			}
+		}
+	}
+	.qv-object-wrapper {
+		td[ng-repeat="cell in row.cells"] {
+
+			&.qv-st-data-cell-selected-highlighted {
+				background: map-get($colors, default-blue);
+
+				span {
+					font-weight: 600 !important;
+					color: #fff !important;
+				}
+			}
+			vertical-align: middle;
+
+			&:not(:first-of-type) {
+				border-right: solid 1px transparent !important;
+			}
+		}
+	}
+}
+
+.qv-listbox {
+	li {
+		height: 45px !important;
+		line-height: 45px !important;
+		transition: all .3s;
+		border-bottom: 1px solid transparent !important;
+
+		&:hover {
+			background: #fff !important;
+		}
+
+		&.selected {
+			color: #fff;
+			border-bottom: 1px solid map-get($colors, default-blue) !important;;
+			background: map-get($colors, default-blue) !important;
+		}
 	}
 }
 

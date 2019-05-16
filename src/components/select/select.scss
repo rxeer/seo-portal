@@ -1,0 +1,72 @@
+.outside {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.select {
+	width: 100%;
+	margin-bottom: 20px;
+	transition: all .3s;
+
+	.select-label {
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 1.33;
+		letter-spacing: .3px;
+		color: #fff;
+	}
+
+	.qv-filterpane-collapsed {
+		border-radius: 4px !important;
+	}
+
+	&:not(.lineable) {
+		.qv-state-count-bar {
+			height: 0 !important;
+		}
+	}
+
+	.qv-collapsed-listbox {
+		position: relative;
+		height: 45px;
+		border-radius: 3px;
+		background: #fff !important;
+		transition: all .3s;
+		border: solid 1px #eaeaea !important;
+		min-height: 45px !important;
+
+		&:hover {
+			background: #f2f3f5!important;
+			border: 1px solid #f2f3f5 !important;
+		}
+
+		&:after {
+			height: 12px;
+			width: 12px;
+			right: 20px;
+			top: 14px;
+			position: absolute;
+			display: inline-block;
+			transition: all .3s;
+			transform: rotate(0deg);
+			content: url("../../assets/images/partners/down.svg");
+		}
+	}
+
+	.qv-filterpane.qv-filterpane-scrollable {
+		overflow: initial !important;
+	}
+
+	&.open {
+		.qv-collapsed-listbox {
+			&:after {
+				transform-origin: center;
+				transform: rotate(180deg);
+			}
+		}
+	}
+}

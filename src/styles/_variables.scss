@@ -4,10 +4,19 @@ $colors: (
   default-orange: #fed766,
   default-white: #fff,
   default-text: #414141,
-  dropdown-hover: #cbf2fa
+  dropdown-hover: #cbf2fa,
+  light-grey: #747474
+);
+
+$views: (
+		tablet: 640px,
+		mobile: 320px,
+		desktop: 1200px,
+		mobile-medium: 425px,
+		tablet-medium: 768px
 );
 
 $dropdown-shadow: 0 5px 14px 0 rgba(15, 15, 15, 0.15);
 $navigation-shadow: 0 4px 12px 0 rgba(50, 50, 50, 0.15);
 $default-border-radius: 0.25rem;
-$default-box-shadow: 0 0 .25rem 0 rgba(0, 0, 0, 0.1);
+$default-box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.1);

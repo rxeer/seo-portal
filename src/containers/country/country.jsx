@@ -1,13 +1,16 @@
 import React from 'react';
-import { Settings } from './country.settings';
+
+import Select from '../../components/select/select';
 
 import QdtComponent from '../../components/QdtComponent';
+
+import { Settings } from './country.settings';
 
 export default class Country extends Settings {
 
   render() {
     return (
-      <main className="country__main">
+      <main className="country__main container">
         <div className="country__main-upperWrapper">
           <QdtComponent
             className="country__main-upperWrapper-title page-title"
@@ -30,7 +33,8 @@ export default class Country extends Settings {
             {/*  type={vizPeriodType.type} */}
             {/*  props={vizPeriodType.props} */}
             {/* /> */}
-            <QdtComponent
+            <Select
+              lineable
               className="country__main-upperWrapper-filter"
               type={this.vizPeriod.type}
               props={this.vizPeriod.props}
@@ -49,6 +53,17 @@ export default class Country extends Settings {
             props={this.vizNetProfit.props}
           />
         </div>
+        <div className="country__main-tableTitleWrapper">
+          <span className="country__main-tableTitle">
+            Фінансовий стан/результат
+          </span>
+          {/* <QdtComponent */}
+          {/*  className="country__main-filter" */}
+          {/*  type={this.vizKPI.type} */}
+          {/*  props={this.vizKPI.props} */}
+          {/* /> */}
+        </div>
+
         <div className="country__main-tableWrapper">
           <QdtComponent
             className="country__main-table"

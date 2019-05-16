@@ -24,7 +24,7 @@ export class Settings extends Component {
     type: 'QdtViz',
     props: {
       id: 'MaBJSm',
-      height: '45px',
+      height: '2.8rem',
     },
   };
 
@@ -32,7 +32,7 @@ export class Settings extends Component {
     type: 'QdtViz',
     props: {
       id: 'HwLEbpk',
-      height: '45px',
+      height: '2.8rem',
     },
   };
 
@@ -40,7 +40,7 @@ export class Settings extends Component {
     type: 'QdtViz',
     props: {
       id: 'qBJGfd',
-      height: '45px',
+      height: '2.8rem',
     },
   };
 
@@ -48,7 +48,7 @@ export class Settings extends Component {
     type: 'QdtViz',
     props: {
       id: 'Gvbcm',
-      height: '45px',
+      height: '2.8rem',
     },
   };
 
@@ -56,7 +56,7 @@ export class Settings extends Component {
     type: 'QdtViz',
     props: {
       id: 'jsCarky',
-      height: '45px',
+      height: '2.8rem',
     },
   };
 
@@ -64,7 +64,7 @@ export class Settings extends Component {
     type: 'QdtViz',
     props: {
       id: 'XUHkNsJ',
-      height: '45px',
+      height: '2.8rem',
     },
   };
 
@@ -72,7 +72,7 @@ export class Settings extends Component {
     type: 'QdtViz',
     props: {
       id: 'dJZnyF',
-      height: '45px',
+      height: '2.8rem',
     },
   };
 
@@ -80,7 +80,7 @@ export class Settings extends Component {
     type: 'QdtViz',
     props: {
       id: 'HfnUJjg',
-      height: '45px',
+      height: '2.8rem',
     },
   };
 
@@ -88,7 +88,7 @@ export class Settings extends Component {
     type: 'QdtViz',
     props: {
       id: 'ZrhDvkG',
-      height: '45px',
+      height: '2.8rem',
     },
   };
 

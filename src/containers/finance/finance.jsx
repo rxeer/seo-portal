@@ -1,42 +1,42 @@
 import React from 'react';
-import { Settings } from './finance.setting';
+
+import Select from '../../components/select/select';
+
 import QdtComponent from '../../components/QdtComponent';
+
+import { Settings } from './finance.setting';
 
 export class Finance extends Settings {
 
   render() {
     return (
-      <main className="finance__main">
+      <main className="finance__main container">
         <QdtComponent
           className="finance__main-title page-title"
           type={this.vizFinance.type}
           props={this.vizFinance.props}
         />
-        <div className="finance__main-upperWrapper">
-          <div>
-            <QdtComponent
-              className="finance__main-upperWrapper-filter"
+        <div className="row finance__main-upperWrapper">
+          <div className="col-3 col-sm-6 col-12 col-lg-4 col-xl-4">
+            <Select
               type={this.vizPeriod.type}
               props={this.vizPeriod.props}
             />
           </div>
-          <div>
-            <QdtComponent
-              className="finance__main-upperWrapper-filter"
+          <div className="col-3 col-sm-6 col-12 col-lg-4 col-xl-4">
+            <Select
               type={this.vizIndustry.type}
               props={this.vizIndustry.props}
             />
           </div>
-          <div>
-            <QdtComponent
-              className="finance__main-upperWrapper-filter"
+          <div className="col-3 col-sm-6 col-12 col-lg-4 col-xl-4">
+            <Select
               type={this.vizOwnership.type}
               props={this.vizOwnership.props}
             />
           </div>
-          <div>
-            <QdtComponent
-              className="finance__main-upperWrapper-filter"
+          <div className="col-3 col-sm-6 col-12 col-lg-4 col-xl-4">
+            <Select
               type={this.vizSOE.type}
               props={this.vizSOE.props}
             />
@@ -47,7 +47,7 @@ export class Finance extends Settings {
             Фінансовий стан/результат
           </span>
           <QdtComponent
-            className="finance__main-filter"
+            className="select finance__main-filter"
             type={this.vizKPI.type}
             props={this.vizKPI.props}
           />
@@ -55,7 +55,7 @@ export class Finance extends Settings {
 
         <div className="finance__main-tableWrapper">
           <QdtComponent
-            className="finance__main-table"
+            className="finance__main-table table"
             type={this.vizTable.type}
             props={this.vizTable.props}
           />

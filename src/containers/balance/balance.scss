@@ -2,7 +2,7 @@
 
 .balance__main {
 	width: 75rem;
-	margin: 4.4rem auto 0;
+	margin-top: 4.4rem !important;
 
 	&-hiddenFilter {
 		display: none;
@@ -19,37 +19,10 @@
 
 	&-upperWrapper {
 		margin: 1.6rem 0 0 0;
-		display: flex;
-		justify-content: space-evenly;
-		align-items: center;
 		background-color: map-get($colors, default-blue);
 		border-radius: $default-border-radius;
 		box-shadow: $default-box-shadow;
 		padding: 1.25rem 0;
-
-		&-filter {
-			width: 17.5rem;
-
-			& .qv-collapsed-listbox {
-				background-color: map-get($colors, default-white) !important;
-			}
-
-			& .title-wrapper {
-				height: 2.4rem;
-			}
-
-			& .qv-state-count-bar {
-				height: 0.31rem;
-			}
-
-			& .title {
-				font-family: Roboto, sans-serif;
-				font-size: 0.87rem !important;
-				line-height: 1.43 !important;
-				font-weight: normal !important;
-				color: map-get($colors, default-text);
-			}
-		}
 	}
 
 	&-tableTitleWrapper {
@@ -69,7 +42,7 @@
 	}
 
 	&-filter {
-		width: 17.5rem;
+		max-width: 17.5rem !important;
 		margin-left: 4rem;
 
 		& .qv-collapsed-listbox {

@@ -44,7 +44,7 @@ export class Settings extends Component {
     type: 'QdtViz',
     props: {
       id: 'BjemFGn',
-      height: '30px',
+      height: '1.3rem',
     },
   };
 

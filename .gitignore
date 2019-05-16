@@ -1,10 +1,6 @@
 .vscode
 node_modules
-build
 dist
 gulpfile.js
-npm-debug.log
-.DS_Store
 package-lock.json
 .idea/
-/.env

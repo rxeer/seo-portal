@@ -14,7 +14,7 @@ module.exports = {
   },
   devServer: {
     contentBase: './build',
-    host: 'http://safe-coast-77037.herokuapp.com',
+    host: '127.0.0.1',
   },
   devtool: 'source-map',
   module: {
@@ -37,6 +37,17 @@ module.exports = {
         options: {
           fix: true,
         },
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
