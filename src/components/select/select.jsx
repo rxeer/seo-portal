@@ -6,7 +6,7 @@ import QdtComponent from '../QdtComponent';
 import './select.scss';
 
 const Select = ({
-  type = '', props = {}, lineable = false, className = '', label = '',
+  type = '', props = {}, lineable = false, className = '',
 }) => {
   const [collapsed, changeCollapseState] = useState(false);
 
@@ -21,7 +21,6 @@ const Select = ({
         )
       }
       <div onClick={() => changeCollapseState(!collapsed)}>
-        <label className="select-label">{label}</label>
         <QdtComponent
           className={`select
           ${collapsed ? 'open' : ''}
@@ -37,16 +36,10 @@ const Select = ({
 };
 
 Select.propTypes = {
-  label: PropTypes.string,
   type: PropTypes.string.isRequired,
   props: PropTypes.object.isRequired,
   className: PropTypes.string.isRequired,
   lineable: PropTypes.string.isRequired,
-};
-
-
-Select.defaultProps = {
-  label: '',
 };
 
 export default Select;
