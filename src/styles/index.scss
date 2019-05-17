@@ -43,8 +43,19 @@ ul {
 }
 
 .page-title {
+	width: 100%;
+
 	.page-title div > div > .qv-object-wrapper {
 		height: 35px !important;
+	}
+
+	& .responsive-text{
+		font-family: Roboto, sans-serif;
+		font-size: 1.5rem !important;
+		font-weight: bold;
+		letter-spacing: 0.06rem;
+		color: #414141;
+		text-transform: uppercase;
 	}
 
 	.qv-interactive {
@@ -81,6 +92,15 @@ ul {
 			font-weight: 600 !important;
 		}
 	}
+}
+
+.chart-filters {
+	display: flex;
+	margin: 0 0 50px;;
+	background-color: #00bfe7;
+	border-radius: 0.25rem;
+	box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.1);
+	padding: 1.25rem 0;
 }
 
 .table {
@@ -187,6 +207,65 @@ ul {
 			color: #fff;
 			border-bottom: 1px solid map-get($colors, default-blue) !important;;
 			background: map-get($colors, default-blue) !important;
+		}
+	}
+}
+
+.chart {
+	padding: 0;
+	border-radius: 4px;
+	background-color: #fff;
+	box-shadow: $chart-box-shadow;
+
+	.__canvas {
+		padding: 15px;
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		background-color: #f2f3f5;
+		justify-content: space-between;
+
+		& > div {
+			flex: 1 1 auto;
+
+			.qv-interactive {
+				width: auto;
+				display: flex;
+				font-weight: bold;
+				line-height: 1.08;
+				align-items: center;
+				color: map-get($colors, default-blue);
+				letter-spacing: .9px;
+				justify-content: flex-end;
+
+				& > div {
+					font {
+						font-size: 24 / 16 + rem !important;
+					}
+				}
+			}
+		}
+
+		& > div:first-of-type {
+			flex-grow: 2.4;
+
+			.qv-interactive {
+				font-weight: bold;
+				color: #414141;
+				justify-content: flex-start;
+
+				& > div {
+					font {
+						font-size: 1rem !important;
+					}
+				}
+			}
+		}
+
+		& > div:last-of-type {
+			display: none;
 		}
 	}
 }

@@ -7,18 +7,20 @@
 	z-index: 1;
 }
 
+.select-label {
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 1.33;
+	padding: 6px 0;
+	letter-spacing: .3px;
+	color: #fff;
+	display: table;
+}
+
 .select {
 	width: 100%;
 	margin-bottom: 20px;
 	transition: all .3s;
-
-	.select-label {
-		font-size: 12px;
-		font-weight: 500;
-		line-height: 1.33;
-		letter-spacing: .3px;
-		color: #fff;
-	}
 
 	.qv-filterpane-collapsed {
 		border-radius: 4px !important;

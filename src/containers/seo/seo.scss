@@ -1,0 +1,44 @@
+.seo {
+	&.container {
+		margin-top: 70px !important;
+	}
+
+	.page-title {
+		margin-bottom: 40px;
+	}
+
+	&-table {
+		background: #fff;
+		margin: 15px 0;
+		padding: 20px;
+
+		& font {
+			font-size: 12px !important;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: 1.33;
+			letter-spacing: normal;
+			color: #414141;
+		}
+	}
+
+	&-title {
+		.qv-object-header {
+			padding: 0 !important;
+		}
+
+		&,
+		.qvt-visualization-title {
+			font-family: Roboto, sans-serif;
+			font-size: 20px !important;
+			font-weight: bold;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: 1.2;
+			padding: 20px 0;
+			letter-spacing: 0.6px;
+			color: #414141 !important;
+			text-transform: uppercase;
+		}
+	}
+}

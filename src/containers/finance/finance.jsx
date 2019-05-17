@@ -19,24 +19,28 @@ export class Finance extends Settings {
         <div className="row finance__main-upperWrapper">
           <div className="col-3 col-sm-6 col-12 col-lg-3">
             <Select
+              label="Період"
               type={this.vizPeriod.type}
               props={this.vizPeriod.props}
             />
           </div>
           <div className="col-3 col-sm-6 col-12 col-lg-3">
             <Select
+              label="Галузь"
               type={this.vizIndustry.type}
               props={this.vizIndustry.props}
             />
           </div>
           <div className="col-3 col-sm-6 col-12 col-lg-3">
             <Select
+              label="Суб’єкт управління"
               type={this.vizOwnership.type}
               props={this.vizOwnership.props}
             />
           </div>
           <div className="col-3 col-sm-6 col-12 col-lg-3">
             <Select
+              label="Підприємство"
               type={this.vizSOE.type}
               props={this.vizSOE.props}
             />

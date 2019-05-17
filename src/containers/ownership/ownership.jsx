@@ -4,20 +4,32 @@ import Select from '../../components/select/select';
 
 import QdtComponent from '../../components/QdtComponent';
 
-import { Settings } from './seo.setting';
+import { Settings } from './ownership.setting';
 
-export class SEO extends Settings {
+export class Ownership extends Settings {
 
   render() {
     return (
-      <div className="seo container">
+      <div className="ownership container">
         <div className="row">
-          <div className="col-12">
+          <div className="col-12 ownership-title-wrapper">
             <QdtComponent
               className="page-title"
-              type={this.vizSOELevel.type}
-              props={this.vizSOELevel.props}
+              type={this.vizOwnershipLevel.type}
+              props={this.vizOwnershipLevel.props}
             />
+            <div className="ownership-title-dropdown">
+              <QdtComponent
+                className="country__main-upperWrapper-title-button"
+                type={this.vizPeriodType.type}
+                props={this.vizPeriodType.props}
+              />
+              <QdtComponent
+                className="dropdown"
+                type={this.vizOwnershipLevel.type}
+                props={this.vizOwnershipLevel.props}
+              />
+            </div>
           </div>
         </div>
         <div className="row">
@@ -33,15 +45,15 @@ export class SEO extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  type={this.vizIndustryF.type}
-                  props={this.vizIndustryF.props}
+                  type={this.vizIndustry.type}
+                  props={this.vizIndustry.props}
                 />
               </div>
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  type={this.vizOwnershipF.type}
-                  props={this.vizOwnershipF.props}
+                  type={this.vizOwnership.type}
+                  props={this.vizOwnership.props}
                 />
               </div>
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
@@ -103,7 +115,7 @@ export class SEO extends Settings {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-12">
+          <div className="col-lg-4 col-md-6">
             <div className="chart">
               <div className="chart__header">
                 <QdtComponent
@@ -130,111 +142,7 @@ export class SEO extends Settings {
         </div>
         <div className="row">
           <div className="col-12">
-            <div className="seo-table">
-              <div className="row">
-                <div className="col-sm-5">
-                  <QdtComponent
-                    type={this.vizNAME.type}
-                    props={this.vizNAME.props}
-                  />
-                </div>
-                <div className="col-sm-4">
-                  <QdtComponent
-                    type={this.vizOwnership.type}
-                    props={this.vizOwnership.props}
-                  />
-                </div>
-                <div className="col-sm-3">
-                  <QdtComponent
-                    type={this.vizEDRPOU.type}
-                    props={this.vizEDRPOU.props}
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-sm-5">
-                  <QdtComponent
-                    type={this.vizOwner.type}
-                    props={this.vizOwner.props}
-                  />
-                </div>
-                <div className="col-sm-4">
-                  <QdtComponent
-                    type={this.vizNACE.type}
-                    props={this.vizNACE.props}
-                  />
-                </div>
-                <div className="col-sm-3">
-                  <QdtComponent
-                    type={this.vizVAT.type}
-                    props={this.vizVAT.props}
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-sm-5">
-                  <QdtComponent
-                    type={this.vizDirector.type}
-                    props={this.vizDirector.props}
-                  />
-                </div>
-                <div className="col-sm-4">
-                  <QdtComponent
-                    type={this.vizIndustry.type}
-                    props={this.vizIndustry.props}
-                  />
-                </div>
-                <div className="col-sm-3">
-                  <QdtComponent
-                    type={this.vizDate.type}
-                    props={this.vizDate.props}
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-sm-5">
-                  <QdtComponent
-                    type={this.vizAddress.type}
-                    props={this.vizAddress.props}
-                  />
-                </div>
-                <div className="col-sm-4">
-                  <QdtComponent
-                    type={this.vizDebts.type}
-                    props={this.vizDebts.props}
-                  />
-                </div>
-                <div className="col-sm-3">
-                  <QdtComponent
-                    type={this.vizStatus.type}
-                    props={this.vizStatus.props}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-12">
-            <QdtComponent
-              className="table seo-title"
-              type={this.vizRegister.type}
-              props={this.vizRegister.props}
-            />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-12">
-            <QdtComponent
-              className="table seo-title"
-              type={this.vizHistory.type}
-              props={this.vizHistory.props}
-            />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-12">
-            <p className="seo-title" style={{ paddingBottom: 0 }}>
+            <p className="ownership-title">
               Фінансовий стан/результат
             </p>
             <QdtComponent

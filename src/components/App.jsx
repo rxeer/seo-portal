@@ -13,7 +13,7 @@ import Footer from '../containers/footer/footer';
 import Home from '../pages/home/home';
 import Country from '../pages/country/country';
 import Industry from '../pages/industry/Industry';
-import Ownership from '../pages/Ownership';
+import Ownership from '../pages/ownership/ownership';
 import SOE from '../pages/seo/seo';
 import Risk from '../pages/risk/risk';
 import Balance from '../pages/balance/balance';

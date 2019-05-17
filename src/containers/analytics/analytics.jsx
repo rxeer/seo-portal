@@ -26,6 +26,7 @@ export class Analytics extends Setting {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
+                  label="Період"
                   type={this.vizPeriod.type}
                   props={this.vizPeriod.props}
                 />
@@ -33,6 +34,7 @@ export class Analytics extends Setting {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
+                  label="Галузь"
                   type={this.vizIndustry.type}
                   props={this.vizIndustry.props}
                 />
@@ -40,6 +42,7 @@ export class Analytics extends Setting {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
+                  label="Суб’єкт управління"
                   type={this.vizOwnership.type}
                   props={this.vizOwnership.props}
                 />
@@ -47,6 +50,7 @@ export class Analytics extends Setting {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
+                  label="Підприємство"
                   type={this.vizSOE.type}
                   props={this.vizSOE.props}
                 />

@@ -1,178 +1,171 @@
 import { Component } from 'react';
 
-import './industry.scss';
+import './ownership.scss';
 
 export class Settings extends Component {
 
-  // SHEET Name
-  vizIndustryLevel = {
+  vizOwnershipLevel = {
     type: 'QdtViz',
     props: {
-      id: 'qBJGfd', height: '30px',
+      id: 'Gvbcm', height: '30px',
     },
   };
 
-  //  Lang
   vizLANG = {
     type: 'QdtViz',
     props: {
-      id: 'e7a369df-0ee2-4551-bcc1-92b31d8d607b', height: '30px',
+      id: '1b888beb-2dd0-4180-a8e1-755d303a847a', height: '30px',
     },
   };
 
-  // KPI and Plots
   /* vizKPIAssets = {
     type: 'QdtViz',
     props: {
-      id: 'TWJYrS', height: '50px',
+      id: '10bfd22f-3407-449c-ba11-2a5075337a9c', height: '50px',
     },
   }; */
   vizKPIAssetsLabel = {
     type: 'QdtViz',
     props: {
-      id: 'VKJvpe', height: '40px',
+      id: 'WmemfR', height: '40px',
     },
   };
 
   vizKPIAssetsValue = {
     type: 'QdtViz',
     props: {
-      id: 'HFvbmaJ', height: '60px',
+      id: 'JjESzmH', height: '60px',
     },
   };
 
   vizLastPeriodLabel = {
     type: 'QdtViz',
     props: {
-      id: 'XKjCU', height: '30px',
+      id: 'EUnJBt', height: '30px',
     },
   };
 
   vizPlotAssets = {
     type: 'QdtViz',
     props: {
-      id: 'zjJeVP', height: '320px',
+      id: 'a3a44362-3567-466b-b4f7-556a98db09dc', height: '320px',
     },
   };
 
   /* vizKPIProfit = {
     type: 'QdtViz',
     props: {
-      id: 'zexrPc', height: '50px',
+      id: '2668dbaa-837a-4d7d-a181-53dc861ee4be', height: '50px',
     },
   }; */
   vizKPIProfitLabel = {
     type: 'QdtViz',
     props: {
-      id: 'yvMjfJ', height: '40px',
+      id: 'BKfNggS', height: '40px',
     },
   };
 
   vizKPIProfitValue = {
     type: 'QdtViz',
     props: {
-      id: 'jpqbav', height: '60px',
+      id: 'LUDcXtP', height: '60px',
     },
   };
 
   vizPlotProfit = {
     type: 'QdtViz',
     props: {
-      id: 'JfuAdat', height: '320px',
+      id: 'd9887c82-957f-4e33-930d-fa104e1a8244', height: '320px',
     },
   };
 
   /* vizKPIUnProfit = {
     type: 'QdtViz',
     props: {
-      id: 'PapjRKP', height: '50px',
+      id: 'f197f6d3-d0fb-4f52-a14b-c63950684106', height: '50px',
     },
   }; */
   vizKPIUnProfitLabel = {
     type: 'QdtViz',
     props: {
-      id: 'MnFuEwe', height: '40px',
+      id: 'cyeJxJT', height: '40px',
     },
   };
 
   vizKPIUnProfitValue = {
     type: 'QdtViz',
     props: {
-      id: 'UGchqB', height: '60px',
+      id: 'pCrAjq', height: '60px',
     },
   };
 
   vizPlotUnProfit = {
     type: 'QdtViz',
     props: {
-      id: 'EhzadN', height: '320px',
+      id: 'qXXzc', height: '320px',
     },
   };
 
-  // Filters DOWN
   vizPeriodType = {
     type: 'QdtViz',
     props: {
-      id: 'd0376bdc-9d3a-42d3-8280-0264b4dfbd35', height: '30px',
+      id: 'fa8d3077-bc8f-434b-82d4-64e0ac03d00a', height: '30px',
     },
   };
 
   vizPeriod = {
     type: 'QdtViz',
     props: {
-      id: '5b1e5ceb-ba77-4010-85f7-57171173f1db', height: '30px',
+      id: '046fdfe1-549c-44fe-a5d1-485fe5aae1ee', height: '30px',
     },
   };
 
-  // Button with label DOWN
   vizButton2 = {
     type: 'QdtViz',
     props: {
-      id: '75f28c83-51b8-4bc0-b76a-97aa1927fb85', height: '30px',
+      id: '9ba6d9f9-09f0-4351-a03c-54d1f02136aa', height: '30px',
     },
   };
 
   vizA2A2 = {
     type: 'QdtViz',
     props: {
-      id: 'AadjAD', height: '30px',
-    },
-  };
-
-  // Filters Industry
-  vizIndustry = {
-    type: 'QdtViz',
-    props: {
-      id: 'yFUMGj', height: '30px',
-    },
-  };
-
-  vizIndustryLabel = {
-    type: 'QdtViz',
-    props: {
-      id: 'YRYWLg', height: '30px',
+      id: 'f5ea0cf6-533e-47e3-9f8f-dbd3a9019fcd', height: '30px',
     },
   };
 
   vizOwnership = {
     type: 'QdtViz',
     props: {
-      id: 'TtAYY', height: '30px',
+      id: 'pGGkTv', height: '30px',
+    },
+  };
+
+  vizOwnershipLabel = {
+    type: 'QdtViz',
+    props: {
+      id: 'vuPWBq', height: '30px',
+    },
+  };
+
+  vizIndustry = {
+    type: 'QdtViz',
+    props: {
+      id: 'RmmXpB', height: '30px',
     },
   };
 
   vizSOE = {
     type: 'QdtViz',
     props: {
-      id: 'rmkdwh', height: '30px',
+      id: 'nFpjKY', height: '30px',
     },
   };
 
-  // Table
   vizTable = {
     type: 'QdtViz',
     props: {
-      id: 'f321ca4e-5be0-4851-9cf9-2e8134643d2e',
+      id: '32e6a4cf-fbe6-408e-9a13-c0e05327b7e1',
       height: '450px',
       exportData: true,
       exportDataOptions: { format: 'OOXML', state: 'P' },

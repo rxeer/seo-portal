@@ -13,7 +13,7 @@ export class IndustryStatistics extends Settings {
       <div className="industry container">
         <div className="industry-header">
           <QdtComponent
-            className="country__main-upperWrapper-title page-title"
+            className="page-title"
             type={this.vizIndustryLevel.type}
             props={this.vizIndustryLevel.props}
           />
@@ -35,34 +35,42 @@ export class IndustryStatistics extends Settings {
             />
           </div>
         </div>
-        <div className="row analytics__main-upperWrapper">
-          <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
-            <Select
-              lineable
-              type={this.vizPeriod.type}
-              props={this.vizPeriod.props}
-            />
-          </div>
-          <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
-            <Select
-              lineable
-              type={this.vizIndustry.type}
-              props={this.vizIndustry.props}
-            />
-          </div>
-          <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
-            <Select
-              lineable
-              type={this.vizOwnership.type}
-              props={this.vizOwnership.props}
-            />
-          </div>
-          <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
-            <Select
-              lineable
-              type={this.vizSOE.type}
-              props={this.vizSOE.props}
-            />
+        <div className="row">
+          <div className="col-12">
+            <div className="row chart-filters">
+              <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
+                <Select
+                  lineable
+                  label="Період"
+                  type={this.vizPeriod.type}
+                  props={this.vizPeriod.props}
+                />
+              </div>
+              <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
+                <Select
+                  lineable
+                  label="Галузь"
+                  type={this.vizIndustry.type}
+                  props={this.vizIndustry.props}
+                />
+              </div>
+              <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
+                <Select
+                  lineable
+                  label="Суб’єкт управління"
+                  type={this.vizOwnership.type}
+                  props={this.vizOwnership.props}
+                />
+              </div>
+              <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
+                <Select
+                  lineable
+                  label="Підприємство"
+                  type={this.vizSOE.type}
+                  props={this.vizSOE.props}
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div className="row">

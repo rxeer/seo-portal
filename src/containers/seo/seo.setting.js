@@ -90,7 +90,7 @@ export class Settings extends Component {
   vizPlotUnProfit = {
     type: 'QdtViz',
     props: {
-      id: 'e70f1406-ff1e-4cf6-a087-ae8721f65199', height: '320px',
+      id: 'YmZQVz', height: '320px',
     },
   };
 

@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.ownership {
+	margin-top: 40px !important;
+
+	&-title {
+		font-family: Roboto, sans-serif;
+		font-size: 20px !important;
+		font-weight: bold;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: 1.2;
+		padding: 20px 0;
+		letter-spacing: 0.6px;
+		color: #414141 !important;
+		text-transform: uppercase;
+	}
+
+	&-title-wrapper,
+	&-title-dropdown {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
