@@ -12,24 +12,12 @@ export class Ownership extends Settings {
     return (
       <div className="ownership container">
         <div className="row">
-          <div className="col-12 ownership-title-wrapper">
+          <div className="col-12">
             <QdtComponent
               className="page-title"
               type={this.vizOwnershipLevel.type}
               props={this.vizOwnershipLevel.props}
             />
-            <div className="ownership-title-dropdown">
-              <QdtComponent
-                className="country__main-upperWrapper-title-button"
-                type={this.vizPeriodType.type}
-                props={this.vizPeriodType.props}
-              />
-              <QdtComponent
-                className="dropdown"
-                type={this.vizOwnershipLevel.type}
-                props={this.vizOwnershipLevel.props}
-              />
-            </div>
           </div>
         </div>
         <div className="row">
@@ -38,6 +26,7 @@ export class Ownership extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
+                  label="Період"
                   type={this.vizPeriod.type}
                   props={this.vizPeriod.props}
                 />
@@ -45,6 +34,7 @@ export class Ownership extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
+                  label="Галузь"
                   type={this.vizIndustry.type}
                   props={this.vizIndustry.props}
                 />
@@ -52,6 +42,7 @@ export class Ownership extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
+                  label="Суб’єкт управління"
                   type={this.vizOwnership.type}
                   props={this.vizOwnership.props}
                 />
@@ -59,6 +50,7 @@ export class Ownership extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
+                  label="Підприємство"
                   type={this.vizSOE.type}
                   props={this.vizSOE.props}
                 />

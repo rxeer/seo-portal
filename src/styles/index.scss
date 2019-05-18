@@ -1,6 +1,5 @@
 @import "normalize";
 @import "_variables";
-@import "country";
 
 * {
 	margin: 0;
@@ -24,7 +23,6 @@ ul {
 	text-decoration: none;
 }
 
-
 .layout {
 	display: flex;
 	background-color: #fafafa;
@@ -45,8 +43,8 @@ ul {
 .page-title {
 	width: 100%;
 
-	.page-title div > div > .qv-object-wrapper {
-		height: 35px !important;
+	div > div > .qv-object-wrapper {
+		height: 100% !important;
 	}
 
 	& .responsive-text{
@@ -66,6 +64,12 @@ ul {
 		letter-spacing: 0.9px;
 		color: #414141;
 		text-transform: uppercase;
+	}
+
+	@media all and (max-width: map-get($views, tablet-medium)) {
+		div > div:first-of-type {
+			height: 3.5rem !important;
+		}
 	}
 }
 
@@ -101,6 +105,10 @@ ul {
 	border-radius: 0.25rem;
 	box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.1);
 	padding: 1.25rem 0;
+
+	@media screen and (max-width: map-get($views, tablet)){
+		margin-bottom: 1rem;
+	}
 }
 
 .table {
@@ -128,6 +136,20 @@ ul {
 
 	& td[ng-repeat="cell in row.cells"] {
 		padding: 1.38rem 0 !important;
+		vertical-align: middle;
+
+		&:not(:first-of-type) {
+			border-right: solid 1px transparent !important;
+		}
+
+		&.qv-st-data-cell-selected-highlighted {
+			background: map-get($colors, default-blue);
+
+			span {
+				font-weight: 600 !important;
+				color: #fff !important;
+			}
+		}
 
 		& span {
 			font-family: Roboto, sans-serif !important;
@@ -153,40 +175,18 @@ ul {
 			text-align: center;
 			margin-bottom: 1rem;
 			padding: 0;
+			position: relative;
 			font-size: 1rem !important;
 			transition: all .3s;
 			color: map-get($colors, default-blue);
 			border: solid 1px map-get($colors, default-blue);
 
-			&:before {
-				width: 16px;
-				height: 16px;
-				margin-right: 10px;
-				display: inline-block;
-				content: url("../assets/images/partners/download.svg");
-			}
-
 			&:hover {
 				background: map-get($colors, blue-light);
 			}
-		}
-	}
-	.qv-object-wrapper {
-		td[ng-repeat="cell in row.cells"] {
-			padding: 1.38rem 0 !important;
 
-			&.qv-st-data-cell-selected-highlighted {
-				background: map-get($colors, default-blue);
-
-				span {
-					font-weight: 600 !important;
-					color: #fff !important;
-				}
-			}
-			vertical-align: middle;
-
-			&:not(:first-of-type) {
-				border-right: solid 1px transparent !important;
+			@media screen and (max-width: map-get($views, mobile-medium)) {
+				width: 77vw;
 			}
 		}
 	}
@@ -214,6 +214,7 @@ ul {
 .chart {
 	padding: 0;
 	border-radius: 4px;
+	margin-bottom: 2rem;
 	background-color: #fff;
 	box-shadow: $chart-box-shadow;
 
@@ -267,6 +268,10 @@ ul {
 		& > div:last-of-type {
 			display: none;
 		}
+	}
+
+	@media screen and (max-width: map-get($views, tablet)){
+		margin-bottom: 1rem;
 	}
 }
 
@@ -336,12 +341,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .container-fluid {
-	padding-left: 0px;
-	padding-right: 0px;
+	padding-left: 0;
+	padding-right: 0;
 
 	.row {
-		margin-right: 0;
-		margin-left: 0;
 		padding-bottom: 10px;
 	}
 

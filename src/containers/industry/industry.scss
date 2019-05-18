@@ -3,20 +3,8 @@
 $table-border-color: #c6cbd4;
 $chart-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .1);
 
-.page-title div > div > .qv-object-wrapper {
-	height: 35px !important;
-}
-
 .industry {
 	margin-top: 70px !important;
-
-	.chart-filters {
-		margin-top: 40px;
-	}
-
-	&-dropdown {
-		width: 220px;
-	}
 
 	&-header,
 	&-action-wrapper {
@@ -27,83 +15,5 @@ $chart-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .1);
 
 	.analytics__main-upperWrapper {
 		margin-bottom: 30px;
-	}
-
-	.industry-chart {
-		padding: 0;
-		border-radius: 4px;
-		background-color: #fff;
-		box-shadow: $chart-box-shadow;
-
-		.industry-chart__canvas {
-			padding: 15px;
-		}
-
-		&__header {
-			display: flex;
-			align-items: center;
-			background-color: #f2f3f5;
-			justify-content: space-between;
-
-			& > div {
-				flex: 1 1 auto;
-
-				.qv-interactive {
-					width: auto;
-					display: flex;
-					font-weight: bold;
-					line-height: 1.08;
-					align-items: center;
-					color: map-get($colors, default-blue);
-					letter-spacing: .9px;
-					justify-content: flex-end;
-
-					& > div {
-						font {
-							font-size: 24 / 16 + rem !important;
-						}
-					}
-				}
-			}
-
-			& > div:first-of-type {
-				flex-grow: 2.4;
-
-				.qv-interactive {
-					font-weight: bold;
-					color: #414141;
-					justify-content: flex-start;
-
-					& > div {
-						font {
-							font-size: 1rem !important;
-						}
-					}
-				}
-			}
-
-			& > div:last-of-type {
-				display: none;
-			}
-		}
-	}
-
-	.qv-object-content-container {
-		.qv-object-content table {
-			tr {
-				text-align: left !important;
-				background: #fff;
-
-				&:nth-child(2n) {
-					background: #f2f3f5;
-				}
-			}
-		}
-	}
-
-	.cell {
-		text-align: left !important;
-		padding: 22px 20px !important;
-		border-bottom: 1px solid $table-border-color;
 	}
 }

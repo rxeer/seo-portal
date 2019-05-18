@@ -11,28 +11,38 @@ export class IndustryStatistics extends Settings {
   render() {
     return (
       <div className="industry container">
-        <div className="industry-header">
-          <QdtComponent
-            className="page-title"
-            type={this.vizIndustryLevel.type}
-            props={this.vizIndustryLevel.props}
-          />
-          <div className="industry-action-wrapper">
+        <div className="row">
+          <div className="col-lg-6 col-md-12 industry-header">
             <QdtComponent
-              className="country__main-upperWrapper-title-button"
-              type={this.vizButton2.type}
-              props={this.vizButton2.props}
+              className="page-title"
+              type={this.vizIndustryLevel.type}
+              props={this.vizIndustryLevel.props}
             />
-            <QdtComponent
-              className="country__main-upperWrapper-btnTitle"
-              type={this.vizA2A2.type}
-              props={this.vizA2A2.props}
-            />
-            <QdtComponent
-              className="dropdown industry-dropdown"
-              type={this.vizPeriodType.type}
-              props={this.vizPeriodType.props}
-            />
+          </div>
+          <div className="col-lg-6 col-md-12">
+            <div className="row country__main-upperWrapper-text">
+              <div className="col-lg-8 col-md-12">
+                <div className="country__main-upperWrapper-text">
+                  <QdtComponent
+                    className="country__main-upperWrapper-title-button"
+                    type={this.vizButton2.type}
+                    props={this.vizButton2.props}
+                  />
+                  <QdtComponent
+                    className="country__main-upperWrapper-btnTitle"
+                    type={this.vizA2A2.type}
+                    props={this.vizA2A2.props}
+                  />
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-12">
+                <QdtComponent
+                  className="dropdown industry-dropdown"
+                  type={this.vizPeriodType.type}
+                  props={this.vizPeriodType.props}
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div className="row">
@@ -75,8 +85,8 @@ export class IndustryStatistics extends Settings {
         </div>
         <div className="row">
           <div className="col-lg-4 col-md-6">
-            <div className="industry-chart">
-              <div className="col industry-chart__header">
+            <div className="chart">
+              <div className="chart__header">
                 <QdtComponent
                   type={this.vizKPIAssetsLabel.type}
                   props={this.vizKPIAssetsLabel.props}
@@ -90,7 +100,7 @@ export class IndustryStatistics extends Settings {
                   props={this.vizLastPeriodLabel.props}
                 />
               </div>
-              <div className="col industry-chart__canvas">
+              <div className="chart__canvas">
                 <QdtComponent
                   type={this.vizPlotAssets.type}
                   props={this.vizPlotAssets.props}
@@ -99,8 +109,8 @@ export class IndustryStatistics extends Settings {
             </div>
           </div>
           <div className="col-lg-4 col-md-6">
-            <div className="industry-chart">
-              <div className="col industry-chart__header">
+            <div className="chart">
+              <div className="chart__header">
                 <QdtComponent
                   type={this.vizKPIProfitLabel.type}
                   props={this.vizKPIProfitLabel.props}
@@ -114,7 +124,7 @@ export class IndustryStatistics extends Settings {
                   props={this.vizLastPeriodLabel.props}
                 />
               </div>
-              <div className="col industry-chart__canvas">
+              <div className="chart__canvas">
                 <QdtComponent
                   type={this.vizPlotProfit.type}
                   props={this.vizPlotProfit.props}
@@ -123,8 +133,8 @@ export class IndustryStatistics extends Settings {
             </div>
           </div>
           <div className="col-lg-4 col-md-12">
-            <div className="industry-chart">
-              <div className="col industry-chart__header">
+            <div className="chart">
+              <div className="chart__header">
                 <QdtComponent
                   type={this.vizKPIUnProfitLabel.type}
                   props={this.vizKPIUnProfitLabel.props}
@@ -138,7 +148,7 @@ export class IndustryStatistics extends Settings {
                   props={this.vizLastPeriodLabel.props}
                 />
               </div>
-              <div className="col industry-chart__canvas">
+              <div className="chart__canvas">
                 <QdtComponent
                   type={this.vizPlotUnProfit.type}
                   props={this.vizPlotUnProfit.props}

@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .seo {
 	&.container {
 		margin-top: 70px !important;
@@ -19,6 +21,16 @@
 			line-height: 1.33;
 			letter-spacing: normal;
 			color: #414141;
+		}
+
+		@media screen and (max-width: map-get($views, mobile-medium)) {
+			div[dir="auto"] {
+				text-align: left !important;
+
+				font {
+					font-weight: 300 !important;
+				}
+			}
 		}
 	}
 

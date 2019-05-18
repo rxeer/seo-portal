@@ -1,22 +1,24 @@
 @import "../../styles/variables";
 
 .country__main {
-	width: 75rem;
 	margin-top: 4.4rem !important;
 
 	&-upperWrapper {
-		display: flex;
-		justify-content: space-between;
 		align-items: center;
+
+		&-text {
+			display: flex;
+			align-items: center;
+
+			.qv-object-text-image .qv-media-tool-html {
+				overflow: hidden !important;
+			}
+		}
 
 		&-filterWrap {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-		}
-
-		&-filter {
-			width: 17.5rem;
 		}
 
 		&-title {
@@ -79,14 +81,6 @@
 }
 
 .country__main {
-	&-chartWrapper {
-		width: 75rem;
-		margin: 2.5rem auto 0;
-		border-radius: 0.25rem;
-		box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.1);
-		background-color: #ffffff;
-	}
-
 	&-chartTitle {
 		box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.1);
 		border-radius: 0.25rem;
@@ -144,60 +138,4 @@
 			color: map-get($colors, default-text);
 		}
 	}
-
-	&-tableWrapper {
-		margin: 1.25rem 0 1.25rem;
-		box-shadow: $default-box-shadow;
-		border-radius: $default-border-radius;
-		background-color: map-get($colors, default-white);
-	}
-
-	&-table {
-		& header {
-			display: none !important;
-		}
-
-		& .scrollbar-thumb {
-			background-color: map-get($colors, default-blue);
-		}
-
-		& th[tid="header.row.cell"] {
-			font-weight: bold !important;
-		}
-
-		& tr[ng-repeat="row in grid.rows"]:nth-child(2n) {
-			background-color: #f2f3f5 !important;
-		}
-
-		& td[ng-repeat="cell in row.cells"] {
-			padding: 1.38rem 0 !important;
-
-			& span {
-				font-family: Roboto, sans-serif !important;
-				font-size: 0.87rem !important;
-				line-height: 1.43 !important;
-				color: map-get($colors, default-text);
-				display: block;
-				text-align: center;
-			}
-
-			& div {
-				font-family: Roboto, sans-serif !important;
-			}
-		}
-
-		& .lui-button {
-			margin: 0 0 1rem 1rem;
-			height: 2rem;
-			border-radius: .25rem;
-			border: solid 1px map-get($colors, default-blue);
-			font-family: Roboto, sans-serif;
-			font-size: 1rem !important;
-			font-weight: 500;
-			line-height: 1.25;
-			text-align: center;
-			color: map-get($colors, default-blue);
-		}
-	}
-
 }

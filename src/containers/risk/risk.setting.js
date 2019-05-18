@@ -87,7 +87,7 @@ export class Settings extends Component {
      vizAvg = {
        type: 'QdtViz',
        props: {
-         id: 'PPwuMm', height: '30px',
+         id: 'kHjFf', height: '30px',
        },
      };
 

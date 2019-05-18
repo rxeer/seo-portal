@@ -48,7 +48,7 @@ export default class Header extends Settings {
                 <NavLink
                   className="navigation__nav-link"
                   activeClassName="active"
-                  onClic={e => e.preventDefault()}
+                  onClick={e => e.preventDefault()}
                   to="/test"
                 >
                   <svg
@@ -131,7 +131,7 @@ export default class Header extends Settings {
                 <NavLink
                   className="navigation__nav-link"
                   activeClassName="active"
-                  onClic={e => e.preventDefault()}
+                  onClick={e => e.preventDefault()}
                   to="/test"
                 >
                   <svg
