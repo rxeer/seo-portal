@@ -7,6 +7,10 @@
 		display: none;
 	}
 
+	&-period {
+		align-items: center;
+	}
+
 	&-tableTitleWrapper {
 		display: flex;
 		justify-content: left;
@@ -34,7 +38,15 @@
 		background-color: map-get($colors, default-white);
 	}
 
+	@media screen and (max-width: 755px) {
+
+		&-filter {
+			margin: 1rem 0 0;
+		}
+	}
+
 	@media screen and (max-width: map-get($views, tablet)) {
+
 		&-period .finance__main-filter {
 			display: flex;
 			margin: 0;

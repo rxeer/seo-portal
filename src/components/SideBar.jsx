@@ -69,6 +69,7 @@ const vizAnalytics = {
 };
 
 export default class SideBar extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -135,4 +136,5 @@ export default class SideBar extends React.Component {
       </div>
     );
   }
+
 }

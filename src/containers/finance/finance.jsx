@@ -55,12 +55,12 @@ export class Finance extends Settings {
           </div>
         </div>
         <div className="row finance__main-period">
-          <div className="col-lg-4 col-md-12">
+          <div className="col-lg-4 col-md-6 col-sm-12">
             <span className="finance__main-tableTitle">
               Фінансовий стан/результат
             </span>
           </div>
-          <div className="col-lg-3 col-md-12">
+          <div className="col-lg-3 col-md-6 col-sm-12">
             <QdtComponent
               className="select finance__main-filter"
               type={this.vizKPI.type}

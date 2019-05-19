@@ -3,25 +3,23 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
-  faHome, faGlobeEurope, faIdCard, faChartBar, faDesktop, faFileExcel,
-  faFileDownload, faTable, faIndustry, faBuilding, faFileMedicalAlt,
+  faTimes, faHome, faDatabase, faChartBar,
 } from '@fortawesome/free-solid-svg-icons';
-
 
 import Header from '../containers/header/Header';
 import Footer from '../containers/footer/footer';
-import Home from '../pages/home/home';
-import Country from '../pages/country/country';
-import Industry from '../pages/industry/Industry';
-import Ownership from '../pages/ownership/ownership';
+
 import SOE from '../pages/seo/seo';
+import Home from '../pages/home/home';
 import Risk from '../pages/risk/risk';
 import Balance from '../pages/balance/balance';
 import Finance from '../pages/finance/finance';
+import Country from '../pages/country/country';
+import Industry from '../pages/industry/Industry';
+import Ownership from '../pages/ownership/ownership';
 import Analytics from '../pages/analytics/analytics';
 
-library.add(faHome, faGlobeEurope, faIdCard, faChartBar, faDesktop, faFileExcel,
-  faFileDownload, faTable, faIndustry, faBuilding, faFileMedicalAlt);
+library.add(faTimes, faDatabase, faHome, faChartBar);
 
 const App = () => (
   <div>

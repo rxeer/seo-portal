@@ -3,6 +3,14 @@
 .ownership {
 	margin-top: 40px !important;
 
+	.page-title {
+		margin-bottom: 40px;
+
+		.qv-media-tool-html.qv-interactive {
+			overflow: hidden !important;
+		}
+	}
+
 	&-title {
 		font-family: Roboto, sans-serif;
 		font-size: 20px !important;

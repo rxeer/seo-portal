@@ -6,6 +6,12 @@ $chart-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .1);
 .industry {
 	margin-top: 70px !important;
 
+	.page-title {
+		.qv-media-tool-html.qv-interactive {
+			overflow: hidden !important;
+		}
+	}
+
 	&-header,
 	&-action-wrapper {
 		display: flex;

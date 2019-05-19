@@ -3,9 +3,15 @@
 .homepage__main {
 	margin-top: 4.4rem !important;
 
+	.page-title {
+		width: auto;
+		margin: 0;
+	}
+
 	&-upper-wrapper {
 		display: flex;
 		flex-wrap: wrap;
+		align-items: center;
 		justify-content: space-between;
 
 		@media screen and (max-width: map-get($views, tablet)) {
@@ -15,6 +21,11 @@
 				font-size: 1.2rem;
 				text-align: center;
 				margin-bottom: 15px;
+			}
+
+			.homepage__main-filter {
+				width: 100%;
+				justify-content: center;
 			}
 		}
 	}
@@ -136,11 +147,6 @@
 			&-icon {
 				position: static;
 			}
-		}
-
-		@media screen and (max-width: map-get($views, mobile-medium)) {
-			flex-basis: 85%;
-			max-width: 85%;
 		}
 	}
 

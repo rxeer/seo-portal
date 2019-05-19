@@ -1,7 +1,73 @@
 @import "../../styles/variables";
 
+$burger-menu-bar-color: #747474;
+$cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+
 .header {
 	background-color: map-get($colors, default-white);
+
+	.burger {
+		width: 24px;
+		height: 24px;
+		display: none;
+		background: #fff;
+		transition: all .6s ease-in-out;
+		top: 5px;
+		right: -25px;
+		transform: translate(-50%, 0);
+
+		i {
+			display: block;
+			width: 24px;
+			height: 2px;
+			margin-bottom: 4px;
+			background: $burger-menu-bar-color;
+			transition: all .2s ease-in-out;
+		}
+
+		&.active {
+			background: $burger-menu-bar-color;
+
+			i {
+				background: transparent;
+
+				&:before,
+				&:after {
+					left: -5px;
+					width: 50px;
+				}
+
+				&:before {
+					transform: rotate(45deg);
+					top: 12px;
+				}
+
+				&:after {
+					transform: rotate(-45deg);
+					top: -12px;
+				}
+			}
+
+			&:hover {
+				background: darken(green, 9%);
+
+				i {
+					&:before,
+					&:after {
+						width: 60px;
+						margin: 0;
+						left: -10px;
+						top: 0;
+					}
+				}
+			}
+		}
+
+		@media all and (max-width: 700px) {
+			display: block;
+			margin-top: 10px;
+		}
+	}
 }
 
 .navigation {
@@ -26,14 +92,58 @@
 	&__nav {
 		margin: 0 2.5rem 0 0;
 		display: flex;
+		background: #fff;
+		z-index: 99;
+		flex-direction: column;
 		align-content: center;
-		height: 5rem;
+		width: 100%;
+		transform: translateX(100vw);
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: all .5s $cubic-menu-open;
+
+		&.desktop {
+			position: static;
+			height: 80px;
+			transform: translate(0);
+
+			.navigation__nav-list {
+				height: 100%;
+				flex-direction: row;
+				justify-content: flex-end;
+
+				.navigation__nav-list-item {
+					border: 0;
+				}
+			}
+
+			.navigation__dropdown-content-link-title .qv-media-tool-html {
+				margin: 0;
+			}
+		}
+
+		&.active {
+			transform: translateX(0);
+		}
+
+		&-title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			color: #747474;
+			font-size: 20px;
+			font-weight: bold;
+			padding: 20px 15px;
+			background: #eaeaea;
+		}
 
 		&-lang {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			margin-left: 1rem;
+			margin: 0 10px;
 			width: 8.75rem;
 
 			& > div {
@@ -61,13 +171,36 @@
 		}
 
 		&-list {
+			display: flex;
+			width: 100%;
+			flex-direction: column;
+
+			.rc-collapse {
+				background: #fff;
+
+				.rc-collapse-item .rc-collapse-header {
+					padding: 20px 15px;
+					position: relative;
+					border-bottom: solid 1px #eaeaea;
+				}
+
+				.rc-collapse-content {
+					padding: 0;
+
+					&-box {
+						margin: 0;
+					}
+				}
+			}
+
 			&-item {
 				display: flex;
-				padding: 0 3% 0 1rem;
+				padding: 20px 15px;
 				align-items: center;
 				cursor: pointer;
 				position: relative;
 				transition: all .3s;
+				border-bottom: solid 1px #eaeaea;
 
 				&:hover {
 					background-color: map-get($colors, default-blue);
@@ -95,7 +228,12 @@
 				&-title {
 					color: map_get($colors, default-text);
 					font-size: 1rem;
-					padding-right: .5rem;
+					padding: 0 .5rem;
+
+					@media (min-width: 700px) and (max-width: 900px) {
+						font-size: 14px;
+						padding: 0 7px;
+					}
 				}
 
 				&.dropdownDecor:hover:after {
@@ -105,7 +243,7 @@
 				&.dropdownDecor:after {
 					content: "\2039";
 					position: absolute;
-					right: 1rem;
+					right: 0.5rem;
 					top: calc(50% - 10px);
 					font-size: 1.5rem;
 					line-height: 1.25rem;
@@ -119,8 +257,13 @@
 			align-items: center;
 			text-decoration: none;
 
+			svg {
+				color: #747474;
+			}
+
 			&.active {
-				.navigation__nav-list-item-icon {
+				svg {
+					color: map-get($colors, default-blue);
 					fill: map-get($colors, default-blue);
 				}
 
@@ -128,6 +271,10 @@
 					color: map-get($colors, default-blue);
 				}
 			}
+		}
+
+		@media all and (max-width: 900px) {
+			margin: 0;
 		}
 	}
 
@@ -165,6 +312,7 @@
 				overflow: hidden;
 				display: flex;
 				align-items: center;
+				margin: 10px 0 0 30px;
 				font-size: 0.875rem !important;
 				font-family: Roboto, sans-serif;
 

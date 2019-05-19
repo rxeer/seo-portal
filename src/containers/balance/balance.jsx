@@ -54,13 +54,13 @@ export class Balance extends Settings {
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-lg-4 col-md-12">
+        <div className="row balance__main-period">
+          <div className="col-lg-4 col-md-6 col-sm-12">
             <span className="balance__main-tableTitle">
                   Фінансовий стан/результат
             </span>
           </div>
-          <div className="col-lg-3 col-md-12">
+          <div className="col-lg-4 col-md-6 col-sm-12">
             <Select
               type={this.vizKPI.type}
               props={this.vizKPI.props}

@@ -22,7 +22,7 @@ export class Analytics extends Setting {
         </div>
         <div className="row">
           <div className="col-12">
-            <div className="row analytics__main-upperWrapper adaptive-chart-container">
+            <div className="row analytics__main-upperWrapper">
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
@@ -58,7 +58,7 @@ export class Analytics extends Setting {
             </div>
           </div>
         </div>
-        <div className="row analytics__main-categoryWrapper adaptive-chart-container">
+        <div className="row analytics__main-categoryWrapper">
           <div className="col-12 col-sm-6 col-lg-3">
             <div className="analytics__main-category">
               <QdtComponent
@@ -118,7 +118,7 @@ export class Analytics extends Setting {
         </div>
         <div className="row">
           <div className="col-12">
-            <div className="analytics__main-graphWrapper adaptive-chart-container">
+            <div className="analytics__main-graphWrapper">
               <div className="analytics__main-graphTitleWrapper">
                 <span className="analytics__main-graphTitle">
               Порівняльний графік
@@ -147,7 +147,7 @@ export class Analytics extends Setting {
             </div>
           </div>
         </div>
-        <div className="row analytics__main-chartsWrapper adaptive-chart-container">
+        <div className="row analytics__main-chartsWrapper">
           <div className="col-sm-12 col-12 col-lg-6">
             <div className="analytics__main-chartWrapper">
               <QdtComponent
