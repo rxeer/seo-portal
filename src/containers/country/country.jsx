@@ -69,7 +69,7 @@ export default class Country extends Settings {
         </div>
         <div className="row finance__main-period">
           <div className="col-lg-4 col-md-12">
-            <span className="country__main-tableTitle">
+            <span className="country__main-tableTitle" style={{ visibility: 'hidden' }}>
               Фінансовий стан/результат
             </span>
           </div>

@@ -12,6 +12,7 @@
 
 			.qv-object-text-image .qv-media-tool-html {
 				overflow: hidden !important;
+				padding-top: 4px;
 			}
 		}
 
@@ -52,9 +53,10 @@
 
 				& .lui-button {
 					color: #fff;
-					border-radius: 2px;
+					border-radius: 4px;
 					transition: all .3s;
-					background-color: #fff;
+					margin-right: 2px !important;
+					background: #fff;
 					border: solid 1px #b7b7b7;
 
 					&[title="X"] {
@@ -81,6 +83,10 @@
 }
 
 .country__main {
+	&-chart {
+		margin-bottom: 1rem;
+	}
+
 	&-chartTitle {
 		box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.1);
 		border-radius: 0.25rem;

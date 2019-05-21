@@ -209,6 +209,14 @@ export class Setting extends Component {
     },
   };
 
+  vizKPI3 = {
+    type: 'QdtViz',
+    props: {
+      id: 'ASvHFCF',
+      height: '1.7rem',
+    },
+  };
+
   vizKPIPlot = {
     type: 'QdtViz',
     props: {

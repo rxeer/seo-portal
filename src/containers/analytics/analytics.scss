@@ -3,8 +3,16 @@
 .analytics__main {
 	margin-top: 4.4rem !important;
 
+	.page-title {
+		margin-bottom: 20px;
+	}
+
 	&-hiddenFilter {
 		display: none;
+	}
+
+	&-filter.dropdown {
+		margin: 0;
 	}
 
 	&-title .responsive-text {
@@ -121,6 +129,12 @@
 		height: 4rem;
 		flex-wrap: wrap;
 		background-color: #f2f3f5;
+
+		.lui-input {
+			height: 45px;
+			margin-top: -5px;
+			border-color: #eaeaea;
+		}
 	}
 
 	&-graphTitle {
@@ -206,6 +220,12 @@
 		letter-spacing: .04rem;
 		color: map-get($colors, default-text);
 		text-transform: uppercase;
+
+		& > small {
+			font-size: 12px;
+			font-weight: 300;
+			text-transform: none;
+		}
 	}
 
 	&-filter {
@@ -238,6 +258,12 @@
 		box-shadow: $default-box-shadow;
 		border-radius: $default-border-radius;
 		background-color: map-get($colors, default-white);
+
+		.table {
+			div:last-of-type button.lui-button {
+				margin-right: 15px;
+			}
+		}
 	}
 
 	@media screen and (max-width: map-get($views, tablet-medium)){

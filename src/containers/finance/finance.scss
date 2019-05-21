@@ -7,8 +7,14 @@
 		display: none;
 	}
 
+	.period {
+		margin-bottom: -80px;
+	}
+
 	&-period {
 		align-items: center;
+		padding: 0;
+		margin-bottom: -50px;
 	}
 
 	&-tableTitleWrapper {
@@ -25,10 +31,6 @@
 		letter-spacing: .04rem;
 		color: map-get($colors, default-text);
 		text-transform: uppercase;
-	}
-
-	&-filter {
-		margin-left: 4rem;
 	}
 
 	&-tableWrapper {

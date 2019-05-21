@@ -11,9 +11,13 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 		height: 24px;
 		display: none;
 		background: #fff;
+		-webkit-transition: all .6s ease-in-out;
+		-o-transition: all .6s ease-in-out;
 		transition: all .6s ease-in-out;
 		top: 5px;
 		right: -25px;
+		-webkit-transform: translate(-50%, 0);
+		-ms-transform: translate(-50%, 0);
 		transform: translate(-50%, 0);
 
 		i {
@@ -22,6 +26,8 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 			height: 2px;
 			margin-bottom: 4px;
 			background: $burger-menu-bar-color;
+			-webkit-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
 			transition: all .2s ease-in-out;
 		}
 
@@ -38,11 +44,15 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 				}
 
 				&:before {
+					-webkit-transform: rotate(45deg);
+					-ms-transform: rotate(45deg);
 					transform: rotate(45deg);
 					top: 12px;
 				}
 
 				&:after {
+					-webkit-transform: rotate(-45deg);
+					-ms-transform: rotate(-45deg);
 					transform: rotate(-45deg);
 					top: -12px;
 				}
@@ -68,13 +78,38 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 			margin-top: 10px;
 		}
 	}
+
+	&-banner {
+		.qv-subtoolbar-button.borderbox,
+		.wrap.borderbox.qv-pager {
+			background: #e9e7e9;
+			border: 0;
+			color: #545352;
+		}
+
+		.qv-panel-current-selections .qv-subtoolbar-button:disabled {
+			color: #c1c0c1;
+		}
+
+		.borderbox.border-left,
+		.borderbox.border-right {
+			border-color: #bbb5b5;
+		}
+	}
 }
 
 .navigation {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	background: #fff;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-shadow: $navigation-shadow;
 	box-shadow: $navigation-shadow;
 
 	&__logo {
@@ -91,27 +126,44 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 
 	&__nav {
 		margin: 0 2.5rem 0 0;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		background: #fff;
 		z-index: 99;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
+		-ms-flex-line-pack: center;
 		align-content: center;
 		width: 100%;
+		-webkit-transform: translateX(100vw);
+		-ms-transform: translateX(100vw);
 		transform: translateX(100vw);
 		height: 100%;
 		position: absolute;
 		top: 0;
 		left: 0;
+		-webkit-transition: all .5s $cubic-menu-open;
+		-o-transition: all .5s $cubic-menu-open;
 		transition: all .5s $cubic-menu-open;
 
 		&.desktop {
 			position: static;
 			height: 80px;
+			-webkit-transform: translate(0);
+			-ms-transform: translate(0);
 			transform: translate(0);
 
 			.navigation__nav-list {
 				height: 100%;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: row;
 				flex-direction: row;
+				-webkit-box-pack: end;
+				-ms-flex-pack: end;
 				justify-content: flex-end;
 
 				.navigation__nav-list-item {
@@ -125,12 +177,20 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 		}
 
 		&.active {
+			-webkit-transform: translateX(0);
+			-ms-transform: translateX(0);
 			transform: translateX(0);
 		}
 
 		&-title {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
 			align-items: center;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
 			justify-content: space-between;
 			color: #747474;
 			font-size: 20px;
@@ -140,8 +200,14 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 		}
 
 		&-lang {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
 			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
 			justify-content: center;
 			margin: 0 10px;
 			width: 8.75rem;
@@ -156,6 +222,8 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 
 			.lui-buttongroup {
 				.lui-button {
+					-webkit-transition: background-color .3s;
+					-o-transition: background-color .3s;
 					transition: background-color .3s;
 					cursor: pointer;
 
@@ -171,8 +239,13 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 		}
 
 		&-list {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
 			width: 100%;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
 			flex-direction: column;
 
 			.rc-collapse {
@@ -194,11 +267,17 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 			}
 
 			&-item {
+				display: -webkit-box;
+				display: -ms-flexbox;
 				display: flex;
 				padding: 20px 15px;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
 				align-items: center;
 				cursor: pointer;
 				position: relative;
+				-webkit-transition: all .3s;
+				-o-transition: all .3s;
 				transition: all .3s;
 				border-bottom: solid 1px #eaeaea;
 
@@ -216,12 +295,12 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 				}
 
 				&.finance:hover .navigation__dropdown-content,
-				&.dataBase:hover .navigation__dropdown-content {
+				&.dataBase:hover .navigation__dropdown-content,
+				&.top:hover .navigation__dropdown-content {
 					display: block;
 				}
 
 				&-icon {
-					margin-right: 0.5rem;
 					fill: #747474;
 				}
 
@@ -237,6 +316,8 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 				}
 
 				&.dropdownDecor:hover:after {
+					-webkit-transform: rotate(90deg);
+					-ms-transform: rotate(90deg);
 					transform: rotate(90deg);
 				}
 
@@ -247,13 +328,19 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 					top: calc(50% - 10px);
 					font-size: 1.5rem;
 					line-height: 1.25rem;
+					-webkit-transform: rotate(-90deg);
+					-ms-transform: rotate(-90deg);
 					transform: rotate(-90deg);
 				}
 			}
 		}
 
 		&-link {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
 			align-items: center;
 			text-decoration: none;
 
@@ -287,6 +374,7 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 		top: 5rem;
 		left: 0;
 		display: none;
+		-webkit-box-shadow: $dropdown-shadow;
 		box-shadow: $dropdown-shadow;
 
 		&-link {
@@ -294,14 +382,29 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 			width: 15rem;
 			cursor: pointer;
 			font-size: 0.87rem;
+			text-decoration: none;
 
 			&-title:hover {
 				cursor: pointer;
 				background-color: map-get($colors, dropdown-hover);
 			}
 
+			&-title.top100Text {
+				display: block;
+				color: map-get($colors, default-text);
+				font-family: Roboto, sans-serif;
+				font-size: 0.87rem;
+				line-height: 1.43;
+				text-align: center;
+				padding: 0.75rem;
+			}
+
 			&-title .media-tool-scrollbar {
+				display: -webkit-box;
+				display: -ms-flexbox;
 				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
 				align-items: center;
 				padding: 0 13px;
 				height: auto !important;
@@ -310,7 +413,11 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 
 			&-title .qv-media-tool-html {
 				overflow: hidden;
+				display: -webkit-box;
+				display: -ms-flexbox;
 				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
 				align-items: center;
 				margin: 10px 0 0 30px;
 				font-size: 0.875rem !important;
@@ -320,6 +427,24 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 					background: map_get($colors, dropdown-hover);
 					cursor: pointer;
 					height: 100%;
+				}
+			}
+		}
+
+		.qv-ti.ng-scope {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+
+		&.db-content  {
+			.navigation__dropdown-content-link-title {
+				& div > div {
+					height: 3.8rem !important;
+					overflow: hidden;
 				}
 			}
 		}

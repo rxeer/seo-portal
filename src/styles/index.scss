@@ -101,7 +101,7 @@ ul {
 
 .chart-filters {
 	display: flex;
-	margin: 0 0 50px;;
+	margin: 0 0 30px;;
 	background-color: #00bfe7;
 	border-radius: 0.25rem;
 	box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.1);
@@ -174,13 +174,23 @@ ul {
 			font-weight: 500;
 			line-height: 1.25;
 			text-align: center;
-			margin-bottom: 1rem;
+			margin: 0 -20px 0 0;
 			padding: 0;
 			position: relative;
 			font-size: 1rem !important;
 			transition: all .3s;
 			color: map-get($colors, default-blue);
 			border: solid 1px map-get($colors, default-blue);
+
+			&:before {
+				width: 16px;
+				height: 16px;
+				top: 2px;
+				position: relative;
+				margin-right: 3px;
+				display: inline-block;
+				content: url("../assets/images/partners/download.svg");
+			}
 
 			&:hover {
 				background: map-get($colors, blue-light);
@@ -225,9 +235,22 @@ ul {
 
 	&__header {
 		display: flex;
+		padding: 0 10px;
 		align-items: center;
 		background-color: #f2f3f5;
 		justify-content: space-between;
+
+		&--green {
+			div:nth-of-type(2n) font {
+				color: map-get($colors, default-green);
+			}
+		}
+
+		&--red {
+			div:nth-of-type(2n) font {
+				color: map-get($colors, default-red);
+			}
+		}
 
 		& > div {
 			flex: 1 1 auto;
@@ -251,7 +274,7 @@ ul {
 		}
 
 		& > div:first-of-type {
-			flex-grow: 2.4;
+			flex-grow: 2.6;
 
 			.qv-interactive {
 				font-weight: bold;
@@ -260,7 +283,8 @@ ul {
 
 				& > div {
 					font {
-						font-size: 1rem !important;
+						letter-spacing: normal;
+						font-size: 15px !important;
 					}
 				}
 			}
@@ -274,6 +298,10 @@ ul {
 	@media screen and (max-width: map-get($views, tablet)) {
 		margin-bottom: 1rem;
 	}
+}
+
+.table-title {
+	margin-bottom: -50px;
 }
 
 .text-center {

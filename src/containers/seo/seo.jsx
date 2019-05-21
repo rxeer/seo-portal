@@ -85,7 +85,7 @@ export class SEO extends Settings {
           </div>
           <div className="col-lg-4 col-md-6">
             <div className="chart">
-              <div className="chart__header">
+              <div className="chart__header chart__header--green">
                 <QdtComponent
                   type={this.vizKPIProfitLabel.type}
                   props={this.vizKPIProfitLabel.props}
@@ -109,7 +109,7 @@ export class SEO extends Settings {
           </div>
           <div className="col-lg-4 col-md-12">
             <div className="chart">
-              <div className="chart__header">
+              <div className="chart__header chart__header--red">
                 <QdtComponent
                   type={this.vizKPIUnProfitLabel.type}
                   props={this.vizKPIUnProfitLabel.props}
@@ -134,6 +134,9 @@ export class SEO extends Settings {
         </div>
         <div className="row">
           <div className="col-12">
+            <p className="seo-title">
+              Назва підприємства
+            </p>
             <div className="seo-table">
               <div className="row">
                 <div className="col-sm-5">
@@ -238,7 +241,7 @@ export class SEO extends Settings {
         </div>
         <div className="row">
           <div className="col-12">
-            <p className="seo-title" style={{ paddingBottom: 0 }}>
+            <p className="seo-title table-title" style={{ visibility: 'hidden' }}>
               Фінансовий стан/результат
             </p>
             <QdtComponent

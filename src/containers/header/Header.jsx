@@ -89,7 +89,72 @@ export default class Header extends Settings {
                           <p className="navigation__nav-list-item-title dropdownDecor">ТОП-100</p>
                         </NavLink>
                     )}
-                      />
+                      >
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Download?id=67d9576a-6d20-4288-b3aa-754f5b087929"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            6m 2018
+                          </span>
+                        </a>
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Download?id=0a6ff86b-5bce-4fa5-b06a-511d2a29d0d0"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            2017
+                          </span>
+                        </a>
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Download?id=8be2f0ec-1015-4722-b9ed-26f46e974d50"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            6m 2017
+                          </span>
+                        </a>
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Download?id=64486187-93ac-4493-b88b-8e62a4542a2e"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            2016
+                          </span>
+                        </a>
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Download?id=51b6e766-320c-43ce-b791-cc1d656d0d06"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            6m 2016
+                          </span>
+                        </a>
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Download?id=5e146da4-05a5-46fe-87f7-54c30a064bd8"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            2015
+                          </span>
+                        </a>
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Detail?lang=uk-UA&id=4d3ccfda-18b5-4dc2-8f74-51b84d976eb0&title=Top100-NaibilshikhDerzhavnikhPidprimstvUkrainiZa6-Misiatsiv2015-roku"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            6m 2015
+                          </span>
+                        </a>
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Download?id=1bb3da5e-0a65-4e6d-95d7-889a687603cd"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            2014
+                          </span>
+                        </a>
+                      </Panel>
                       <Panel header={
                       (
                         <NavLink
@@ -235,7 +300,7 @@ export default class Header extends Settings {
                       </NavLink>
                     </li>
 
-                    <li className="navigation__nav-list-item dropdownDecor">
+                    <li className="navigation__nav-list-item top dropdownDecor">
                       <svg
                         className="navigation__nav-list-item-icon"
                         xmlns="http://www.w3.org/2000/svg"
@@ -248,6 +313,72 @@ export default class Header extends Settings {
                         />
                       </svg>
                       <p className="navigation__nav-list-item-title dropdownDecor">ТОП-100</p>
+                      <div className="navigation__dropdown-content">
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Download?id=67d9576a-6d20-4288-b3aa-754f5b087929"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            6m 2018
+                          </span>
+                        </a>
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Download?id=0a6ff86b-5bce-4fa5-b06a-511d2a29d0d0"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            2017
+                          </span>
+                        </a>
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Download?id=8be2f0ec-1015-4722-b9ed-26f46e974d50"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            6m 2017
+                          </span>
+                        </a>
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Download?id=64486187-93ac-4493-b88b-8e62a4542a2e"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            2016
+                          </span>
+                        </a>
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Download?id=51b6e766-320c-43ce-b791-cc1d656d0d06"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            6m 2016
+                          </span>
+                        </a>
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Download?id=5e146da4-05a5-46fe-87f7-54c30a064bd8"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            2015
+                          </span>
+                        </a>
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Detail?lang=uk-UA&id=4d3ccfda-18b5-4dc2-8f74-51b84d976eb0&title=Top100-NaibilshikhDerzhavnikhPidprimstvUkrainiZa6-Misiatsiv2015-roku"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            6m 2015
+                          </span>
+                        </a>
+                        <a
+                          className="navigation__dropdown-content-link"
+                          href="http://www.me.gov.ua/Documents/Download?id=1bb3da5e-0a65-4e6d-95d7-889a687603cd"
+                        >
+                          <span className="navigation__dropdown-content-link-title top100Text">
+                            2014
+                          </span>
+                        </a>
+                      </div>
                     </li>
 
                     <li className="navigation__nav-list-item finance dropdownDecor">
@@ -333,7 +464,7 @@ export default class Header extends Settings {
                         />
                       </svg>
                       <p className="navigation__nav-list-item-title">База даних</p>
-                      <div className="navigation__dropdown-content">
+                      <div className="navigation__dropdown-content db-content">
                         <a className="navigation__dropdown-content-link" href="#/balance">
                           <QdtComponent
                             className="navigation__dropdown-content-link-title"
@@ -373,6 +504,7 @@ export default class Header extends Settings {
           </div>
         </section>
         <QdtComponent
+          className="header-banner"
           type={this.viz1.type}
           props={this.viz1.props}
         />

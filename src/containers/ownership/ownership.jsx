@@ -85,7 +85,7 @@ export class Ownership extends Settings {
           </div>
           <div className="col-lg-4 col-md-6">
             <div className="chart">
-              <div className="chart__header">
+              <div className="chart__header chart__header--green">
                 <QdtComponent
                   type={this.vizKPIProfitLabel.type}
                   props={this.vizKPIProfitLabel.props}
@@ -109,7 +109,7 @@ export class Ownership extends Settings {
           </div>
           <div className="col-lg-4 col-md-6">
             <div className="chart">
-              <div className="chart__header">
+              <div className="chart__header chart__header--red">
                 <QdtComponent
                   type={this.vizKPIUnProfitLabel.type}
                   props={this.vizKPIUnProfitLabel.props}
@@ -134,7 +134,7 @@ export class Ownership extends Settings {
         </div>
         <div className="row">
           <div className="col-12">
-            <p className="ownership-title">
+            <p className="ownership-title hidden-title">
               Фінансовий стан/результат
             </p>
             <QdtComponent

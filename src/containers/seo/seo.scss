@@ -6,7 +6,7 @@
 	}
 
 	.page-title {
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 
 		.qv-media-tool-html.qv-interactive {
 			overflow: hidden !important;
@@ -17,6 +17,16 @@
 		background: #fff;
 		margin: 15px 0;
 		padding: 20px;
+
+		.qv-media-tool-html {
+			& > div[dir="auto"] {
+				text-align: left !important;
+				font-family: Roboto, sans-serif !important;
+				font-size: 12px;
+				font-weight: 300;
+				text-transform: uppercase;
+			}
+		}
 
 		& font {
 			font-size: 12px !important;

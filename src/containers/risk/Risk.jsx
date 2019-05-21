@@ -168,7 +168,7 @@ export default class Risk extends Settings {
         </div>
         <div className="row">
           <div className="col-12">
-            <p className="risk__main-title">
+            <p className="risk__main-title table-title" style={{ visibility: 'hidden' }}>
               Ризик-індикатори
             </p>
             <QdtComponent

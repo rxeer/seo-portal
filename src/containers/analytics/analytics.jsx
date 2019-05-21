@@ -133,6 +133,11 @@ export class Analytics extends Setting {
                   type={this.vizKPI2.type}
                   props={this.vizKPI2.props}
                 />
+                <QdtComponent
+                  className="analytics__main-graphFilter dropdown"
+                  type={this.vizKPI3.type}
+                  props={this.vizKPI3.props}
+                />
               </div>
               <QdtComponent
                 className="analytics__main-graphSubtitle"
@@ -180,14 +185,11 @@ export class Analytics extends Setting {
         <div className="row">
           <div className="col-12">
             <div className="analytics__main-tableTitleWrapper">
-              <span className="analytics__main-tableTitle">
-            Фінансовий стан/результат
-              </span>
-              {/* <QdtComponent */}
-              {/*  className="analytics__main-filter" */}
-              {/*  type={this.vizKPI.type} */}
-              {/*  props={this.vizKPI.props} */}
-              {/* /> */}
+              <QdtComponent
+                className="analytics__main-filter dropdown"
+                type={this.vizKPI.type}
+                props={this.vizKPI.props}
+              />
             </div>
             <div className="analytics__main-tableWrapper adaptive-chart-container">
               <QdtComponent

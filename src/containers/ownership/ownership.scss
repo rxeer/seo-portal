@@ -4,11 +4,17 @@
 	margin-top: 40px !important;
 
 	.page-title {
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 
 		.qv-media-tool-html.qv-interactive {
 			overflow: hidden !important;
 		}
+	}
+
+	.hidden-title {
+		visibility: hidden;
+		padding: 0;
+		margin-bottom: -40px;
 	}
 
 	&-title {
