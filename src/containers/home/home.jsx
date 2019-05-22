@@ -30,6 +30,11 @@ class Home extends Settings {
               type={this.vizPeriod.type}
               props={this.vizPeriod.props}
             />
+            <QdtComponent
+              className="homepage__main-filter-dropdown dropdown"
+              type={this.vizFilterPeriod.type}
+              props={this.vizFilterPeriod.props}
+            />
           </div>
         </div>
         <div className="homepage__main-middle-wrapper">

@@ -30,6 +30,14 @@ export class Settings extends Component {
     },
   };
 
+  vizFilterPeriod = {
+    type: 'QdtViz',
+    props: {
+      id: 'YNgzBEt',
+      height: '30px',
+    },
+  };
+
   // KPI
   /* const vizTotalSOE = {
     type: 'QdtViz',

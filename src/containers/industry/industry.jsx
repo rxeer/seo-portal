@@ -15,30 +15,12 @@ class IndustryStatistics extends Settings {
     return (
       <div className="industry container">
         <div className="row">
-          <div className="col-lg-6 col-md-12 industry-header">
+          <div className="col-lg-12 col-md-12 industry-header">
             <QdtComponent
               className="page-title"
               type={this.vizIndustryLevel.type}
               props={this.vizIndustryLevel.props}
             />
-          </div>
-          <div className="col-lg-6 col-md-12">
-            <div className="row country__main-upperWrapper-text">
-              <div className="col-lg-12 col-md-12">
-                <div className="country__main-upperWrapper-text">
-                  <QdtComponent
-                    className="country__main-upperWrapper-title-button"
-                    type={this.vizButton2.type}
-                    props={this.vizButton2.props}
-                  />
-                  <QdtComponent
-                    className="country__main-upperWrapper-btnTitle"
-                    type={this.vizA2A2.type}
-                    props={this.vizA2A2.props}
-                  />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <div className="row">
@@ -148,6 +130,24 @@ class IndustryStatistics extends Settings {
                 <QdtComponent
                   type={this.vizPlotUnProfit.type}
                   props={this.vizPlotUnProfit.props}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-12">
+          <div className="row country__main-upperWrapper-text">
+            <div className="col-lg-12 col-md-12" style={{ padding: 0 }}>
+              <div className="country__main-upperWrapper-text industry-filter">
+                <QdtComponent
+                  className="country__main-upperWrapper-title-button"
+                  type={this.vizButton2.type}
+                  props={this.vizButton2.props}
+                />
+                <QdtComponent
+                  className="country__main-upperWrapper-btnTitle"
+                  type={this.vizA2A2.type}
+                  props={this.vizA2A2.props}
                 />
               </div>
             </div>

@@ -22,6 +22,7 @@ class Header extends Settings {
     this.state = {
       isMenuOpen: false,
       isMobile: false,
+      currentLocale: 'ua',
       enLanguageButton: null,
       uaLanguageButton: null,
       isBannerFixed: false,
@@ -35,7 +36,7 @@ class Header extends Settings {
   }
 
   startLanguagesButtonInterval() {
-    const twoSecondsInterval = 3000;
+    const twoSecondsInterval = 1000;
     this.languageInterval = setInterval(() => {
       const { uaLanguageButton, enLanguageButton } = this.state;
       if (!uaLanguageButton || !enLanguageButton) {
@@ -72,6 +73,7 @@ class Header extends Settings {
   changeLocalization(localization) {
     i18n.changeLanguage(localization);
     setLocalization(localization);
+    this.setState({ currentLocale: localization }, () => this.forceUpdate());
   }
 
   handleBanner = () => {
@@ -93,7 +95,7 @@ class Header extends Settings {
   };
 
   render() {
-    const { isBannerFixed } = this.state;
+    const { isBannerFixed, currentLocale } = this.state;
     return (
       <header className="header">
         <section className="navigation">
@@ -102,7 +104,11 @@ class Header extends Settings {
               <img
                 className="navigation__logo-link-img"
                 alt="logo"
-                src="../../assets/images/logo/logo@1x.jpg"
+                src={
+                  currentLocale === 'ua'
+                    ? '../../assets/images/logo/logo@1x.jpg'
+                    : '../../assets/images/logo/logo-eng.svg'
+                }
               />
             </Link>
           </h1>
