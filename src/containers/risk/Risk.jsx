@@ -1,9 +1,16 @@
 import React from 'react';
-import QdtComponent from '../../components/QdtComponent';
+import { Trans } from 'react-i18next';
+
+import { connectTranslation } from '../../middlewares/connect-translation';
+
 import Select from '../../components/select/select';
+
+import QdtComponent from '../../components/QdtComponent';
+
 import { Settings } from './risk.setting';
 
-export default class Risk extends Settings {
+@connectTranslation()
+class Risk extends Settings {
 
   render() {
     return (
@@ -23,7 +30,7 @@ export default class Risk extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Період"
+                  label={this.props.t('filters.period')}
                   type={this.vizYear.type}
                   props={this.vizYear.props}
                 />
@@ -31,7 +38,7 @@ export default class Risk extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Галузь"
+                  label={this.props.t('filters.industry')}
                   type={this.vizIndustry.type}
                   props={this.vizIndustry.props}
                 />
@@ -39,7 +46,7 @@ export default class Risk extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Суб’єкт управління"
+                  label={this.props.t('filters.ownership')}
                   type={this.vizOwnership.type}
                   props={this.vizOwnership.props}
                 />
@@ -47,7 +54,7 @@ export default class Risk extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Підприємство"
+                  label={this.props.t('filters.seo')}
                   type={this.vizSOE.type}
                   props={this.vizSOE.props}
                 />
@@ -157,10 +164,12 @@ export default class Risk extends Settings {
         <div className="row">
           <div className="col-12">
             <p className="risk__main-title">
-              Обрані показники
+              <Trans i18nKey="risk.table-title">
+                Обрані показники
+              </Trans>
             </p>
             <QdtComponent
-              className="table"
+              className="table risk-table"
               type={this.vizKPISelected.type}
               props={this.vizKPISelected.props}
             />
@@ -168,8 +177,10 @@ export default class Risk extends Settings {
         </div>
         <div className="row">
           <div className="col-12">
-            <p className="risk__main-title table-title" style={{ visibility: 'hidden' }}>
-              Ризик-індикатори
+            <p className="risk__main-title table-title">
+              <Trans i18nKey="risk.indicator-title">
+                Ризик-індикатори
+              </Trans>
             </p>
             <QdtComponent
               className="table"
@@ -183,3 +194,5 @@ export default class Risk extends Settings {
   }
 
 }
+
+export default Risk;

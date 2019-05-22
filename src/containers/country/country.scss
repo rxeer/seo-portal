@@ -9,6 +9,8 @@
 		&-text {
 			display: flex;
 			align-items: center;
+			margin-right: -30px;
+			justify-content: flex-end;
 
 			.qv-object-text-image .qv-media-tool-html {
 				overflow: hidden !important;

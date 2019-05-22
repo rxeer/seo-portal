@@ -1,12 +1,15 @@
 import React from 'react';
 
+import { connectTranslation } from '../../middlewares/connect-translation';
+
 import Select from '../../components/select/select';
 
 import QdtComponent from '../../components/QdtComponent';
 
 import { Settings } from './industry.setting';
 
-export class IndustryStatistics extends Settings {
+@connectTranslation()
+class IndustryStatistics extends Settings {
 
   render() {
     return (
@@ -21,7 +24,7 @@ export class IndustryStatistics extends Settings {
           </div>
           <div className="col-lg-6 col-md-12">
             <div className="row country__main-upperWrapper-text">
-              <div className="col-lg-8 col-md-12">
+              <div className="col-lg-12 col-md-12">
                 <div className="country__main-upperWrapper-text">
                   <QdtComponent
                     className="country__main-upperWrapper-title-button"
@@ -35,13 +38,6 @@ export class IndustryStatistics extends Settings {
                   />
                 </div>
               </div>
-              <div className="col-lg-4 col-md-12">
-                <QdtComponent
-                  className="dropdown industry-dropdown"
-                  type={this.vizPeriodType.type}
-                  props={this.vizPeriodType.props}
-                />
-              </div>
             </div>
           </div>
         </div>
@@ -51,7 +47,7 @@ export class IndustryStatistics extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Період"
+                  label={this.props.t('filters.period')}
                   type={this.vizPeriod.type}
                   props={this.vizPeriod.props}
                 />
@@ -59,7 +55,7 @@ export class IndustryStatistics extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Галузь"
+                  label={this.props.t('filters.industry')}
                   type={this.vizIndustry.type}
                   props={this.vizIndustry.props}
                 />
@@ -67,7 +63,7 @@ export class IndustryStatistics extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Суб’єкт управління"
+                  label={this.props.t('filters.ownership')}
                   type={this.vizOwnership.type}
                   props={this.vizOwnership.props}
                 />
@@ -75,7 +71,7 @@ export class IndustryStatistics extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Підприємство"
+                  label={this.props.t('filters.seo')}
                   type={this.vizSOE.type}
                   props={this.vizSOE.props}
                 />
@@ -167,3 +163,5 @@ export class IndustryStatistics extends Settings {
   }
 
 }
+
+export default IndustryStatistics;

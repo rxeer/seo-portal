@@ -6,6 +6,8 @@ import {
   faTimes, faHome, faDatabase, faChartBar,
 } from '@fortawesome/free-solid-svg-icons';
 
+import { setLocalization } from '../middlewares/localization';
+
 import Header from '../containers/header/Header';
 import Footer from '../containers/footer/footer';
 
@@ -18,6 +20,7 @@ import Country from '../pages/country/country';
 import Industry from '../pages/industry/Industry';
 import Ownership from '../pages/ownership/ownership';
 import Analytics from '../pages/analytics/analytics';
+import NotFoundPage from '../pages/not-found/not-found';
 
 library.add(faTimes, faDatabase, faHome, faChartBar);
 
@@ -33,14 +36,17 @@ const App = () => (
           <Route exact path="/ownership" component={Ownership} />
           <Route exact path="/SOE" component={SOE} />
           <Route exact path="/risk" component={Risk} />
-          <Route exact path="/Balance" component={Balance} />
-          <Route exact path="/Finance" component={Finance} />
-          <Route exact path="/Analytics" component={Analytics} />
+          <Route exact path="/balance" component={Balance} />
+          <Route exact path="/finance" component={Finance} />
+          <Route exact path="/analytics" component={Analytics} />
+          <Route exact path="/*" component={NotFoundPage} />
         </Switch>
         <Footer />
       </Fragment>
     </Router>
   </div>
 );
+
+setLocalization();
 
 export default App;

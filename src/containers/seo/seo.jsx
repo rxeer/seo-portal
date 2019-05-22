@@ -1,4 +1,7 @@
 import React from 'react';
+import { Trans } from 'react-i18next';
+
+import { connectTranslation } from '../../middlewares/connect-translation';
 
 import Select from '../../components/select/select';
 
@@ -6,7 +9,8 @@ import QdtComponent from '../../components/QdtComponent';
 
 import { Settings } from './seo.setting';
 
-export class SEO extends Settings {
+@connectTranslation()
+class SEO extends Settings {
 
   render() {
     return (
@@ -26,7 +30,7 @@ export class SEO extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Період"
+                  label={this.props.t('filters.period')}
                   type={this.vizPeriod.type}
                   props={this.vizPeriod.props}
                 />
@@ -34,7 +38,7 @@ export class SEO extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Галузь"
+                  label={this.props.t('filters.industry')}
                   type={this.vizIndustryF.type}
                   props={this.vizIndustryF.props}
                 />
@@ -42,7 +46,7 @@ export class SEO extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Суб’єкт управління"
+                  label={this.props.t('filters.ownership')}
                   type={this.vizOwnershipF.type}
                   props={this.vizOwnershipF.props}
                 />
@@ -50,7 +54,7 @@ export class SEO extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Підприємство"
+                  label={this.props.t('filters.seo')}
                   type={this.vizSOE.type}
                   props={this.vizSOE.props}
                 />
@@ -135,24 +139,29 @@ export class SEO extends Settings {
         <div className="row">
           <div className="col-12">
             <p className="seo-title">
-              Назва підприємства
+              <Trans i18nKey="seo.table-title">
+                Назва підприємства
+              </Trans>
             </p>
             <div className="seo-table">
               <div className="row">
                 <div className="col-sm-5">
                   <QdtComponent
+                    className="seo-block-table"
                     type={this.vizNAME.type}
                     props={this.vizNAME.props}
                   />
                 </div>
                 <div className="col-sm-4">
                   <QdtComponent
+                    className="seo-block-table"
                     type={this.vizOwnership.type}
                     props={this.vizOwnership.props}
                   />
                 </div>
                 <div className="col-sm-3">
                   <QdtComponent
+                    className="seo-block-table"
                     type={this.vizEDRPOU.type}
                     props={this.vizEDRPOU.props}
                   />
@@ -161,18 +170,21 @@ export class SEO extends Settings {
               <div className="row">
                 <div className="col-sm-5">
                   <QdtComponent
+                    className="seo-block-table"
                     type={this.vizOwner.type}
                     props={this.vizOwner.props}
                   />
                 </div>
                 <div className="col-sm-4">
                   <QdtComponent
+                    className="seo-block-table"
                     type={this.vizNACE.type}
                     props={this.vizNACE.props}
                   />
                 </div>
                 <div className="col-sm-3">
                   <QdtComponent
+                    className="seo-block-table"
                     type={this.vizVAT.type}
                     props={this.vizVAT.props}
                   />
@@ -181,18 +193,21 @@ export class SEO extends Settings {
               <div className="row">
                 <div className="col-sm-5">
                   <QdtComponent
+                    className="seo-block-table"
                     type={this.vizDirector.type}
                     props={this.vizDirector.props}
                   />
                 </div>
                 <div className="col-sm-4">
                   <QdtComponent
+                    className="seo-block-table"
                     type={this.vizIndustry.type}
                     props={this.vizIndustry.props}
                   />
                 </div>
                 <div className="col-sm-3">
                   <QdtComponent
+                    className="seo-block-table"
                     type={this.vizDate.type}
                     props={this.vizDate.props}
                   />
@@ -201,18 +216,21 @@ export class SEO extends Settings {
               <div className="row">
                 <div className="col-sm-5">
                   <QdtComponent
+                    className="seo-block-table"
                     type={this.vizAddress.type}
                     props={this.vizAddress.props}
                   />
                 </div>
                 <div className="col-sm-4">
                   <QdtComponent
+                    className="seo-block-table"
                     type={this.vizDebts.type}
                     props={this.vizDebts.props}
                   />
                 </div>
                 <div className="col-sm-3">
                   <QdtComponent
+                    className="seo-block-table"
                     type={this.vizStatus.type}
                     props={this.vizStatus.props}
                   />
@@ -241,9 +259,6 @@ export class SEO extends Settings {
         </div>
         <div className="row">
           <div className="col-12">
-            <p className="seo-title table-title" style={{ visibility: 'hidden' }}>
-              Фінансовий стан/результат
-            </p>
             <QdtComponent
               className="table"
               type={this.vizTable.type}
@@ -256,3 +271,5 @@ export class SEO extends Settings {
   }
 
 }
+
+export default SEO;

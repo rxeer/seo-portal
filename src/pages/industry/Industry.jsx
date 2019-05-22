@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { IndustryStatistics } from '../../containers/industry/industry';
+import IndustryStatistics from '../../containers/industry/industry';
 
 const EmbedObject = () => <IndustryStatistics />;
 

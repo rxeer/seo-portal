@@ -1,17 +1,24 @@
 import React from 'react';
+import { Trans } from 'react-i18next';
+
+import { connectTranslation } from '../../middlewares/connect-translation';
 
 import QdtComponent from '../../components/QdtComponent';
 
 import { Settings } from './home.settings';
 
-
-export default class Home extends Settings {
+@connectTranslation()
+class Home extends Settings {
 
   render() {
     return (
       <main className="homepage__main container">
         <div className="homepage__main-upper-wrapper">
-          <h2 className="homepage__main-title page-title">Державні підприємства</h2>
+          <h2 className="homepage__main-title page-title">
+            <Trans i18nKey="home.title">
+              Державні підприємства
+            </Trans>
+          </h2>
           <div className="homepage__main-filter">
             <QdtComponent
               className="homepage__main-filter-dropdown dropdown analytics__main-hiddenFilter"
@@ -321,3 +328,5 @@ export default class Home extends Settings {
   }
 
 }
+
+export default Home;

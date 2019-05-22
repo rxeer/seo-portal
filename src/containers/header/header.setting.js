@@ -4,6 +4,8 @@ import './header.scss';
 
 export class Settings extends Component {
 
+  languageInterval = 0;
+
   viz1 = {
     type: 'QdtCurrentSelections',
     props: { height: 'auto' },

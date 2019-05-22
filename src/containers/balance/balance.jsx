@@ -2,11 +2,14 @@ import React from 'react';
 
 import Select from '../../components/select/select';
 
+import { connectTranslation } from '../../middlewares/connect-translation';
+
 import QdtComponent from '../../components/QdtComponent';
 
 import { Settings } from './balance.setting';
 
-export class Balance extends Settings {
+@connectTranslation()
+class Balance extends Settings {
 
   render() {
     return (
@@ -25,28 +28,28 @@ export class Balance extends Settings {
             <div className="row chart-filters">
               <div className="col-3 col-sm-6 col-12 col-lg-3">
                 <Select
-                  label="Період"
+                  label={this.props.t('filters.period')}
                   type={this.vizPeriod.type}
                   props={this.vizPeriod.props}
                 />
               </div>
               <div className="col-3 col-sm-6 col-12 col-lg-3">
                 <Select
-                  label="Галузь"
+                  label={this.props.t('filters.industry')}
                   type={this.vizIndustry.type}
                   props={this.vizIndustry.props}
                 />
               </div>
               <div className="col-3 col-sm-6 col-12 col-lg-3">
                 <Select
-                  label="Суб’єкт управління"
+                  label={this.props.t('filters.ownership')}
                   type={this.vizOwnership.type}
                   props={this.vizOwnership.props}
                 />
               </div>
               <div className="col-3 col-sm-6 col-12 col-lg-3">
                 <Select
-                  label="Підприємство"
+                  label={this.props.t('filters.seo')}
                   type={this.vizSOE.type}
                   props={this.vizSOE.props}
                 />
@@ -65,7 +68,7 @@ export class Balance extends Settings {
         <div className="row">
           <div className="col-12 adaptive-chart-container">
             <QdtComponent
-              className="table"
+              className="table first-column-text-align-left"
               type={this.vizTable.type}
               props={this.vizTable.props}
             />
@@ -86,3 +89,5 @@ export class Balance extends Settings {
   }
 
 }
+
+export default Balance;

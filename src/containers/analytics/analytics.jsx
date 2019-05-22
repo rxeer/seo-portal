@@ -1,4 +1,7 @@
 import React from 'react';
+import { Trans } from 'react-i18next';
+
+import { connectTranslation } from '../../middlewares/connect-translation';
 
 import Select from '../../components/select/select';
 
@@ -6,7 +9,8 @@ import QdtComponent from '../../components/QdtComponent';
 
 import { Setting } from './analytics.setting';
 
-export class Analytics extends Setting {
+@connectTranslation()
+class Analytics extends Setting {
 
   render() {
     return (
@@ -26,7 +30,7 @@ export class Analytics extends Setting {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Період"
+                  label={this.props.t('filters.period')}
                   type={this.vizPeriod.type}
                   props={this.vizPeriod.props}
                 />
@@ -34,7 +38,7 @@ export class Analytics extends Setting {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Галузь"
+                  label={this.props.t('filters.industry')}
                   type={this.vizIndustry.type}
                   props={this.vizIndustry.props}
                 />
@@ -42,7 +46,7 @@ export class Analytics extends Setting {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Суб’єкт управління"
+                  label={this.props.t('filters.ownership')}
                   type={this.vizOwnership.type}
                   props={this.vizOwnership.props}
                 />
@@ -50,7 +54,7 @@ export class Analytics extends Setting {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Підприємство"
+                  label={this.props.t('filters.seo')}
                   type={this.vizSOE.type}
                   props={this.vizSOE.props}
                 />
@@ -121,7 +125,9 @@ export class Analytics extends Setting {
             <div className="analytics__main-graphWrapper">
               <div className="analytics__main-graphTitleWrapper">
                 <span className="analytics__main-graphTitle">
-              Порівняльний графік
+                  <Trans i18nKey="analytics.table-title">
+                    Порівняльний графік
+                  </Trans>
                 </span>
                 <QdtComponent
                   className="analytics__main-graphFilter dropdown"
@@ -191,7 +197,7 @@ export class Analytics extends Setting {
                 props={this.vizKPI.props}
               />
             </div>
-            <div className="analytics__main-tableWrapper adaptive-chart-container">
+            <div className="analytics__main-tableWrapper">
               <QdtComponent
                 className="table"
                 type={this.vizTable.type}
@@ -230,3 +236,5 @@ export class Analytics extends Setting {
   }
 
 }
+
+export default Analytics;

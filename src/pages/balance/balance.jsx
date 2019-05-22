@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Balance } from '../../containers/balance/balance';
+import Balance from '../../containers/balance/balance';
 
 const EmbedObject = () => <Balance />;
 

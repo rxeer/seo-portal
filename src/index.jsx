@@ -5,6 +5,8 @@ import { AppContainer } from 'react-hot-loader';
 
 import App from './components/App';
 
+import './localization';
+
 import './styles/index.scss';
 
 const render = (Component) => {

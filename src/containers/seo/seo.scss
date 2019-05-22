@@ -1,70 +1,94 @@
 @import "../../styles/variables";
 
 .seo {
-	&.container {
-		margin-top: 70px !important;
-	}
+  &.container {
+    margin-top: 70px !important;
+  }
 
-	.page-title {
-		margin-bottom: 20px;
+  .page-title {
+    margin-bottom: 20px;
 
-		.qv-media-tool-html.qv-interactive {
-			overflow: hidden !important;
-		}
-	}
+    .qv-media-tool-html.qv-interactive {
+      overflow: hidden !important;
+    }
+  }
 
-	&-table {
-		background: #fff;
-		margin: 15px 0;
-		padding: 20px;
+  &-table {
+    background: #fff;
+    margin: 15px 0;
+    padding: 20px;
 
-		.qv-media-tool-html {
-			& > div[dir="auto"] {
-				text-align: left !important;
-				font-family: Roboto, sans-serif !important;
-				font-size: 12px;
-				font-weight: 300;
-				text-transform: uppercase;
-			}
-		}
+    .qv-media-tool-html {
+      & > div[dir="auto"] {
+        text-align: left !important;
+        font-family: Roboto, sans-serif !important;
+        font-size: 12px;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+    }
 
-		& font {
-			font-size: 12px !important;
-			font-style: normal;
-			font-stretch: normal;
-			line-height: 1.33;
-			letter-spacing: normal;
-			color: #414141;
-		}
+    & font {
+      font-size: 12px !important;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.33;
+      letter-spacing: normal;
+      color: #414141;
+    }
 
-		@media screen and (max-width: map-get($views, mobile-medium)) {
-			div[dir="auto"] {
-				text-align: left !important;
+    @media screen and (max-width: map-get($views, mobile-medium)) {
+      div[dir="auto"] {
+        text-align: left !important;
 
-				font {
-					font-weight: 300 !important;
-				}
-			}
-		}
-	}
+        font {
+          font-weight: 300 !important;
+        }
+      }
+    }
+  }
 
-	&-title {
-		.qv-object-header {
-			padding: 0 !important;
-		}
+  &-title {
+    .qv-object-header {
+      padding: 0 !important;
+    }
 
-		&,
-		.qvt-visualization-title {
-			font-family: Roboto, sans-serif;
-			font-size: 20px !important;
-			font-weight: bold;
-			font-style: normal;
-			font-stretch: normal;
-			line-height: 1.2;
-			padding: 20px 0;
-			letter-spacing: 0.6px;
-			color: #414141 !important;
-			text-transform: uppercase;
-		}
-	}
+    &,
+    .qvt-visualization-title {
+      font-family: Roboto, sans-serif;
+      font-size: 20px !important;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.2;
+      padding: 20px 0;
+      letter-spacing: 0.6px;
+      color: #414141 !important;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.seo-block-table {
+  & b font {
+    font-family: Roboto, sans-serif;
+    font-size: 0.75rem !important;
+    font-weight: 300;
+    line-height: 1.33;
+    color: map-get($colors, default-text);
+    text-transform: uppercase;
+	  &:after {
+		  content:":";
+	  }
+  }
+  & font {
+	  font-family: Roboto, sans-serif;
+	  font-size: .87rem !important;
+	  font-weight: normal;
+	  line-height: 1.43;
+	  letter-spacing: normal;
+	  color: map-get($colors, default-text);
+	  display: block;
+	  padding-top: .5rem;
+  }
 }

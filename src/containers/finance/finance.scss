@@ -9,6 +9,10 @@
 
 	.period {
 		margin-bottom: -80px;
+
+		@media all and (max-width: 765px) {
+			margin-bottom: 0;
+		}
 	}
 
 	&-period {

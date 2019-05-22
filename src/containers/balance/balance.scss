@@ -10,6 +10,10 @@
 	&-period {
 		align-items: center;
 		margin-bottom: -80px;
+
+		@media all and (max-width: 770px) {
+			margin-bottom: 0;
+		}
 	}
 
 	&-title .responsive-text {

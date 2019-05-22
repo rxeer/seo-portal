@@ -1,12 +1,15 @@
 import React from 'react';
 
+import { connectTranslation } from '../../middlewares/connect-translation';
+
 import Select from '../../components/select/select';
 
 import QdtComponent from '../../components/QdtComponent';
 
 import { Settings } from './ownership.setting';
 
-export class Ownership extends Settings {
+@connectTranslation()
+class Ownership extends Settings {
 
   render() {
     return (
@@ -26,7 +29,7 @@ export class Ownership extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Період"
+                  label={this.props.t('filters.period')}
                   type={this.vizPeriod.type}
                   props={this.vizPeriod.props}
                 />
@@ -34,7 +37,7 @@ export class Ownership extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Галузь"
+                  label={this.props.t('filters.industry')}
                   type={this.vizIndustry.type}
                   props={this.vizIndustry.props}
                 />
@@ -42,7 +45,7 @@ export class Ownership extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Суб’єкт управління"
+                  label={this.props.t('filters.ownership')}
                   type={this.vizOwnership.type}
                   props={this.vizOwnership.props}
                 />
@@ -50,7 +53,7 @@ export class Ownership extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
                   lineable
-                  label="Підприємство"
+                  label={this.props.t('filters.seo')}
                   type={this.vizSOE.type}
                   props={this.vizSOE.props}
                 />
@@ -149,3 +152,5 @@ export class Ownership extends Settings {
   }
 
 }
+
+export default Ownership;

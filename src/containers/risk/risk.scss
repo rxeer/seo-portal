@@ -66,6 +66,14 @@
 		}
 	}
 
+	.risk-table {
+		th[ng-repeat="header in row.cells"] {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
 	&-title {
 		text-align: left;
 		margin-bottom: 2rem;
@@ -79,6 +87,12 @@
 			letter-spacing: 0.9px;
 			//color: #414141;
 			text-transform: uppercase;
+		}
+
+		&.table-title {
+			@media all and (max-width: 640px) {
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -229,16 +243,22 @@
 				align-items: center;
 
 				&-text {
-					width: 80%;
+					width: 100%;
 
 					.qv-interactive > div {
-						padding-top: 2px;
+						padding-top: 8px;
 						color: #ffffff !important;
 						text-align: left !important;
 						font-family: Roboto, sans-serif !important;
 						line-height: 0.75rem !important;
-						font-size: 1.2rem !important;
+						font-size: 14px !important;
 						text-decoration: underline;
+					}
+
+					.qv-interactive > div font {
+						font-size: 14px !important;
+						font-weight: normal !important;
+						font-family: Roboto, sans-serif !important;
 					}
 
 					.qv-interactive > div font:hover {
@@ -251,6 +271,7 @@
 
 				&-button {
 					width: 20%;
+					display: none;
 
 					& .container {
 						padding: 0;
@@ -306,6 +327,15 @@
 						text-align: center;
 						color: #ffffff !important;
 					}
+
+					.qv-media-tool-html {
+						div[dir="auto"] > b {
+							display: none;
+							height: 0;
+							position: absolute;
+							right: -100vw;
+						}
+					}
 				}
 
 				& .qv-object-header {
@@ -332,6 +362,8 @@
 							align-items: center;
 							justify-content: center;
 							height: 1.2rem;
+							color: #fff;
+							font-family: 'Roboto', sans-serif;
 							transition: all .3s;
 
 							&:hover {

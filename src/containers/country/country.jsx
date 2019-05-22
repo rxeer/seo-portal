@@ -1,12 +1,15 @@
 import React from 'react';
 
+import { connectTranslation } from '../../middlewares/connect-translation';
+
 import Select from '../../components/select/select';
 
 import QdtComponent from '../../components/QdtComponent';
 
 import { Settings } from './country.settings';
 
-export default class Country extends Settings {
+@connectTranslation()
+class Country extends Settings {
 
   render() {
     return (
@@ -95,3 +98,5 @@ export default class Country extends Settings {
   }
 
 }
+
+export default Country;

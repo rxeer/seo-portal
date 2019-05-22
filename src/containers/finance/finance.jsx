@@ -1,12 +1,15 @@
 import React from 'react';
 
+import { connectTranslation } from '../../middlewares/connect-translation';
+
 import Select from '../../components/select/select';
 
 import QdtComponent from '../../components/QdtComponent';
 
 import { Settings } from './finance.setting';
 
-export class Finance extends Settings {
+@connectTranslation()
+class Finance extends Settings {
 
   render() {
     return (
@@ -25,28 +28,28 @@ export class Finance extends Settings {
             <div className="row chart-filters">
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
-                  label="Період"
+                  label={this.props.t('filters.period')}
                   type={this.vizPeriod.type}
                   props={this.vizPeriod.props}
                 />
               </div>
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
-                  label="Галузь"
+                  label={this.props.t('filters.industry')}
                   type={this.vizIndustry.type}
                   props={this.vizIndustry.props}
                 />
               </div>
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
-                  label="Суб’єкт управління"
+                  label={this.props.t('filters.ownership')}
                   type={this.vizOwnership.type}
                   props={this.vizOwnership.props}
                 />
               </div>
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
                 <Select
-                  label="Підприємство"
+                  label={this.props.t('filters.seo')}
                   type={this.vizSOE.type}
                   props={this.vizSOE.props}
                 />
@@ -66,7 +69,7 @@ export class Finance extends Settings {
         <div className="row">
           <div className="col-12">
             <QdtComponent
-              className="table"
+              className="table first-column-text-align-left"
               type={this.vizTable.type}
               props={this.vizTable.props}
             />
@@ -87,3 +90,5 @@ export class Finance extends Settings {
   }
 
 }
+
+export default Finance;

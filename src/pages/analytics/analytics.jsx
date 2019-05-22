@@ -1,5 +1,6 @@
 import React from 'react';
-import { Analytics } from '../../containers/analytics/analytics';
+
+import Analytics from '../../containers/analytics/analytics';
 
 const EmbedObject = () => <Analytics />;
 

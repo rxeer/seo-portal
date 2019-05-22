@@ -1,0 +1,48 @@
+@import "../../styles/variables";
+
+.not-found {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 50px 0;
+	justify-content: center;
+
+	&__img img {
+		max-width: 100%;
+	}
+
+	&__content {
+		padding-top: 30px;
+		font-family: Roboto, sans-serif;
+		font-size: 16px;
+		font-weight: 500;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: 1.5;
+		letter-spacing: normal;
+		color: #747474;
+		text-align: center;
+
+		& > p {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__back-link {
+		padding: 12px 20px;
+		border-radius: 4px;
+		color: #fff;
+		display: inline-block;
+		text-decoration: none;
+		transition: all .3s;
+		background-color: map-get($colors, default-blue);
+
+		&:hover {
+			opacity: .7;
+		}
+
+		@media all and (max-width: map-get($views, mobile-medium)) {
+			width: 100%;
+		}
+	}
+}
