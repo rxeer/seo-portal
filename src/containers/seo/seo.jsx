@@ -242,7 +242,7 @@ class SEO extends Settings {
         <div className="row">
           <div className="col-12">
             <QdtComponent
-              className="table seo-title"
+              className="table seo-title first-table first-column-text-align-left"
               type={this.vizRegister.type}
               props={this.vizRegister.props}
             />
@@ -251,7 +251,7 @@ class SEO extends Settings {
         <div className="row">
           <div className="col-12">
             <QdtComponent
-              className="table seo-title"
+              className="table seo-title second-table first-column-text-align-left"
               type={this.vizHistory.type}
               props={this.vizHistory.props}
             />
@@ -260,7 +260,7 @@ class SEO extends Settings {
         <div className="row">
           <div className="col-12">
             <QdtComponent
-              className="table"
+              className="table first-column-text-align-left"
               type={this.vizTable.type}
               props={this.vizTable.props}
             />

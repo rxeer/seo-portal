@@ -243,7 +243,8 @@
 				align-items: center;
 
 				&-text {
-					width: 100%;
+					width: 91%;
+					margin-left: -10px;
 
 					.qv-interactive > div {
 						padding-top: 8px;
@@ -260,18 +261,10 @@
 						font-weight: normal !important;
 						font-family: Roboto, sans-serif !important;
 					}
-
-					.qv-interactive > div font:hover {
-						font-size: 14px;
-						font-weight: 500;
-						cursor: pointer;
-						color: map-get($colors, default-orange);
-					}
 				}
 
 				&-button {
 					width: 20%;
-					display: none;
 
 					& .container {
 						padding: 0;

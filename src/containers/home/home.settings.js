@@ -138,7 +138,15 @@ export class Settings extends Component {
     type: 'QdtViz',
     props: {
       id: 'pcBfgv',
-      height: '80px',
+      height: '75px',
+    },
+  };
+
+  vizNetProfitLabelUnit = {
+    type: 'QdtViz',
+    props: {
+      id: 'JfTC',
+      height: '27px',
     },
   };
 

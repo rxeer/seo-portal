@@ -123,6 +123,22 @@
 				height: 105px !important;
 			}
 		}
+		&-unit {
+			position: absolute;
+			display: block;
+			top: 6.6%;
+			width: 100%;
+		}
+
+		&-unit font{
+			font-family: Roboto, sans-serif;
+			font-size: .87rem !important;
+			letter-spacing: 0.2px;
+			font-weight: normal;
+			text-align: left !important;
+			color: #fff;
+			display: block;
+		}
 
 		&-title font {
 			width: 12.7rem;

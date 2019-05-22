@@ -76,6 +76,11 @@ class Home extends Settings {
             </div>
             <div className="homepage__main-big-category orange">
               <QdtComponent
+                className="homepage__main-big-category-unit"
+                type={this.vizNetProfitLabelUnit.type}
+                props={this.vizNetProfitLabelUnit.props}
+              />
+              <QdtComponent
                 className="homepage__main-big-category-number"
                 type={this.vizNetProfitValue.type}
                 props={this.vizNetProfitValue.props}

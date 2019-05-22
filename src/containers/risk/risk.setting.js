@@ -24,7 +24,9 @@ export class Settings extends Component {
      vizYear = {
        type: 'QdtViz',
        props: {
-         id: 'wAVZxEP', height: '30px',
+         // id: 'wAVZxEP',
+         id: 'ktxVjN',
+         height: '30px',
        },
      };
 

@@ -62,6 +62,44 @@ class Analytics extends Setting {
             </div>
           </div>
         </div>
+        <div className="row">
+          <div className="col-12">
+            <div className="analytics__main-graphWrapper">
+              <div className="analytics__main-graphTitleWrapper">
+                <span className="analytics__main-graphTitle">
+                  <Trans i18nKey="analytics.table-title">
+                    Порівняльний графік
+                  </Trans>
+                </span>
+                <QdtComponent
+                  className="analytics__main-graphFilter dropdown"
+                  type={this.vizKPI.type}
+                  props={this.vizKPI.props}
+                />
+                <QdtComponent
+                  className="analytics__main-graphFilter dropdown"
+                  type={this.vizKPI2.type}
+                  props={this.vizKPI2.props}
+                />
+                <QdtComponent
+                  className="analytics__main-graphFilter dropdown"
+                  type={this.vizKPI3.type}
+                  props={this.vizKPI3.props}
+                />
+              </div>
+              <QdtComponent
+                className="analytics__main-graphSubtitle"
+                type={this.vizRemark.type}
+                props={this.vizRemark.props}
+              />
+              <QdtComponent
+                className="analytics__main-graph"
+                type={this.vizBubblePlot.type}
+                props={this.vizBubblePlot.props}
+              />
+            </div>
+          </div>
+        </div>
         <div className="row analytics__main-categoryWrapper">
           <div className="col-12 col-sm-6 col-lg-3">
             <div className="analytics__main-category">
@@ -120,44 +158,6 @@ class Analytics extends Setting {
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-12">
-            <div className="analytics__main-graphWrapper">
-              <div className="analytics__main-graphTitleWrapper">
-                <span className="analytics__main-graphTitle">
-                  <Trans i18nKey="analytics.table-title">
-                    Порівняльний графік
-                  </Trans>
-                </span>
-                <QdtComponent
-                  className="analytics__main-graphFilter dropdown"
-                  type={this.vizKPI.type}
-                  props={this.vizKPI.props}
-                />
-                <QdtComponent
-                  className="analytics__main-graphFilter dropdown"
-                  type={this.vizKPI2.type}
-                  props={this.vizKPI2.props}
-                />
-                <QdtComponent
-                  className="analytics__main-graphFilter dropdown"
-                  type={this.vizKPI3.type}
-                  props={this.vizKPI3.props}
-                />
-              </div>
-              <QdtComponent
-                className="analytics__main-graphSubtitle"
-                type={this.vizRemark.type}
-                props={this.vizRemark.props}
-              />
-              <QdtComponent
-                className="analytics__main-graph"
-                type={this.vizBubblePlot.type}
-                props={this.vizBubblePlot.props}
-              />
-            </div>
-          </div>
-        </div>
         <div className="row analytics__main-chartsWrapper">
           <div className="col-sm-12 col-12 col-lg-6">
             <div className="analytics__main-chartWrapper">
@@ -190,16 +190,9 @@ class Analytics extends Setting {
         </div>
         <div className="row">
           <div className="col-12">
-            <div className="analytics__main-tableTitleWrapper">
-              <QdtComponent
-                className="analytics__main-filter dropdown"
-                type={this.vizKPI.type}
-                props={this.vizKPI.props}
-              />
-            </div>
             <div className="analytics__main-tableWrapper">
               <QdtComponent
-                className="table"
+                className="table first-column-text-align-left"
                 type={this.vizTable.type}
                 props={this.vizTable.props}
               />

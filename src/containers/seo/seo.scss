@@ -13,6 +13,16 @@
     }
   }
 
+  .table {
+    &.first-table > div > div {
+      min-height: 200px !important;
+    }
+
+    &.second-table > div > div {
+      min-height: 140px !important;
+    }
+  }
+
   &-table {
     background: #fff;
     margin: 15px 0;
@@ -70,6 +80,10 @@
 }
 
 .seo-block-table {
+
+  & > div > div {
+    height: 110px !important;
+  }
   & b font {
     font-family: Roboto, sans-serif;
     font-size: 0.75rem !important;

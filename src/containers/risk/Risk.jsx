@@ -109,18 +109,6 @@ class Risk extends Settings {
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3 responsive">
                 <div className="risk__main-upperWrapper-itemLast-item keys">
                   <div className="key-item">
-                    <QdtComponent
-                      className="risk__main-upperWrapper-itemLast-item-up"
-                      type={this.vizTrendUp.type}
-                      props={this.vizTrendUp.props}
-                    />
-                    <QdtComponent
-                      className="risk__main-upperWrapper-itemLast-item-down"
-                      type={this.vizTrendDown.type}
-                      props={this.vizTrendDown.props}
-                    />
-                  </div>
-                  <div className="key-item">
                     <div className="risk__main-upperWrapper-itemLast-item">
                       <QdtComponent
                         className="risk__main-upperWrapper-itemLast-item-title"
@@ -138,13 +126,25 @@ class Risk extends Settings {
                         props={this.vizTHDirectDown.props}
                       />
                     </div>
-                    <div className="risk__main-upperWrapper-itemLast-item">
-                      <QdtComponent
-                        className="risk__main-upperWrapper-itemLast-item-title"
-                        type={this.vizTrendLabel.type}
-                        props={this.vizTrendLabel.props}
-                      />
-                    </div>
+                  </div>
+                  <div className="key-item">
+                    <QdtComponent
+                      className="risk__main-upperWrapper-itemLast-item-up"
+                      type={this.vizTrendUp.type}
+                      props={this.vizTrendUp.props}
+                    />
+                    <QdtComponent
+                      className="risk__main-upperWrapper-itemLast-item-down"
+                      type={this.vizTrendDown.type}
+                      props={this.vizTrendDown.props}
+                    />
+                    {/* <div className="risk__main-upperWrapper-itemLast-item"> */}
+                    {/*  <QdtComponent */}
+                    {/*    className="risk__main-upperWrapper-itemLast-item-title" */}
+                    {/*    type={this.vizTrendLabel.type} */}
+                    {/*    props={this.vizTrendLabel.props} */}
+                    {/*  /> */}
+                    {/* </div> */}
                   </div>
                 </div>
               </div>
@@ -164,12 +164,10 @@ class Risk extends Settings {
         <div className="row">
           <div className="col-12">
             <p className="risk__main-title">
-              <Trans i18nKey="risk.table-title">
-                Обрані показники
-              </Trans>
+              <Trans i18nKey="risk.table-title">Обрані показники</Trans>
             </p>
             <QdtComponent
-              className="table risk-table"
+              className="table first-column-text-align-left risk-table"
               type={this.vizKPISelected.type}
               props={this.vizKPISelected.props}
             />
@@ -178,12 +176,10 @@ class Risk extends Settings {
         <div className="row">
           <div className="col-12">
             <p className="risk__main-title table-title">
-              <Trans i18nKey="risk.indicator-title">
-                Ризик-індикатори
-              </Trans>
+              <Trans i18nKey="risk.indicator-title">Ризик-індикатори</Trans>
             </p>
             <QdtComponent
-              className="table"
+              className="table first-column-text-align-left"
               type={this.vizTable.type}
               props={this.vizTable.props}
             />

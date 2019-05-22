@@ -30,6 +30,8 @@ export class Settings extends Component {
     },
   };
 
+  // 'JfTC'
+
   vizCountryLevel = {
     type: 'QdtViz',
     props: {

@@ -25,7 +25,7 @@
 	}
 
 	&-upperWrapper {
-		margin: 1.6rem 0 0 0;
+		margin: 0;
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
@@ -62,7 +62,6 @@
 	&-categoryWrapper {
 		display: flex;
 		flex-wrap: wrap;
-		margin-top: 1.9rem;
 		justify-content: space-between;
 	}
 
@@ -181,6 +180,21 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		width: 100%;
+		margin: 0;
+
+		& > .col-12:first-of-type {
+			padding-left: 0;
+		}
+
+		& > .col-12:last-of-type {
+			padding-right: 0;
+		}
+
+		@media all and (max-width: 990px) {
+			& > .col-12 {
+				padding: 0;
+			}
+		}
 	}
 
 	&-chartWrapper {
