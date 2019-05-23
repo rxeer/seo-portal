@@ -259,7 +259,7 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
         background: #fff;
 
         .rc-collapse-item .rc-collapse-header {
-          padding: 20px 30px;
+          padding: 20px 15px;
           position: relative;
           border-bottom: solid 1px #eaeaea;
         }
@@ -277,7 +277,7 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        padding: 20px 15px;
+        padding: 20px 30px;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
