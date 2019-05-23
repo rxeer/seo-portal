@@ -135,18 +135,29 @@ class Ownership extends Settings {
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-12">
-            <p className="ownership-title hidden-title">
-              Фінансовий стан/результат
-            </p>
-            <QdtComponent
-              className="table"
-              type={this.vizTable.type}
-              props={this.vizTable.props}
-            />
+        <div className="col-12">
+          <div className="row country__main-upperWrapper-text">
+            <div className="col-lg-12 col-md-12" style={{ padding: 0 }}>
+              <div className="country__main-upperWrapper-text ownership-filter">
+                <QdtComponent
+                  className="country__main-upperWrapper-title-button"
+                  type={this.vizButton2.type}
+                  props={this.vizButton2.props}
+                />
+                <QdtComponent
+                  className="country__main-upperWrapper-btnTitle"
+                  type={this.vizA2A2.type}
+                  props={this.vizA2A2.props}
+                />
+              </div>
+            </div>
           </div>
         </div>
+        <QdtComponent
+          className="table"
+          type={this.vizTable.type}
+          props={this.vizTable.props}
+        />
       </div>
     );
   }

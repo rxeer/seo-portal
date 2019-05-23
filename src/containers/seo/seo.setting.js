@@ -229,14 +229,14 @@ export class Settings extends Component {
   vizRegister = {
     type: 'QdtViz',
     props: {
-      id: 'ByzJFN', height: '180px',
+      id: 'ByzJFN', height: '200px',
     },
   };
 
   vizHistory = {
     type: 'QdtViz',
     props: {
-      id: 'QYGFdE', height: '110px',
+      id: 'QYGFdE', height: '200px',
     },
   };
 

@@ -87,6 +87,10 @@ ul {
     height: 45px;
   }
 
+  &-hidden {
+    display: none;
+  }
+
   .qv-inner-object,
   .qv-inner-object .qv-object-simple-list {
     overflow: visible !important;
