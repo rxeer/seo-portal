@@ -42,9 +42,9 @@ ul {
 }
 
 .first-column-text-align-left
-  tr[ng-repeat="row in grid.rows"]
-  td[ng-repeat="cell in row.cells"]:first-child
-  span {
+tr[ng-repeat="row in grid.rows"]
+td[ng-repeat="cell in row.cells"]:first-child
+span {
   text-align: left;
   padding-left: .5rem;
 }
@@ -112,12 +112,12 @@ ul {
 }
 
 .chart-filters {
-	display: flex;
-	margin: 0 0 30px;;
-	background-color: #00bfe7;
-	border-radius: 0.25rem;
-	box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.1);
-	padding: 1.25rem 0;
+  display: flex;
+  margin: 0 0 30px;;
+  background-color: #00bfe7;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.1);
+  padding: 1.25rem 0;
 
   @media screen and (max-width: map-get($views, tablet)) {
     margin-bottom: 1rem;
@@ -179,34 +179,34 @@ ul {
     flex-direction: column-reverse;
     align-items: flex-end;
 
-		&:last-of-type button.lui-button {
-			height: 45px;
-			min-width: 200px;
-			border-radius: 4px;
-			font-weight: 500;
-			line-height: 1.25;
-			text-align: center;
-			margin: 0 -20px 0 0;
-			padding: 0;
-			position: relative;
-			font-size: 1rem !important;
-			transition: all .3s;
-			color: map-get($colors, default-blue);
-			border: solid 1px map-get($colors, default-blue);
+    &:last-of-type button.lui-button {
+      height: 45px;
+      min-width: 200px;
+      border-radius: 4px;
+      font-weight: 500;
+      line-height: 1.25;
+      text-align: center;
+      margin: 0 -20px 0 0;
+      padding: 0;
+      position: relative;
+      font-size: 1rem !important;
+      transition: all .3s;
+      color: map-get($colors, default-blue);
+      border: solid 1px map-get($colors, default-blue);
 
-			&:before {
-				width: 16px;
-				height: 16px;
-				top: 2px;
-				position: relative;
-				margin-right: 3px;
-				display: inline-block;
-				content: url("../assets/images/partners/download.svg");
-			}
+      &:before {
+        width: 16px;
+        height: 16px;
+        top: 2px;
+        position: relative;
+        margin-right: 3px;
+        display: inline-block;
+        content: url("../assets/images/partners/download.svg");
+      }
 
-			&:hover {
-				background: map-get($colors, blue-light);
-			}
+      &:hover {
+        background: map-get($colors, blue-light);
+      }
 
       @media screen and (max-width: map-get($views, mobile-medium)) {
         width: 77vw;
@@ -245,31 +245,47 @@ ul {
   background-color: #fff;
   box-shadow: $chart-box-shadow;
 
-  .__canvas {
-    padding: 15px;
+  &-period {
+    .chart__header {
+      padding: 0 10px 15px !important;
+    }
   }
 
-	&__header {
-		display: flex;
-		padding: 0 10px;
-		align-items: center;
-		background-color: #f2f3f5;
-		justify-content: space-between;
+  &__period {
+    margin-top: -36px;
 
-		&--green {
-			div:nth-of-type(2n) font {
-				color: map-get($colors, default-green);
-			}
-		}
+    & > div > div {
+      height: 35px !important;
+    }
 
-		&--red {
-			div:nth-of-type(2n) font {
-				color: map-get($colors, default-red);
-			}
-		}
+    font {
+      font-size: 14px !important;
+      padding-left: 10px;
+      font-family: Roboto, sans-serif !important;
+    }
+  }
 
-		& > div {
-			flex: 1 1 auto;
+  &__header {
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    background-color: #f2f3f5;
+    justify-content: space-between;
+
+    &--green {
+      div:nth-of-type(2n) font {
+        color: map-get($colors, default-green);
+      }
+    }
+
+    &--red {
+      div:nth-of-type(2n) font {
+        color: map-get($colors, default-red);
+      }
+    }
+
+    & > div {
+      flex: 1 1 auto;
 
       .qv-interactive {
         width: auto;
@@ -289,22 +305,22 @@ ul {
       }
     }
 
-		& > div:first-of-type {
-			flex-grow: 2.6;
+    & > div:first-of-type {
+      flex-grow: 2.6;
 
       .qv-interactive {
         font-weight: bold;
         color: #414141;
         justify-content: flex-start;
 
-				& > div {
-					font {
-						letter-spacing: normal;
-						font-size: 15px !important;
-					}
-				}
-			}
-		}
+        & > div {
+          font {
+            letter-spacing: normal;
+            font-size: 15px !important;
+          }
+        }
+      }
+    }
 
     & > div:last-of-type {
       display: none;
@@ -317,7 +333,7 @@ ul {
 }
 
 .table-title {
-	margin-bottom: -50px;
+  margin-bottom: -50px;
 }
 
 .text-center {

@@ -20,13 +20,13 @@ export class Settings extends Component {
     },
   };
 
-  // KPI and Plots
-  /* vizKPIAssets = {
+  vizKPIAssets = {
     type: 'QdtViz',
     props: {
-      id: 'TWJYrS', height: '50px',
+      id: 'XKjCU', height: '50px',
     },
-  }; */
+  };
+
   vizKPIAssetsLabel = {
     type: 'QdtViz',
     props: {
