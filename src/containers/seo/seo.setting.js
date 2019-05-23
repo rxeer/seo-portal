@@ -12,6 +12,13 @@ export class Settings extends Component {
     },
   };
 
+  vizPeriodLabel = {
+    type: 'QdtViz',
+    props: {
+      id: 'FSzPT', height: '30px',
+    },
+  };
+
   vizKPIAssetsLabel = {
     type: 'QdtViz',
     props: {

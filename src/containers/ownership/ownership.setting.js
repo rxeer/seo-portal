@@ -4,6 +4,13 @@ import './ownership.scss';
 
 export class Settings extends Component {
 
+  vizPeriodLabel = {
+    type: 'QdtViz',
+    props: {
+      id: 'EUnJBt', height: '30px',
+    },
+  };
+
   vizOwnershipLevel = {
     type: 'QdtViz',
     props: {

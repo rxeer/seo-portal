@@ -20,13 +20,12 @@ export class Settings extends Component {
     },
   };
 
-  // KPI and Plots
-  /* vizKPIAssets = {
+  vizKPIAssets = {
     type: 'QdtViz',
     props: {
-      id: 'TWJYrS', height: '50px',
+      id: 'XKjCU', height: '50px',
     },
-  }; */
+  };
   vizKPIAssetsLabel = {
     type: 'QdtViz',
     props: {
@@ -173,7 +172,7 @@ export class Settings extends Component {
     type: 'QdtViz',
     props: {
       id: 'f321ca4e-5be0-4851-9cf9-2e8134643d2e',
-      height: '450px',
+      height: '100%',
       exportData: true,
       exportDataOptions: { format: 'OOXML', state: 'P' },
       exportDataTitle: 'Excel',

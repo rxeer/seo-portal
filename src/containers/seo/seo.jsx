@@ -64,7 +64,7 @@ class SEO extends Settings {
         </div>
         <div className="row">
           <div className="col-lg-4 col-md-6">
-            <div className="chart">
+            <div className="chart chart-period">
               <div className="chart__header">
                 <QdtComponent
                   type={this.vizKPIAssetsLabel.type}
@@ -79,6 +79,11 @@ class SEO extends Settings {
                   props={this.vizLastPeriodLabel.props}
                 />
               </div>
+              <QdtComponent
+                className="chart__period"
+                type={this.vizPeriodLabel.type}
+                props={this.vizPeriodLabel.props}
+              />
               <div className="chart__canvas">
                 <QdtComponent
                   type={this.vizPlotAssets.type}
@@ -88,7 +93,7 @@ class SEO extends Settings {
             </div>
           </div>
           <div className="col-lg-4 col-md-6">
-            <div className="chart">
+            <div className="chart chart-period">
               <div className="chart__header chart__header--green">
                 <QdtComponent
                   type={this.vizKPIProfitLabel.type}
@@ -103,6 +108,11 @@ class SEO extends Settings {
                   props={this.vizLastPeriodLabel.props}
                 />
               </div>
+              <QdtComponent
+                className="chart__period"
+                type={this.vizPeriodLabel.type}
+                props={this.vizPeriodLabel.props}
+              />
               <div className="chart__canvas">
                 <QdtComponent
                   type={this.vizPlotProfit.type}
@@ -112,7 +122,7 @@ class SEO extends Settings {
             </div>
           </div>
           <div className="col-lg-4 col-md-12">
-            <div className="chart">
+            <div className="chart chart-period">
               <div className="chart__header chart__header--red">
                 <QdtComponent
                   type={this.vizKPIUnProfitLabel.type}
@@ -127,6 +137,11 @@ class SEO extends Settings {
                   props={this.vizLastPeriodLabel.props}
                 />
               </div>
+              <QdtComponent
+                className="chart__period"
+                type={this.vizPeriodLabel.type}
+                props={this.vizPeriodLabel.props}
+              />
               <div className="chart__canvas">
                 <QdtComponent
                   type={this.vizPlotUnProfit.type}
