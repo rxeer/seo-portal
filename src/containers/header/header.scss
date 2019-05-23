@@ -113,12 +113,9 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-shadow: $navigation-shadow;
-  box-shadow: $navigation-shadow;
 
   &__logo {
-    margin-left: 3%;
-    margin-bottom: 0;
+    margin: 0;
 
     &-link-img {
       width: 9rem;
@@ -218,7 +215,7 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
-      margin: 0 10px;
+      margin: 0 0 0 10px;
       width: 8.75rem;
 
       & > div {
@@ -262,7 +259,7 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
         background: #fff;
 
         .rc-collapse-item .rc-collapse-header {
-          padding: 20px 15px;
+          padding: 20px 30px;
           position: relative;
           border-bottom: solid 1px #eaeaea;
         }

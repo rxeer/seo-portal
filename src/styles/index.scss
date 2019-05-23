@@ -259,7 +259,7 @@ span {
     }
 
     font {
-      font-size: 14px !important;
+      font-size: 11px !important;
       padding-left: 10px;
       font-family: Roboto, sans-serif !important;
     }
@@ -306,7 +306,7 @@ span {
     }
 
     & > div:first-of-type {
-      flex-grow: 2.6;
+      flex-grow: 2.7;
 
       .qv-interactive {
         font-weight: bold;
@@ -316,7 +316,7 @@ span {
         & > div {
           font {
             letter-spacing: normal;
-            font-size: 15px !important;
+            font-size: 17px !important;
           }
         }
       }
