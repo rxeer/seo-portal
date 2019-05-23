@@ -154,7 +154,7 @@ class Ownership extends Settings {
           </div>
         </div>
         <QdtComponent
-          className="table"
+          className="table first-column-text-align-left"
           type={this.vizTable.type}
           props={this.vizTable.props}
         />

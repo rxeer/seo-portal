@@ -167,7 +167,7 @@ class Risk extends Settings {
               <Trans i18nKey="risk.table-title">Обрані показники</Trans>
             </p>
             <QdtComponent
-              className="table first-column-text-align-left"
+              className="table first-column-text-align-left compress-table"
               type={this.vizKPISelected.type}
               props={this.vizKPISelected.props}
             />

@@ -3,6 +3,26 @@
 .risk__main {
 	margin-top: 70px !important;
 
+	.compress-table {
+		tbody {
+			tr[ng-repeat="row in grid.headerRows"]:first-of-type {
+				display: block !important;
+
+				td:first-of-type {
+					width: 300px !important;
+				}
+			}
+
+			tr[ng-repeat="row in grid.rows"]:first-of-type {
+				display: block !important;
+
+				td:first-of-type {
+					width: 320px !important;
+				}
+			}
+		}
+	}
+
 	&-itemQuart {
 		width: 24%;
 		margin-bottom: 2.5rem;

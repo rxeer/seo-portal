@@ -176,7 +176,8 @@ export class Settings extends Component {
     vizKPISelected = {
       type: 'QdtViz',
       props: {
-        id: 'pYaXAEj', height: '135px',
+        id: 'pYaXAEj',
+        height: '135px',
       },
     };
 

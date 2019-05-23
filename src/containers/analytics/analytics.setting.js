@@ -41,7 +41,7 @@ export class Setting extends Component {
   vizPeriod = {
     type: 'QdtViz',
     props: {
-      id: 'e0787051-038d-4711-8a7f-b691864a360e',
+      id: 'BGjpfFc',
       height: '2.2rem',
     },
   };
@@ -270,7 +270,7 @@ export class Setting extends Component {
     type: 'QdtViz',
     props: {
       id: 'Ugnz',
-      height: '380px',
+      height: '780px',
       exportData: true,
       exportDataOptions: { format: 'OOXML', state: 'P' },
       exportDataTitle: 'Excel',

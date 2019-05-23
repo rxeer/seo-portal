@@ -87,7 +87,7 @@ class Country extends Settings {
         <div className="row">
           <div className="col-12">
             <QdtComponent
-              className="table"
+              className="table first-column-text-align-left"
               type={this.vizTable.type}
               props={this.vizTable.props}
             />
