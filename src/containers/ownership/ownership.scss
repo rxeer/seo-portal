@@ -17,6 +17,12 @@
 		margin-bottom: -40px;
 	}
 
+	&-filter {
+		justify-content: flex-start;
+		position: absolute;
+		top: 30px;
+	}
+
 	&-title {
 		font-family: Roboto, sans-serif;
 		font-size: 20px !important;

@@ -82,11 +82,11 @@ class Risk extends Settings {
                   />
                 </div>
                 <div className="risk__main-upperWrapper-itemAvg-itemCopy">
-                  <QdtComponent
-                    className="risk__main-upperWrapper-itemAvg-itemCopy-text"
-                    type={this.vizCopyLabel.type}
-                    props={this.vizCopyLabel.props}
-                  />
+                  {/* <QdtComponent */}
+                  {/*  className="risk__main-upperWrapper-itemAvg-itemCopy-text" */}
+                  {/*  type={this.vizCopyLabel.type} */}
+                  {/*  props={this.vizCopyLabel.props} */}
+                  {/* /> */}
                   <QdtComponent
                     className="risk__main-upperWrapper-itemAvg-itemCopy-button"
                     type={this.vizCopy.type}
@@ -167,7 +167,7 @@ class Risk extends Settings {
               <Trans i18nKey="risk.table-title">Обрані показники</Trans>
             </p>
             <QdtComponent
-              className="table first-column-text-align-left risk-table"
+              className="table first-column-text-align-left"
               type={this.vizKPISelected.type}
               props={this.vizKPISelected.props}
             />

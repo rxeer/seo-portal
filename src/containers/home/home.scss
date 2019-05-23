@@ -8,6 +8,16 @@
 		margin: 0;
 	}
 
+	.period-dropdown {
+		.title.qvt-visualization-title {
+			display: none;
+		}
+
+		.lui-select.qui-select {
+			width: 100% !important;
+		}
+	}
+
 	&-upper-wrapper {
 		display: flex;
 		flex-wrap: wrap;
@@ -46,7 +56,7 @@
 		&-dropdown {
 			height: 35px;
 			width: 12.5rem;
-			margin: 0 1rem;
+			margin: 0;
 
 			@media screen and (max-width: map-get($views, tablet)) {
 				margin: 0 5px;

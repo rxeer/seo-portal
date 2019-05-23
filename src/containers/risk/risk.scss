@@ -243,8 +243,7 @@
 				align-items: center;
 
 				&-text {
-					width: 91%;
-					margin-left: -10px;
+					width: 100%;
 
 					.qv-interactive > div {
 						padding-top: 8px;
@@ -261,31 +260,38 @@
 						font-weight: normal !important;
 						font-family: Roboto, sans-serif !important;
 					}
+
+					.qv-interactive > div font:hover {
+						font-size: 14px;
+						font-weight: 500;
+						cursor: pointer;
+						color: map-get($colors, default-orange);
+					}
 				}
 
 				&-button {
-					width: 20%;
-
-					& .container {
+					width:100px;
+					padding: 0;
+					& .container.centered {
 						padding: 0;
-						height: 1.2rem !important;
-
-						& .lui-button {
-							padding: 0;
-							width: 100% !important;
-							box-shadow: none;
-							border-radius: 0;
-							outline: none;
-							height: 1.2rem;
-
-							& .ng-binding {
-								width: 100%;
-								display: flex;
-								align-items: center;
-								justify-content: center;
-								height: 1.2rem;
-							}
+					}
+					& .lui-button {
+						padding: 0 3px;
+						border: none !important;
+						&:hover  .lui-icon--small:before {
+							color:map-get($colors, default-orange);
 						}
+						&:hover .ng-binding{
+							color:map-get($colors, default-orange);
+						}
+						.ng-binding {
+							color: #fff;
+							text-decoration: underline;
+						}
+						& .lui-icon--small:before {
+							color: #fff;
+						}
+
 					}
 				}
 			}

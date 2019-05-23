@@ -103,7 +103,9 @@ export class Settings extends Component {
      vizCopy = {
        type: 'QdtViz',
        props: {
-         id: 'WWfPU', height: '30px',
+         // id: 'WWfPU',
+         id: 'jGFLpVj',
+         height: '30px',
        },
      };
 
@@ -174,7 +176,7 @@ export class Settings extends Component {
     vizKPISelected = {
       type: 'QdtViz',
       props: {
-        id: 'pYaXAEj', height: '100px',
+        id: 'pYaXAEj', height: '135px',
       },
     };
 
