@@ -28,9 +28,14 @@ class Analytics extends Setting {
           <div className="col-12">
             <div className="row analytics__main-upperWrapper">
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
-                <Select
-                  lineable
-                  label={this.props.t('filters.period')}
+                {/*<Select*/}
+                {/*  lineable*/}
+                {/*  label={this.props.t('filters.period')}*/}
+                {/*  type={this.vizPeriod.type}*/}
+                {/*  props={this.vizPeriod.props}*/}
+                {/*/>*/}
+                <QdtComponent
+                  className="analytics__main-filter-dropdown dropdown period-dropdown"
                   type={this.vizPeriod.type}
                   props={this.vizPeriod.props}
                 />

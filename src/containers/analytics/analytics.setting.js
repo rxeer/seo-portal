@@ -42,7 +42,7 @@ export class Setting extends Component {
     type: 'QdtViz',
     props: {
       id: 'BGjpfFc',
-      height: '2.2rem',
+      height: '2.5rem',
     },
   };
 

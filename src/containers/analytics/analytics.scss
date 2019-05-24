@@ -14,6 +14,27 @@
 	&-filter.dropdown {
 		margin: 0;
 	}
+	&-filter {
+		&-dropdown {
+			position: relative;
+			padding-top: 1rem;
+			& .title.qvt-visualization-title {
+				font-family: Roboto, sans-serif !important;
+				position: absolute;
+				font-size: 12px;
+				font-weight: 500;
+				line-height: 1.33;
+				text-transform: uppercase;
+				letter-spacing: .3px;
+				color: #fff;
+				top:-1.5rem;
+			}
+
+			& .lui-select.qui-select.touch.transparent-select {
+				width: 100% !important;
+			}
+		}
+	}
 
 	&-title .responsive-text {
 		font-family: Roboto, sans-serif;
