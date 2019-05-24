@@ -92,10 +92,15 @@ class Analytics extends Setting {
                   props={this.vizKPI3.props}
                 />
               </div>
+              {/*<QdtComponent*/}
+              {/*  className="analytics__main-graphSubtitle"*/}
+              {/*  type={this.vizRemark.type}*/}
+              {/*  props={this.vizRemark.props}*/}
+              {/*/>*/}
               <QdtComponent
-                className="analytics__main-graphSubtitle"
-                type={this.vizRemark.type}
-                props={this.vizRemark.props}
+                className="chart__period"
+                type={this.vizKPIAssets.type}
+                props={this.vizKPIAssets.props}
               />
               <QdtComponent
                 className="analytics__main-graph"
@@ -166,11 +171,18 @@ class Analytics extends Setting {
         <div className="row analytics__main-chartsWrapper">
           <div className="col-sm-12 col-12 col-lg-6">
             <div className="analytics__main-chartWrapper">
-              <QdtComponent
-                className="analytics__main-chartTitle"
-                type={this.vizKPIPlotTitle.type}
-                props={this.vizKPIPlotTitle.props}
-              />
+              <div className="analytics__main-chartTitleWrapper">
+                <QdtComponent
+                  className="analytics__main-chartTitle"
+                  type={this.vizKPIPlotTitle.type}
+                  props={this.vizKPIPlotTitle.props}
+                />
+                <QdtComponent
+                  className="chart__period"
+                  type={this.vizKPIAssets.type}
+                  props={this.vizKPIAssets.props}
+                />
+              </div>
               <QdtComponent
                 className="analytics__main-chart"
                 type={this.vizKPIPlot.type}
@@ -180,11 +192,18 @@ class Analytics extends Setting {
           </div>
           <div className="col-sm-12 col-12 col-lg-6">
             <div className="analytics__main-chartWrapper ">
-              <QdtComponent
-                className="analytics__main-chartTitle"
-                type={this.vizKPI2PlotTitle.type}
-                props={this.vizKPI2PlotTitle.props}
-              />
+              <div className="analytics__main-chartTitleWrapper">
+                <QdtComponent
+                  className="analytics__main-chartTitle"
+                  type={this.vizKPI2PlotTitle.type}
+                  props={this.vizKPI2PlotTitle.props}
+                />
+                <QdtComponent
+                  className="chart__period"
+                  type={this.vizKPIAssets.type}
+                  props={this.vizKPIAssets.props}
+                />
+              </div>
               <QdtComponent
                 className="analytics__main-chart"
                 type={this.vizKPI2Plot.type}

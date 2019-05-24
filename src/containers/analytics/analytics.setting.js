@@ -176,6 +176,13 @@ export class Setting extends Component {
     },
   };
 
+  vizKPIAssets = {
+    type: 'QdtViz',
+    props: {
+      id: 'XKjCU', height: '50px',
+    },
+  };
+
   // Plots
   vizBubblePlot = {
     type: 'QdtViz',
