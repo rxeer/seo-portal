@@ -275,7 +275,7 @@ class SEO extends Settings {
         <div className="row">
           <div className="col-12">
             <QdtComponent
-              className="table first-column-text-align-left"
+              className="table first-column-text-align-left narrow-row"
               type={this.vizTable.type}
               props={this.vizTable.props}
             />

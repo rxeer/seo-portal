@@ -167,7 +167,7 @@ class Risk extends Settings {
               <Trans i18nKey="risk.table-title">Обрані показники</Trans>
             </p>
             <QdtComponent
-              className="table first-column-text-align-left compress-table"
+              className="table first-column-text-align-left compress-table risk__main-KpiTable"
               type={this.vizKPISelected.type}
               props={this.vizKPISelected.props}
             />
@@ -179,7 +179,7 @@ class Risk extends Settings {
               <Trans i18nKey="risk.indicator-title">Ризик-індикатори</Trans>
             </p>
             <QdtComponent
-              className="table first-column-text-align-left"
+              className="table first-column-text-align-left risk__main-vizTable"
               type={this.vizTable.type}
               props={this.vizTable.props}
             />

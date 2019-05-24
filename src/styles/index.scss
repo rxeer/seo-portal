@@ -113,7 +113,7 @@ span {
 
 .chart-filters {
   display: flex;
-  margin: 0 0 30px;;
+  margin: 0 0 30px;
   background-color: #00bfe7;
   border-radius: 0.25rem;
   box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.1);
@@ -190,7 +190,7 @@ span {
       padding: 0;
       position: relative;
       font-size: 1rem !important;
-      transition: all .3s;
+      transition: all 0.3s;
       color: map-get($colors, default-blue);
       border: solid 1px map-get($colors, default-blue);
 
@@ -338,6 +338,26 @@ span {
 
 .text-center {
   text-align: center;
+}
+
+.risk__main {
+  &-KpiTable {
+    & td[ng-repeat="cell in row.cells"] {
+      padding: 0.4rem 0 !important;
+    }
+  }
+  &-vizTable {
+    & .qv-object-subtitle.qvt-visualization-subtitle.ng-binding.ng-scope {
+      position: absolute;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+.narrow-row {
+  & td[ng-repeat="cell in row.cells"] {
+    padding: .8rem 0 !important;
+  }
 }
 
 //BOOTSTRAP
