@@ -169,7 +169,7 @@ class IndustryStatistics extends Settings {
           </div>
         </div>
         <QdtComponent
-          className="table narrow-row"
+          className="table narrow-row first-column-text-align-left"
           type={this.vizTable.type}
           props={this.vizTable.props}
         />

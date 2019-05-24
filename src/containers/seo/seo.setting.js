@@ -251,7 +251,7 @@ export class Settings extends Component {
     type: 'QdtViz',
     props: {
       id: '3b2ef8da-2d4a-42d6-a10f-54918e63a1d3',
-      height: '39rem',
+      height: '40rem',
       exportData: true,
       exportDataOptions: { format: 'OOXML', state: 'P' },
       exportDataTitle: 'Excel',
