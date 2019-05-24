@@ -175,9 +175,9 @@ class Risk extends Settings {
         </div>
         <div className="row">
           <div className="col-12">
-            <p className="risk__main-title table-title">
-              <Trans i18nKey="risk.indicator-title">Ризик-індикатори</Trans>
-            </p>
+            {/*<p className="risk__main-title table-title">*/}
+            {/*  <Trans i18nKey="risk.indicator-title">Ризик-індикатори</Trans>*/}
+            {/*</p>*/}
             <QdtComponent
               className="table first-column-text-align-left risk__main-vizTable"
               type={this.vizTable.type}
