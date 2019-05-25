@@ -104,7 +104,8 @@ export class Settings extends Component {
        type: 'QdtViz',
        props: {
          // id: 'WWfPU',
-         id: 'jGFLpVj',
+         //id: 'jGFLpVj',
+         id: 'jkFseW',
          height: '30px',
        },
      };

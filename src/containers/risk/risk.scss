@@ -292,8 +292,16 @@
 				&-button {
 					width:100px;
 					padding: 0;
+
 					& .container.centered {
 						padding: 0;
+					}
+					& .lui-button--gradient {
+						background: transparent !important;
+					}
+					& .lui-button--gradient:focus {
+						border: none !important;
+						box-shadow: none !important;
 					}
 					& .lui-button {
 						padding: 0 3px;
