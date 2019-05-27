@@ -82,7 +82,7 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
   &-banner {
     .qv-subtoolbar-button.borderbox,
     .wrap.borderbox.qv-pager {
-      background: #fff;
+      background: #fafafa;
       border: 0;
       color: #545352;
       & .ng-binding, .lui-icon--remove {
@@ -94,7 +94,7 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
       max-width: 1200px;
     }
     & .qv-selections-pager {
-      background-color: #fff;
+      background-color: #fafafa;
     }
 
     & .qv-panel-current-selections .buttons-end, .qv-panel-current-selections .buttons {
