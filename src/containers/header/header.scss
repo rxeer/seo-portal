@@ -82,13 +82,25 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
   &-banner {
     .qv-subtoolbar-button.borderbox,
     .wrap.borderbox.qv-pager {
-      background: #e9e7e9;
+      background: #fff;
       border: 0;
       color: #545352;
       & .ng-binding, .lui-icon--remove {
         color: map-get($colors, default-text);
       }
     }
+    & .wrap.borderbox.qv-pager {
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    & .qv-selections-pager {
+      background-color: #fff;
+    }
+
+    & .qv-panel-current-selections .buttons-end, .qv-panel-current-selections .buttons {
+      display: none !important;
+    }
+
 
     .qv-panel-current-selections .qv-subtoolbar-button:disabled {
       color: #c1c0c1;
