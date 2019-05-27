@@ -1,9 +1,15 @@
 {
   "menu": {
     "home": "Home",
-    "rating": "TOP-100",
+    "rating": "TOP-100 reports",
     "finance-statistics": "Financial statistic",
     "database": "Database"
+  },
+  "top-100-menu-items": {
+    "6m18": "6m 2018",
+    "6m17": "6m 2017",
+    "6m16": "6m 2016",
+    "6m15": "6m 2015"
   },
   "home": {
     "title": "State-Owned Enterprises of Ukraine"
