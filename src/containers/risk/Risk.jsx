@@ -62,7 +62,7 @@ class Risk extends Settings {
                   props={this.vizOwnership.props}
                 />
               </div>
-              <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3" style={{ position: 'relative' }}>
+              <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3 risk-seo-tooltips-wrapper" style={{ position: 'relative' }}>
                 <Select
                   lineable
                   label={this.props.t('filters.seo')}
@@ -190,7 +190,7 @@ class Risk extends Settings {
           </div>
         </div>
         <div className="row">
-          <div className="col-12">
+          <div className="col-12 risk__main-indicators-tooltips-wrapper">
             <p className="risk__main-title">
               <Trans i18nKey="risk.table-title">Обрані показники</Trans>
             </p>
@@ -202,7 +202,7 @@ class Risk extends Settings {
                             <img 
                                 class="tooltip-img-seo"  
                                 src="../../assets/images/tooltip/${this.props.t('tooltips.riskIndicatorsImgName')}"
-                                style="width:550px"
+                                style="width:460px"
                              />
                         `}
               data-type="light"
