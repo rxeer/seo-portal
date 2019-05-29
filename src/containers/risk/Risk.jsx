@@ -75,7 +75,7 @@ class Risk extends Settings {
                   className="tooltip-risk-seo"
                   alt="info icon"
                   src="../../assets/images/info/info-white.png"
-                  data-tip={`<p>${this.props.t('tooltips.seo')}</p>
+                  data-tip={`<p>${this.props.t('tooltips.riskIndicators')}</p>
                             <img 
                                 class="tooltip-img-seo"  
                                 src="../../assets/images/tooltip/${this.props.t('tooltips.seoImgName')}"

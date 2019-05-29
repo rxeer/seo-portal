@@ -82,7 +82,7 @@ class Balance extends Settings {
               className="tooltip-indicators"
               alt="info icon"
               src="../../assets/images/info/info.png"
-              data-tip={this.props.t('tooltips.indicatorFinance')}
+              data-tip={this.props.t('tooltips.indicatorBalance')}
               data-place="top"
               data-type="light"
               data-multiline
