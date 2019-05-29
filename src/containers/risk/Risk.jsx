@@ -75,7 +75,7 @@ class Risk extends Settings {
                   className="tooltip-risk-seo"
                   alt="info icon"
                   src="../../assets/images/info/info-white.png"
-                  data-tip={`<p>${this.props.t('tooltips.riskIndicators')}</p>
+                  data-tip={`<p>${this.props.t('tooltips.seo')}</p>
                             <img 
                                 class="tooltip-img-seo"  
                                 src="../../assets/images/tooltip/${this.props.t('tooltips.seoImgName')}"
@@ -201,7 +201,7 @@ class Risk extends Settings {
               className="tooltip-risk-title"
               alt="info icon"
               src="../../assets/images/info/info.png"
-              data-tip={`<p>${this.props.t('tooltips.seo')}</p>
+              data-tip={`<p>${this.props.t('tooltips.riskIndicators')}</p>
                             <img 
                                 class="tooltip-img-seo"  
                                 src="../../assets/images/tooltip/${this.props.t('tooltips.riskIndicatorsImgName')}"
