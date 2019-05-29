@@ -1,4 +1,56 @@
-.contact-us-form__title {
-	font-size: 20px;
-	font-weight: bold;
+@import "../../../styles/variables";
+
+.contact-us {
+	.modal-container {
+		top: 10%;
+		padding: 40px;
+		max-height: 500px;
+	}
+
+	&-form {
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 20px;
+		justify-content: space-between;
+
+		&__title {
+			text-align: center;
+			color: map-get($colors, default-blue);
+			text-transform: uppercase;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		&__actions {
+			text-align: right;
+
+			button {
+				cursor: pointer;
+				border: 0;
+				outline: 0;
+				font-size: 1rem;
+				color: #fff;
+				display: inline-block;
+				border-radius: 4px;
+				padding: 11px 30px;
+				box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+				transition: all .15s;
+				font-weight: 700;
+				font-family: Lato,sans-serif;
+				margin-right: 12px;
+
+				&:hover {
+					opacity: .8;
+				}
+			}
+
+			button[type="button"] {
+				background: #8d9496;
+			}
+
+			button[type="submit"] {
+				background: map-get($colors, default-blue);
+			}
+		}
+	}
 }

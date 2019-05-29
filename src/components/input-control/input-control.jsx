@@ -7,10 +7,11 @@ import './input-control.scss';
 export class InputControl extends PureComponent {
 
   static propTypes = {
+    multiple: PropTypes.bool,
     required: PropTypes.bool,
-    placeholder: PropTypes.string,
-    maxLength: PropTypes.number,
     minLength: PropTypes.number,
+    maxLength: PropTypes.number,
+    placeholder: PropTypes.string,
     change: PropTypes.func.isRequired,
     type: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -22,6 +23,7 @@ export class InputControl extends PureComponent {
     placeholder: '',
     maxLength: 30,
     minLength: 10,
+    multiple: false
   };
 
   state = {
@@ -44,22 +46,35 @@ export class InputControl extends PureComponent {
 
   render() {
     const {
-      type, placeholder, maxLength, minLength, required, title, label,
+      type, placeholder, maxLength, minLength, required, title, label, multiple
     } = this.props;
     return (
       <label className="form-label">
         <span className="form-label-title">{label}</span>
-        <input
-          type={type}
-          value={this.state.value || ''}
-          title={title}
-          onChange={this.changeInputState.bind(this)}
-          required={required}
-          minLength={minLength}
-          maxLength={maxLength}
-          className="form-control"
-          placeholder={placeholder}
-        />
+        {
+          multiple ? <textarea
+            cols={30}
+            rows={10}
+            value={this.state.value || ''}
+            title={title}
+            onChange={this.changeInputState.bind(this)}
+            required={required}
+            minLength={minLength}
+            maxLength={maxLength}
+            className="form-control"
+            placeholder={placeholder}
+          /> : <input
+              type={type}
+              value={this.state.value || ''}
+              title={title}
+              onChange={this.changeInputState.bind(this)}
+              required={required}
+              minLength={minLength}
+              maxLength={maxLength}
+              className="form-control"
+              placeholder={placeholder}
+            />
+        }
       </label>
     );
   }

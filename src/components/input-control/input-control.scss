@@ -19,17 +19,22 @@ $muted-input-color: #bdc9df;
 			transition: border-color .15s;
 
 			&::placeholder {
-				font-weight: normal;
+				font-weight: 300;
 				color: $muted-input-color;
 				opacity: 1;
 			}
 
 			&:hover,
 			&:focus {
-				border-color: map-get($colors, default-blue);
+				border-color: map-get($colors, blue-light);
 				outline: none;
 			}
 		}
+	}
+
+	textarea {
+		width: 100%;
+		resize: none;
 	}
 }
 
@@ -50,7 +55,7 @@ $muted-input-color: #bdc9df;
 		line-height: 1.5;
 		vertical-align: middle;
 		margin-right: 8px;
-		margin-bottom: 10px;
+		margin-bottom: 2px;
 		min-height: 24px;
 	}
 }

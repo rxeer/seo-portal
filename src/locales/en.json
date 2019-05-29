@@ -33,5 +33,24 @@
   "not-found": {
     "title": "The page you are looking for does not exist",
     "action": "Back to the main page"
+  },
+  "contact-us": {
+    "title": "Contact Us",
+    "email": {
+      "label": "Your Email",
+      "placeholder": "Enter your email to contact to you"
+    },
+    "name": {
+      "label": "Your Name",
+      "placeholder": "Enter your name"
+    },
+    "question": {
+      "label": "Your Question",
+      "placeholder": "Enter your question to us here"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "submit": "Send"
+    }
   }
 }

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-import { object, bool } from 'prop-types';
+import { object, bool, func } from 'prop-types';
 
 import './modal.scss';
 
@@ -8,6 +8,7 @@ export class Modal extends PureComponent {
 
   static propTypes = {
     open: bool.isRequired,
+    closeModal: func.isRequired,
     children: object.isRequired,
   };
 
@@ -21,6 +22,11 @@ export class Modal extends PureComponent {
     }
   }
 
+  closeInnerModal() {
+    this.setState({ modalOpened: false });
+    this.props.closeModal();
+  }
+
   render() {
     const coverClass = this.state.modalOpened ? 'modal-cover modal-cover-active' : 'modal-cover';
     const containerClass = this.state.modalOpened ? 'modal-container modal-container-active' : 'modal-container';
@@ -32,7 +38,7 @@ export class Modal extends PureComponent {
         </div>
         <div
           className={coverClass}
-          onClick={() => this.setState({ modalOpened: false })}
+          onClick={() => this.closeInnerModal()}
         />
       </div>
     );
