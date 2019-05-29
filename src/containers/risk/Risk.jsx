@@ -1,6 +1,7 @@
 import React from 'react';
 import { Trans } from 'react-i18next';
 
+import ReactTooltip from 'react-tooltip';
 import { connectTranslation } from '../../middlewares/connect-translation';
 
 import Select from '../../components/select/select';
@@ -16,12 +17,22 @@ class Risk extends Settings {
     return (
       <div className="risk__main container">
         <div className="row">
-          <div className="col-12">
+          <div className="col-12" style={{ position: 'relative' }}>
             <QdtComponent
               className="page-title"
               type={this.vizRISK.type}
               props={this.vizRISK.props}
             />
+            <img
+              className="tooltip-risk-title"
+              alt="info icon"
+              src="../../assets/images/info/info.png"
+              data-tip={this.props.t('tooltips.riskTitle')}
+              data-place="top"
+              data-type="light"
+              data-multiline
+            />
+            <ReactTooltip data-class="risk-title-tooltip" />
           </div>
         </div>
         <div className="row chart-filters">
@@ -51,14 +62,31 @@ class Risk extends Settings {
                   props={this.vizOwnership.props}
                 />
               </div>
-              <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
+              <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3" style={{ position: 'relative' }}>
                 <Select
                   lineable
                   label={this.props.t('filters.seo')}
                   type={this.vizSOE.type}
                   props={this.vizSOE.props}
                 />
+                <img
+                  className="tooltip-risk-seo"
+                  alt="info icon"
+                  src="../../assets/images/info/info-white.png"
+                  data-tip={`<p>${this.props.t('tooltips.seo')}</p>
+                            <img 
+                                class="tooltip-img-seo"  
+                                src="../../assets/images/tooltip/${this.props.t('tooltips.seoImgName')}"
+                             />
+                        `}
+                  data-place="left"
+                  data-type="light"
+                  data-multiline
+                  data-html
+                />
+                <ReactTooltip />
               </div>
+
             </div>
             <div className="row" style={{ marginTop: '2rem' }}>
               <div className="col-12 col-sm-6 col-12 col-lg-3 col-xl-3">
@@ -166,6 +194,22 @@ class Risk extends Settings {
             <p className="risk__main-title">
               <Trans i18nKey="risk.table-title">Обрані показники</Trans>
             </p>
+            <img
+              className="tooltip-risk-title"
+              alt="info icon"
+              src="../../assets/images/info/info.png"
+              data-tip={`<p>${this.props.t('tooltips.seo')}</p>
+                            <img 
+                                class="tooltip-img-seo"  
+                                src="../../assets/images/tooltip/${this.props.t('tooltips.riskIndicatorsImgName')}"
+                                style="width:550px"
+                             />
+                        `}
+              data-type="light"
+              data-multiline
+              data-html
+            />
+            <ReactTooltip />
             <QdtComponent
               className="table first-column-text-align-left compress-table risk__main-KpiTable"
               type={this.vizKPISelected.type}

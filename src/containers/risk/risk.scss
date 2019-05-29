@@ -2,6 +2,9 @@
 
 .risk__main {
 	margin-top: 70px !important;
+	& .multi-line {
+		text-align: left;
+	}
 
 	.compress-table {
 		tbody {
@@ -341,6 +344,7 @@
 					top: -25px;
 					z-index: 100;
 					width: 100%;
+
 
 					& .ng-binding {
 						font-family: sans-serif;

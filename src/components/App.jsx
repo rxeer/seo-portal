@@ -24,6 +24,7 @@ import NotFoundPage from '../pages/not-found/not-found';
 
 library.add(faTimes, faDatabase, faHome, faChartBar);
 
+
 const App = () => (
   <div>
     <Router>
