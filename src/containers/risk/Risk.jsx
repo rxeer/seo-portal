@@ -1,7 +1,9 @@
 import React from 'react';
 import { Trans } from 'react-i18next';
 
+
 import ReactTooltip from 'react-tooltip';
+
 import { connectTranslation } from '../../middlewares/connect-translation';
 
 import Select from '../../components/select/select';
@@ -77,6 +79,7 @@ class Risk extends Settings {
                             <img 
                                 class="tooltip-img-seo"  
                                 src="../../assets/images/tooltip/${this.props.t('tooltips.seoImgName')}"
+                                style="width: 200px"
                              />
                         `}
                   data-place="left"
