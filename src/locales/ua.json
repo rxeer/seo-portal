@@ -38,15 +38,15 @@
     "title": "Зв'яжіться з нами",
     "email": {
       "label": "Ваш eмейл",
-      "placeholder": "Веддіть вашу емейл адресу"
+      "placeholder": "Введіть вашу емейл адресу"
     },
     "name": {
       "label": "Ваше Ім'я",
-      "placeholder": "Веддіть ваше ім'я"
+      "placeholder": "Введіть ваше ім'я"
     },
     "question": {
       "label": "Ваше запитання",
-      "placeholder": "Веддіть ваше запитання"
+      "placeholder": "Введіть ваше запитання"
     },
     "actions": {
       "cancel": "Назад",
