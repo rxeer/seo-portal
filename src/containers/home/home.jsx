@@ -3,6 +3,7 @@ import { Trans } from 'react-i18next';
 
 import { connectTranslation } from '../../middlewares/connect-translation';
 
+import { ContactUsModalForm } from './contact-us-modal/contact-us-modal';
 import QdtComponent from '../../components/QdtComponent';
 
 import { Settings } from './home.settings';
@@ -333,6 +334,7 @@ class Home extends Settings {
         </div>
         {/* <QdtComponent type={vizTOP5Label.type} props={vizTOP5Label.props} /> */}
         {/* <QdtComponent type={vizTOP5Value.type} props={vizTOP5Value.props} /> */}
+        <ContactUsModalForm />
       </main>
     );
   }
