@@ -67,6 +67,7 @@ class ContactUsModalForm extends PureComponent {
               <InputControl
                 type="text"
                 required
+                minLength={2}
                 maxLength={35}
                 value={this.state.name}
                 label={t('contact-us.name.label')}
@@ -79,6 +80,7 @@ class ContactUsModalForm extends PureComponent {
               <InputControl
                 type="email"
                 required
+                minLength={7}
                 value={this.state.email}
                 label={t('contact-us.email.label')}
                 title={t('contact-us.email.label')}
