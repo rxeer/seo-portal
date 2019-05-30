@@ -8,6 +8,8 @@ import { Modal } from '../../../components/modal/modal';
 import { FormGroup } from '../../../components/form-group/form-group';
 import { InputControl } from '../../../components/input-control/input-control';
 
+import { ContactUsDto } from './contact-us.dto';
+
 import './contact-us-modal.scss';
 
 @connectTranslation()
@@ -15,8 +17,9 @@ class ContactUsModalForm extends PureComponent {
 
   state = {
     name: '',
-    text: '',
+    message: '',
     email: '',
+    isLoading: false,
     isContactUsModalOpen: true,
   };
 
@@ -29,6 +32,17 @@ class ContactUsModalForm extends PureComponent {
   closeModal() {
     this.setState({ isContactUsModalOpen: false });
     this.props.close();
+  }
+
+  sendMessage(event) {
+    event.preventDefault();
+    fetch('https://mokup.herokuapp.com/message', {
+      method: 'POST',
+      data: new ContactUsDto(this.state),
+    }).then(() => {
+      this.props.close();
+      this.setState({ isLoading: false });
+    }).catch(error => alert(error));
   }
 
   render() {
@@ -47,7 +61,7 @@ class ContactUsModalForm extends PureComponent {
           </p>
           <form
             className="contact-us-form"
-            onSubmit={() => {}}
+            onSubmit={this.sendMessage.bind(this)}
           >
             <FormGroup className="half-width">
               <InputControl
@@ -79,10 +93,10 @@ class ContactUsModalForm extends PureComponent {
                 required
                 minLength={35}
                 maxLength={3000}
-                value={this.state.text}
+                value={this.state.message}
                 label={t('contact-us.question.label')}
                 title={t('contact-us.question.label')}
-                change={value => this.setState({ text: value })}
+                change={value => this.setState({ message: value })}
                 placeholder={t('contact-us.question.placeholder')}
               />
             </FormGroup>
