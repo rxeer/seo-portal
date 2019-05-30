@@ -339,10 +339,14 @@ class Home extends Settings {
         {/* <QdtComponent type={vizTOP5Label.type} props={vizTOP5Label.props} /> */}
         {/* <QdtComponent type={vizTOP5Value.type} props={vizTOP5Value.props} /> */}
         <p className="home-page-contact-caption">
-          <Trans>
+          <Trans i18nKey="home.contact-us-caption.label">
             Якщо у вас є питання/пропозиції, Ви можете зв&apos;язатися з нами
-            <span onClick={() => this.setState({ contactUsModalOpen: true })}>тут</span>
           </Trans>
+          <span onClick={() => this.setState({ contactUsModalOpen: true })}>
+            <Trans i18nKey="home.contact-us-caption.action">
+              тут
+            </Trans>
+          </span>
         </p>
         <ContactUsModalForm
           open={this.state.contactUsModalOpen}

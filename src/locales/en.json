@@ -12,7 +12,11 @@
     "6m15": "6m 2015"
   },
   "home": {
-    "title": "State-Owned Enterprises of Ukraine"
+    "title": "State-Owned Enterprises of Ukraine",
+    "contact-us-caption": {
+      "label": "If you have any questions / suggestions, you can contact us",
+      "action": "here"
+    }
   },
   "risk": {
     "table-title": "Selected Indicators",
