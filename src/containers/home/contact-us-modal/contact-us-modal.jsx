@@ -23,7 +23,7 @@ class ContactUsModalForm extends PureComponent {
     message: '',
     email: '',
     isLoading: false,
-    isContactUsModalOpen: true,
+    isContactUsModalOpen: false,
   };
 
   state = { ...this.initialState };
