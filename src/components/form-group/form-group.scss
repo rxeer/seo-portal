@@ -1,0 +1,24 @@
+.form-group {
+  margin: 0 0 24px;
+  position: relative;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.iconed {
+    display: flex;
+  }
+
+  &.half-width {
+    flex-basis: calc(50% - 10px);
+  }
+
+  &.full-width {
+    flex-basis: 100%;
+  }
+}
