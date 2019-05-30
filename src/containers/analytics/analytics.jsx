@@ -233,7 +233,7 @@ class Analytics extends Setting {
           <div className="col-12">
             <div className="analytics__main-tableWrapper">
               <QdtComponent
-                className="table first-column-text-align-left"
+                className="table first-three-column-text-align-left"
                 type={this.vizTable.type}
                 props={this.vizTable.props}
               />

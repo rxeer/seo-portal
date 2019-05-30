@@ -49,6 +49,14 @@ ul {
   padding-left: 0.5rem;
 }
 
+.first-three-column-text-align-left
+tr[ng-repeat="row in grid.rows"]
+td[ng-repeat="cell in row.cells"]:nth-child(-n+3)
+span {
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
 .page-title {
   width: 100%;
 

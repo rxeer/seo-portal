@@ -94,7 +94,7 @@ class Balance extends Settings {
         <div className="row">
           <div className="col-12 adaptive-chart-container">
             <QdtComponent
-              className="table first-column-text-align-left"
+              className="table first-three-column-text-align-left"
               type={this.vizTable.type}
               props={this.vizTable.props}
             />
