@@ -1,10 +1,13 @@
 import React, { PureComponent } from 'react';
 
+import axios from 'axios';
+
 import { Trans } from 'react-i18next';
 
 import { connectTranslation } from '../../../middlewares/connect-translation';
 
 import { Modal } from '../../../components/modal/modal';
+import { Spinner } from '../../../components/spinner/spinner';
 import { FormGroup } from '../../../components/form-group/form-group';
 import { InputControl } from '../../../components/input-control/input-control';
 
@@ -15,13 +18,15 @@ import './contact-us-modal.scss';
 @connectTranslation()
 class ContactUsModalForm extends PureComponent {
 
-  state = {
+  initialState = {
     name: '',
     message: '',
     email: '',
     isLoading: false,
     isContactUsModalOpen: true,
   };
+
+  state = { ...this.initialState };
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.open !== this.state.isContactUsModalOpen) {
@@ -32,18 +37,20 @@ class ContactUsModalForm extends PureComponent {
   closeModal() {
     this.setState({ isContactUsModalOpen: false });
     this.props.close();
+    this.setState({ ...this.initialState });
   }
 
   sendMessage(event) {
     event.preventDefault();
-    fetch('https://mokup.herokuapp.com/message', {
-      method: 'POST',
-      type: 'cors',
-      data: new ContactUsDto(this.state),
-    }).then(() => {
-      this.props.close();
-      this.setState({ isLoading: false });
-    }).catch(error => console.log(error));
+    const data = new ContactUsDto(this.state);
+    axios.post('https://mokup.herokuapp.com/message', data)
+      .then(() => {
+        this.closeModal();
+        this.setState({ isLoading: false });
+      }).catch(() => {
+        alert(t('contact-us.error'));
+        this.setState({ isLoading: false });
+      });
   }
 
   render() {
@@ -122,6 +129,7 @@ class ContactUsModalForm extends PureComponent {
             </FormGroup>
           </form>
         </Modal>
+        <Spinner show={this.state.isLoading} />
       </div>
     );
   }

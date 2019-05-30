@@ -64,6 +64,7 @@
     "actions": {
       "cancel": "Cancel",
       "submit": "Send"
-    }
+    },
+    "error": "Something was wrong"
   }
 }
