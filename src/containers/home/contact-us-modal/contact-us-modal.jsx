@@ -43,6 +43,7 @@ class ContactUsModalForm extends PureComponent {
   sendMessage(event) {
     event.preventDefault();
     const data = new ContactUsDto(this.state);
+    this.setState({ isLoading: true });
     axios.post('https://mokup.herokuapp.com/message', data)
       .then(() => {
         this.closeModal();
