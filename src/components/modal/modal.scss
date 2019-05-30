@@ -19,12 +19,20 @@
 	border: 1px solid lightgray;
 	border-radius: 6px;
 	background: white;
-	max-width: 600px;
+	width: 600px;
 	min-height: 300px;
 	left: 50%;
+	transform: translate(-50%);
 	top: 20%;
-	margin-left: -300px;
 	display: none;
+
+	@media all and (max-width: 650px) {
+		width: 400px;
+	}
+
+	@media all and (max-width: 450px) {
+		width: 90vw;
+	}
 }
 
 .modal-container.modal-container-active {
