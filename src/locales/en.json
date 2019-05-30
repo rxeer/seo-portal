@@ -34,6 +34,15 @@
     "title": "The page you are looking for does not exist",
     "action": "Back to the main page"
   },
+  "tooltips": {
+    "indicatorBalance": "Choose indicators that will be displayed from Balance Sheet report (Statement of financial position)",
+    "indicatorFinance": "Choose indicators that will be displayed from Profit and Losses report (Income Statement)",
+    "seo": "To search for an inaccurate name, you must begin and end the search with the \"*\" sign. Example:",
+    "seoImgName": "seo-en.png",
+    "riskTitle": "Shows enterprises that meet specified criteria (risk-indicators).<br/>Examples:<br/>— show all enterprises which have assets more than 200 million UAH, and which have a positive trend in revenue<br/>— show all enterprises which have revenue less than 500 million UAH, value of assets less than 1 billion UAH, and which have a negative EBITDA trend",
+    "riskIndicatorsImgName": "risk-en.png",
+    "riskIndicators": "To remove selected indicator, choose it from the drop-down list and click on the button «-»"
+  },
   "contact-us": {
     "title": "Contact Us",
     "email": {

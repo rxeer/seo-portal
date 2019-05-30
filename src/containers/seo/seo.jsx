@@ -8,6 +8,7 @@ import Select from '../../components/select/select';
 import QdtComponent from '../../components/QdtComponent';
 
 import { Settings } from './seo.setting';
+import ReactTooltip from "react-tooltip";
 
 @connectTranslation()
 class SEO extends Settings {
@@ -59,6 +60,22 @@ class SEO extends Settings {
                   props={this.vizSOE.props}
                 />
               </div>
+              <img
+                className="tooltip-seo"
+                alt="info icon"
+                src="../../assets/images/info/info-white.png"
+                data-tip={`<p>${this.props.t('tooltips.seo')}</p>
+                            <img 
+                                class="tooltip-img-seo"  
+                                src="../../assets/images/tooltip/${this.props.t('tooltips.seoImgName')}"
+                             />
+                        `}
+                data-place="left"
+                data-type="light"
+                data-multiline
+                data-html
+              />
+              <ReactTooltip />
             </div>
           </div>
         </div>

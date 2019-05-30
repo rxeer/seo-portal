@@ -1,6 +1,7 @@
 import React from 'react';
 import { Trans } from 'react-i18next';
 
+import ReactTooltip from 'react-tooltip';
 import { connectTranslation } from '../../middlewares/connect-translation';
 
 import Select from '../../components/select/select';
@@ -64,6 +65,22 @@ class Analytics extends Setting {
                   props={this.vizSOE.props}
                 />
               </div>
+              <img
+                className="tooltip-seo-analytics"
+                alt="info icon"
+                src="../../assets/images/info/info-white.png"
+                data-tip={`<p>${this.props.t('tooltips.seo')}</p>
+                            <img 
+                                class="tooltip-img-seo"  
+                                src="../../assets/images/tooltip/${this.props.t('tooltips.seoImgName')}"
+                             />
+                        `}
+                data-place="left"
+                data-type="light"
+                data-multiline
+                data-html
+              />
+              <ReactTooltip />
             </div>
           </div>
         </div>
@@ -216,7 +233,7 @@ class Analytics extends Setting {
           <div className="col-12">
             <div className="analytics__main-tableWrapper">
               <QdtComponent
-                className="table first-column-text-align-left"
+                className="table first-three-column-text-align-left"
                 type={this.vizTable.type}
                 props={this.vizTable.props}
               />

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ReactTooltip from 'react-tooltip';
 import Select from '../../components/select/select';
 
 import { connectTranslation } from '../../middlewares/connect-translation';
@@ -54,21 +54,47 @@ class Balance extends Settings {
                   props={this.vizSOE.props}
                 />
               </div>
+              <img
+                className="tooltip-seo"
+                alt="info icon"
+                src="../../assets/images/info/info-white.png"
+                data-tip={`<p>${this.props.t('tooltips.seo')}</p>
+                            <img 
+                                class="tooltip-img-seo"  
+                                src="../../assets/images/tooltip/${this.props.t('tooltips.seoImgName')}"
+                             />
+                        `}
+                data-place="left"
+                data-type="light"
+                data-multiline
+                data-html
+              />
+              <ReactTooltip />
             </div>
           </div>
         </div>
         <div className="row balance__main-period">
-          <div className="col-lg-3 col-md-6 col-sm-12">
-            <Select
-              type={this.vizKPI.type}
-              props={this.vizKPI.props}
+          <div
+            className="col-lg-3 col-md-6 col-sm-11 "
+            style={{ paddingRight: '40px', position: 'relative' }}
+          >
+            <img
+              className="tooltip-indicators"
+              alt="info icon"
+              src="../../assets/images/info/info.png"
+              data-tip={this.props.t('tooltips.indicatorBalance')}
+              data-place="top"
+              data-type="light"
+              data-multiline
             />
+            <ReactTooltip />
+            <Select type={this.vizKPI.type} props={this.vizKPI.props} />
           </div>
         </div>
         <div className="row">
           <div className="col-12 adaptive-chart-container">
             <QdtComponent
-              className="table first-column-text-align-left"
+              className="table first-three-column-text-align-left"
               type={this.vizTable.type}
               props={this.vizTable.props}
             />

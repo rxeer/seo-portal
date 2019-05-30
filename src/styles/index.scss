@@ -42,11 +42,19 @@ ul {
 }
 
 .first-column-text-align-left
+  tr[ng-repeat="row in grid.rows"]
+  td[ng-repeat="cell in row.cells"]:first-child
+  span {
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.first-three-column-text-align-left
 tr[ng-repeat="row in grid.rows"]
-td[ng-repeat="cell in row.cells"]:first-child
+td[ng-repeat="cell in row.cells"]:nth-child(-n+3)
 span {
   text-align: left;
-  padding-left: .5rem;
+  padding-left: 0.5rem;
 }
 
 .page-title {
@@ -112,6 +120,7 @@ span {
 }
 
 .chart-filters {
+  position: relative;
   display: flex;
   margin: 0 0 30px;
   background-color: #00bfe7;
@@ -356,7 +365,7 @@ span {
 
 .narrow-row {
   & td[ng-repeat="cell in row.cells"] {
-    padding: .8rem 0 !important;
+    padding: 0.8rem 0 !important;
   }
 }
 
@@ -610,3 +619,64 @@ h6,
   border-top: 6px solid #666;
   margin-right: 6px;
 }
+
+
+// tooltips styling //
+.tooltip {
+  &-indicators,
+  &-seo,
+  &-seo-analytics,
+  &-risk-title,
+  &-risk-seo {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    z-index: 999;
+    cursor: pointer;
+    padding-right: 10px;
+  }
+  &-indicators {
+    top: 18px;
+    right: 0;
+  }
+  &-seo {
+    bottom: 65px !important;
+    right: 5px;
+  }
+  &-seo-analytics {
+    bottom: 65px !important;
+    right: 20px;
+  }
+  &-risk-title {
+    left: 280px;
+    top: 0;
+  }
+  &-risk-seo {
+    top:0;
+    right: 0;
+
+  }
+
+  &-img-seo {
+    width: 250px;
+    display: block;
+    margin: 5px auto 0;
+    border-radius: $default-border-radius;
+    border: 1px solid map-get($colors, default-blue);
+  }
+}
+
+.__react_component_tooltip {
+  opacity: 1 !important;
+  //width: 400px;
+  box-shadow: $default-box-shadow;
+  width: 340px;
+}
+
+.risk__main {
+  & .__react_component_tooltip {
+    width: 500px;
+  }
+}
+
+//tooltips styling end //

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import ReactTooltip from 'react-tooltip';
 import { connectTranslation } from '../../middlewares/connect-translation';
 
 import Select from '../../components/select/select';
@@ -54,22 +55,44 @@ class Finance extends Settings {
                   props={this.vizSOE.props}
                 />
               </div>
+              <img
+                className="tooltip-seo"
+                alt="info icon"
+                src="../../assets/images/info/info-white.png"
+                data-tip={`<p>${this.props.t('tooltips.seo')}</p>
+                            <img 
+                                class="tooltip-img-seo"  
+                                src="../../assets/images/tooltip/${this.props.t('tooltips.seoImgName')}"
+                             />
+                        `}
+                data-place="left"
+                data-type="light"
+                data-multiline
+                data-html
+              />
+              <ReactTooltip />
             </div>
           </div>
         </div>
         <div className="row finance__main-period period">
-          <div className="col-lg-3 col-md-6 col-sm-12">
-            <QdtComponent
-              className="select finance__main-filter"
-              type={this.vizKPI.type}
-              props={this.vizKPI.props}
+          <div className="col-lg-3 col-md-6 col-sm-12 " style={{ paddingRight: '40px', position: 'relative' }}>
+            <img
+              className="tooltip-indicators"
+              alt="info icon"
+              src="../../assets/images/info/info.png"
+              data-tip={this.props.t('tooltips.indicatorFinance')}
+              data-place="top"
+              data-type="light"
+              data-multiline
             />
+            <ReactTooltip />
+            <Select type={this.vizKPI.type} props={this.vizKPI.props} />
           </div>
         </div>
         <div className="row">
           <div className="col-12">
             <QdtComponent
-              className="table first-column-text-align-left"
+              className="table first-three-column-text-align-left"
               type={this.vizTable.type}
               props={this.vizTable.props}
             />
