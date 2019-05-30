@@ -38,11 +38,12 @@ class ContactUsModalForm extends PureComponent {
     event.preventDefault();
     fetch('https://mokup.herokuapp.com/message', {
       method: 'POST',
+      type: 'cors',
       data: new ContactUsDto(this.state),
     }).then(() => {
       this.props.close();
       this.setState({ isLoading: false });
-    }).catch(error => alert(error));
+    }).catch(error => console.log(error));
   }
 
   render() {
