@@ -42,5 +42,24 @@
     "riskTitle": "Shows enterprises that meet specified criteria (risk-indicators).<br/>Examples:<br/>— show all enterprises which have assets more than 200 million UAH, and which have a positive trend in revenue<br/>— show all enterprises which have revenue less than 500 million UAH, value of assets less than 1 billion UAH, and which have a negative EBITDA trend",
     "riskIndicatorsImgName": "risk-en.png",
     "riskIndicators": "To remove selected indicator, choose it from the drop-down list and click on the button «-»"
+  },
+  "contact-us": {
+    "title": "Contact Us",
+    "email": {
+      "label": "Your Email",
+      "placeholder": "Enter your email to contact to you"
+    },
+    "name": {
+      "label": "Your Name",
+      "placeholder": "Enter your name"
+    },
+    "question": {
+      "label": "Your Question",
+      "placeholder": "Enter your question to us here"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "submit": "Send"
+    }
   }
 }

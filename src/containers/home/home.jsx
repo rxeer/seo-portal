@@ -3,12 +3,17 @@ import { Trans } from 'react-i18next';
 
 import { connectTranslation } from '../../middlewares/connect-translation';
 
+import ContactUsModalForm from './contact-us-modal/contact-us-modal';
 import QdtComponent from '../../components/QdtComponent';
 
 import { Settings } from './home.settings';
 
 @connectTranslation()
 class Home extends Settings {
+
+  state = {
+    contactUsModalOpen: false,
+  };
 
   render() {
     return (
@@ -333,6 +338,16 @@ class Home extends Settings {
         </div>
         {/* <QdtComponent type={vizTOP5Label.type} props={vizTOP5Label.props} /> */}
         {/* <QdtComponent type={vizTOP5Value.type} props={vizTOP5Value.props} /> */}
+        <p className="home-page-contact-caption">
+          <Trans>
+            Якщо у вас є питання/пропозиції, Ви можете зв&apos;язатися з нами
+            <span onClick={() => this.setState({ contactUsModalOpen: true })}>тут</span>
+          </Trans>
+        </p>
+        <ContactUsModalForm
+          open={this.state.contactUsModalOpen}
+          close={() => this.setState({ contactUsModalOpen: false })}
+        />
       </main>
     );
   }

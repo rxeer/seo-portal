@@ -299,3 +299,17 @@
 		}
 	}
 }
+
+.home-page-contact-caption {
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 1rem;
+
+	span {
+		padding-left: 6px;
+		text-decoration: underline;
+		cursor: pointer;
+		color: map-get($colors, default-blue);
+	}
+}
