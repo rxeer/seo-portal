@@ -92,7 +92,7 @@ class Finance extends Settings {
         <div className="row">
           <div className="col-12">
             <QdtComponent
-              className="table first-column-text-align-left"
+              className="table first-three-column-text-align-left"
               type={this.vizTable.type}
               props={this.vizTable.props}
             />
