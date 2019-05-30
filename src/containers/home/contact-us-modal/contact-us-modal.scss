@@ -53,4 +53,10 @@
 			}
 		}
 	}
+
+	@media all and (max-width: 650px) {
+		.form-group {
+			flex-basis: 100%;
+		}
+	}
 }
