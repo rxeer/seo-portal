@@ -1,0 +1,50 @@
+$loader-color: #fff;
+$loader-bg: rgba(0, 0, 0, .2);
+$spinner-border-color: #a7a2a2;
+
+.loader-container {
+  color: $loader-color;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: $loader-bg;
+  z-index: 9999;
+  animation: fadeIn 1s ease-in;
+
+  &::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 3px solid;
+    border-top-color: $spinner-border-color;
+    border-bottom-color: $spinner-border-color;
+    animation: spin .5s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
