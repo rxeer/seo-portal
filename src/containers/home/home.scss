@@ -49,6 +49,15 @@
 		text-transform: uppercase;
 	}
 
+	.partners {
+		.gray-image {
+			opacity: .6;
+			margin-top: 15px;
+			-webkit-filter: grayscale(77%);
+			filter: grayscale(77%);
+		}
+	}
+
 	&-filter {
 		display: flex;
 		justify-content: space-between;

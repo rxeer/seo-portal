@@ -253,7 +253,7 @@ class Home extends Settings {
           </div>
         </div>
         <div className="homepage__main-bottom-wrapper">
-          <ul>
+          <ul className="partners">
             <li>
               <a
                 rel="noopener noreferrer"
@@ -325,8 +325,8 @@ class Home extends Settings {
                 target="_blank"
               >
                 <img
+                  className="gray-image"
                   title="RDC Group"
-                  className="homepage__main-bottom-wrapper-img"
                   src="../../assets/images/partners/logo2.png"
                   alt="RDC Group"
                 />
