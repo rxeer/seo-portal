@@ -21,7 +21,7 @@ class Header extends Settings {
     this.state = {
       isMenuOpen: false,
       isMobile: false,
-      currentLocale: "ua",
+      currentLocale: 'ua',
       enLanguageButton: null,
       uaLanguageButton: null,
       isBannerFixed: false
@@ -66,7 +66,7 @@ class Header extends Settings {
   }
 
   checkBrowserView() {
-    if (window.matchMedia("(max-width: 700px)").matches) {
+    if (window.matchMedia("(max-width: 790px)").matches) {
       this.setState({ isMobile: true });
     } else {
       this.setState({ isMobile: false });
@@ -80,6 +80,7 @@ class Header extends Settings {
   changeLocalization(localization) {
     i18n.changeLanguage(localization);
     setLocalization(localization);
+    window.location.reload();
     this.setState({ currentLocale: localization }, () => this.forceUpdate());
   }
 
@@ -607,11 +608,7 @@ class Header extends Settings {
               props={this.vizLANG.props}
             />
             <div
-              onClick={() =>
-                this.setState(prevState => ({
-                  isMenuOpen: !prevState.isMenuOpen
-                }))
-              }
+              onClick={() => this.setState(prevState => ({ isMenuOpen: !prevState.isMenuOpen }))}
               className="burger"
             >
               <i />
