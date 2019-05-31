@@ -78,7 +78,9 @@ class Header extends Settings {
   changeLocalization(localization) {
     i18n.changeLanguage(localization);
     setLocalization(localization);
-    window.location.reload();
+    if (this.state.isMobile) {
+      window.location.reload();
+    }
     this.setState({ currentLocale: localization }, () => this.forceUpdate());
   }
 
