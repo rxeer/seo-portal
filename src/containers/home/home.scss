@@ -294,8 +294,9 @@
 		}
 
 		&-img {
-			max-width: 100%;
-			object-fit: cover;
+			max-width: 175px;
+			height: 80px;
+			width: 100%;
 		}
 	}
 }

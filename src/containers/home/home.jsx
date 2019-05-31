@@ -320,6 +320,20 @@ class Home extends Settings {
             </li>
             <li>
               <a
+                href="https://www.rbcgrp.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  title="RDC Group"
+                  className="homepage__main-bottom-wrapper-img"
+                  src="../../assets/images/partners/logo2.png"
+                  alt="RDC Group"
+                />
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://prozorro.sale/"
                 rel="noopener noreferrer"
                 target="_blank"

@@ -41,12 +41,10 @@ class Header extends Settings {
       if (!uaLanguageButton || !enLanguageButton) {
         this.getLanguagesButton();
       } else {
-        uaLanguageButton.addEventListener("click", () =>
-          this.changeLocalization("ua")
-        );
-        enLanguageButton.addEventListener("click", () =>
-          this.changeLocalization("en")
-        );
+        uaLanguageButton.addEventListener("click", () => this.changeLocalization("ua"));
+        uaLanguageButton.addEventListener("touchstart", () => this.changeLocalization("ua"));
+        enLanguageButton.addEventListener("click", () => this.changeLocalization("en"));
+        enLanguageButton.addEventListener("touchstart", () => this.changeLocalization("en"));
         clearInterval(this.languageInterval);
       }
     }, twoSecondsInterval);
@@ -80,7 +78,6 @@ class Header extends Settings {
   changeLocalization(localization) {
     i18n.changeLanguage(localization);
     setLocalization(localization);
-    window.location.reload();
     this.setState({ currentLocale: localization }, () => this.forceUpdate());
   }
 
@@ -607,14 +604,16 @@ class Header extends Settings {
               type={this.vizLANG.type}
               props={this.vizLANG.props}
             />
-            <div
-              onClick={() => this.setState(prevState => ({ isMenuOpen: !prevState.isMenuOpen }))}
-              className="burger"
-            >
-              <i />
-              <i />
-              <i />
-            </div>
+            {
+              this.state.isMobile && <div
+                onClick={() => this.setState(prevState => ({ isMenuOpen: !prevState.isMenuOpen }))}
+                className="burger"
+              >
+                <i />
+                <i />
+                <i />
+              </div>
+            }
           </div>
         </section>
         <QdtComponent
