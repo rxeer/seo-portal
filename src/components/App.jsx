@@ -6,6 +6,8 @@ import {
   faTimes, faHome, faDatabase, faChartBar,
 } from '@fortawesome/free-solid-svg-icons';
 
+import { setLocalization } from '../middlewares/localization';
+
 import Header from '../containers/header/Header';
 import Footer from '../containers/footer/footer';
 
@@ -44,5 +46,7 @@ const App = () => (
     </Router>
   </div>
 );
+
+setLocalization();
 
 export default App;

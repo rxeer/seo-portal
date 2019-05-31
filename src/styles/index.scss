@@ -26,6 +26,8 @@ ul {
 .layout {
   display: flex;
   overflow: hidden;
+  height: 100%;
+  position: relative;
   background-color: #fafafa;
 }
 
