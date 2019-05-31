@@ -35,7 +35,7 @@ class Header extends Settings {
   }
 
   startLanguagesButtonInterval() {
-    const twoSecondsInterval = 1000;
+    const twoSecondsInterval = 500;
     this.languageInterval = setInterval(() => {
       const { uaLanguageButton, enLanguageButton } = this.state;
       if (!uaLanguageButton || !enLanguageButton) {
@@ -78,9 +78,6 @@ class Header extends Settings {
   changeLocalization(localization) {
     i18n.changeLanguage(localization);
     setLocalization(localization);
-    if (this.state.isMobile) {
-      window.location.reload();
-    }
     this.setState({ currentLocale: localization }, () => this.forceUpdate());
   }
 
