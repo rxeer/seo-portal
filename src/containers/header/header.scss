@@ -85,7 +85,8 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
       background: #fafafa;
       border: 0;
       color: #545352;
-      & .ng-binding, .lui-icon--remove {
+      & .ng-binding,
+      .lui-icon--remove {
         color: map-get($colors, default-text);
       }
     }
@@ -97,10 +98,10 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
       background-color: #fafafa;
     }
 
-    & .qv-panel-current-selections .buttons-end, .qv-panel-current-selections .buttons {
+    & .qv-panel-current-selections .buttons-end,
+    .qv-panel-current-selections .buttons {
       display: none !important;
     }
-
 
     .qv-panel-current-selections .qv-subtoolbar-button:disabled {
       color: #c1c0c1;
@@ -114,7 +115,7 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 }
 
 .navigation {
-	position: relative;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,7 +245,7 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
           -o-transition: background-color 0.3s;
           transition: background-color 0.3s;
           cursor: pointer;
-          height: 27px!important;
+          height: 27px !important;
 
           &.selected {
             background-color: map-get($colors, default-blue) !important;
@@ -459,21 +460,50 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
       align-items: center;
     }
 
-		&.db-content  {
-			.navigation__dropdown-content-link-title {
-				& div > div {
-					height: 3.8rem !important;
-					overflow: hidden;
-				}
-			}
-		}
-	}
+    &.db-content {
+      .navigation__dropdown-content-link-title {
+        & div > div {
+          height: 3.8rem !important;
+          overflow: hidden;
+        }
+      }
+    }
+  }
 }
 
 .fixed-banner {
-	position: fixed;
-	display: block;
-	width: 100%;
-	top: 0;
-	z-index: 999;
+  position: fixed;
+  display: block;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .navigation {
+    &__nav-list-item {
+      padding: 20px 8px;
+      &-icon {
+        width: 12px;
+        height: 12px;
+      }
+      &-title {
+        font-size: 12px;
+      }
+      &.dropdownDecor:after {
+        font-size: 11px;
+      }
+    }
+    &__dropdown-content-link {
+      &-title {
+        &.top100Text {
+          font-size: 12px;
+          padding: 0.75rem 0 0.75rem 1.7rem;
+        }
+        & .responsive-text {
+          font-size: 12px !important;
+        }
+      }
+    }
+  }
 }
