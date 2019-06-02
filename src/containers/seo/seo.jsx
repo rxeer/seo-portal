@@ -1,5 +1,6 @@
 import React from 'react';
 import { Trans } from 'react-i18next';
+import ReactTooltip from 'react-tooltip';
 
 import { connectTranslation } from '../../middlewares/connect-translation';
 
@@ -8,12 +9,12 @@ import Select from '../../components/select/select';
 import QdtComponent from '../../components/QdtComponent';
 
 import { Settings } from './seo.setting';
-import ReactTooltip from "react-tooltip";
 
 @connectTranslation()
 class SEO extends Settings {
 
   render() {
+    const { i18n = {} } = this.props;
     return (
       <div className="seo container">
         <div className="row">
@@ -65,8 +66,8 @@ class SEO extends Settings {
                 alt="info icon"
                 src="../../assets/images/info/info-white.png"
                 data-tip={`<p>${this.props.t('tooltips.seo')}</p>
-                            <img 
-                                class="tooltip-img-seo"  
+                            <img
+                                class="tooltip-img-seo"
                                 src="../../assets/images/tooltip/${this.props.t('tooltips.seoImgName')}"
                              />
                         `}
@@ -292,7 +293,11 @@ class SEO extends Settings {
         <div className="row">
           <div className="col-12">
             <QdtComponent
-              className="table first-column-text-align-left narrow-row"
+              className={`
+                 first-column-text-align-left
+                 narrow-row
+                 ${i18n.language !== 'ua' ? 'hidden-value-button' : ''}
+               `}
               type={this.vizTable.type}
               props={this.vizTable.props}
             />

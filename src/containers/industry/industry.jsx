@@ -13,6 +13,7 @@ import { Settings } from './industry.setting';
 class IndustryStatistics extends Settings {
 
   render() {
+    const { i18n = {} } = this.props;
     return (
       <div className="industry container">
         <div className="row">
@@ -64,8 +65,8 @@ class IndustryStatistics extends Settings {
                 alt="info icon"
                 src="../../assets/images/info/info-white.png"
                 data-tip={`<p>${this.props.t('tooltips.seo')}</p>
-                            <img 
-                                class="tooltip-img-seo"  
+                            <img
+                                class="tooltip-img-seo"
                                 src="../../assets/images/tooltip/${this.props.t('tooltips.seoImgName')}"
                              />
                         `}
@@ -186,7 +187,12 @@ class IndustryStatistics extends Settings {
           </div>
         </div>
         <QdtComponent
-          className="table narrow-row first-column-text-align-left"
+          className={`
+                 first-column-text-align-left
+                 narrow-row
+                 table
+                 ${i18n.language !== 'ua' ? 'hidden-value-button' : ''}
+               `}
           type={this.vizTable.type}
           props={this.vizTable.props}
         />

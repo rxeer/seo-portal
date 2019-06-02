@@ -230,6 +230,14 @@ span {
   }
 }
 
+.hidden-value-button {
+	.button-wrapper {
+		.lui-button[qva-outside-ignore-for=""] {
+			display: none !important;
+		}
+	}
+}
+
 .qv-listbox {
   li {
     height: 45px !important;
