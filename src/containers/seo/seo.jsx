@@ -14,7 +14,6 @@ import { Settings } from './seo.setting';
 class SEO extends Settings {
 
   render() {
-    const { i18n = {} } = this.props;
     return (
       <div className="seo container">
         <div className="row">
@@ -293,11 +292,7 @@ class SEO extends Settings {
         <div className="row">
           <div className="col-12">
             <QdtComponent
-              className={`
-                 first-column-text-align-left
-                 narrow-row
-                 ${i18n.language !== 'ua' ? 'hidden-value-button' : ''}
-               `}
+              className="first-column-text-align-left narrow-row hidden-value-button"
               type={this.vizTable.type}
               props={this.vizTable.props}
             />

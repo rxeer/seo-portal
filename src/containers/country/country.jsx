@@ -12,7 +12,6 @@ import { Settings } from './country.settings';
 class Country extends Settings {
 
   render() {
-    const { i18n = {} } = this.props;
     return (
       <main className="country__main container">
         <div className="row country__main-upperWrapper">
@@ -88,12 +87,7 @@ class Country extends Settings {
         <div className="row">
           <div className="col-12">
             <QdtComponent
-              className={`
-                 first-column-text-align-left
-                 narrow-row
-                 table
-                 ${i18n.language !== 'ua' ? 'hidden-value-button' : ''}
-               `}
+              className="first-column-text-align-left narrow-row table hidden-value-button"
               type={this.vizTable.type}
               props={this.vizTable.props}
             />

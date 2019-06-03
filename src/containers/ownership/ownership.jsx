@@ -13,7 +13,6 @@ import { Settings } from './ownership.setting';
 class Ownership extends Settings {
 
   render() {
-    const { i18n = {} } = this.props;
     return (
       <div className="ownership container">
         <div className="row">
@@ -187,12 +186,7 @@ class Ownership extends Settings {
           </div>
         </div>
         <QdtComponent
-          className={`
-                 first-column-text-align-left
-                 narrow-row
-                 table
-                 ${i18n.language !== 'ua' ? 'hidden-value-button' : ''}
-               `}
+          className="first-column-text-align-left narrow-row table hidden-value-button"
           type={this.vizTable.type}
           props={this.vizTable.props}
         />
