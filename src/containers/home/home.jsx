@@ -1,18 +1,17 @@
-import React from 'react';
-import { Trans } from 'react-i18next';
+import React from "react";
+import { Trans } from "react-i18next";
 
-import { connectTranslation } from '../../middlewares/connect-translation';
+import { connectTranslation } from "../../middlewares/connect-translation";
 
-import ContactUsModalForm from './contact-us-modal/contact-us-modal';
-import QdtComponent from '../../components/QdtComponent';
+import ContactUsModalForm from "./contact-us-modal/contact-us-modal";
+import QdtComponent from "../../components/QdtComponent";
 
-import { Settings } from './home.settings';
+import { Settings } from "./home.settings";
 
 @connectTranslation()
 class Home extends Settings {
-
   state = {
-    contactUsModalOpen: false,
+    contactUsModalOpen: false
   };
 
   render() {
@@ -20,9 +19,7 @@ class Home extends Settings {
       <main className="homepage__main container">
         <div className="homepage__main-upper-wrapper">
           <h2 className="homepage__main-title page-title">
-            <Trans i18nKey="home.title">
-              Державні підприємства
-            </Trans>
+            <Trans i18nKey="home.title">Державні підприємства</Trans>
           </h2>
           <div className="homepage__main-filter">
             <QdtComponent
@@ -265,7 +262,7 @@ class Home extends Settings {
                   className="homepage__main-bottom-wrapper-img"
                   src="../../assets/images/partners/logo-1.png"
                   srcSet="../../assets/images/partners/logo-1@2x.png 2x,
-             ../../images/partners/logo-1@3x.png 3x"
+             ../../assets/images/partners/logo-1@3x.png 3x"
                   alt="Міністерство економічного розвитку і торгівлі"
                 />
               </a>
@@ -281,7 +278,7 @@ class Home extends Settings {
                   className="homepage__main-bottom-wrapper-img"
                   src="../../assets/images/partners/logo-3.png"
                   srcSet="../../assets/images/partners/logo-3@2x.png 2x,
-             ../../images/partners/logo-3@3x.png 3x"
+             ../../assets/images/partners/logo-3@3x.png 3x"
                   alt="Оупендатабот"
                 />
               </a>
@@ -297,7 +294,7 @@ class Home extends Settings {
                   className="homepage__main-bottom-wrapper-img"
                   src="../../assets/images/partners/logo-4.png"
                   srcSet="../../assets/images/partners/logo-4@2x.png 2x,
-             ../../images/partners/logo-4@3x.png 3x"
+             ../../assets/images/partners/logo-4@3x.png 3x"
                   alt="GIZ"
                 />
               </a>
@@ -313,7 +310,7 @@ class Home extends Settings {
                   className="homepage__main-bottom-wrapper-img"
                   src="../../assets/images/partners/logo-5.png"
                   srcSet="../../assets/images/partners/logo-5@2x.png 2x,
-             ../../images/partners/logo-5@3x.png 3x"
+             ../../assets/images/partners/logo-5@3x.png 3x"
                   alt="Qlik"
                 />
               </a>
@@ -343,7 +340,7 @@ class Home extends Settings {
                   className="homepage__main-bottom-wrapper-img"
                   src="../../assets/images/partners/logo-6.png"
                   srcSet="../../assets/images/partners/logo-6@2x.png 2x,
-             ../../images/partners/logo-6@3x.png 3x"
+             ../../assets/images/partners/logo-6@3x.png 3x"
                   alt="Prozorro.Sale"
                 />
               </a>
@@ -357,9 +354,7 @@ class Home extends Settings {
             Якщо у вас є питання/пропозиції, Ви можете зв&apos;язатися з нами
           </Trans>
           <span onClick={() => this.setState({ contactUsModalOpen: true })}>
-            <Trans i18nKey="home.contact-us-caption.action">
-              тут
-            </Trans>
+            <Trans i18nKey="home.contact-us-caption.action">тут</Trans>
           </span>
         </p>
         <ContactUsModalForm
@@ -369,7 +364,6 @@ class Home extends Settings {
       </main>
     );
   }
-
 }
 
 export default Home;
