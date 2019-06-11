@@ -56,6 +56,14 @@
 			-webkit-filter: grayscale(77%);
 			filter: grayscale(77%);
 		}
+
+		.trans-image {
+			width: 175px;
+			opacity: .9;
+			margin-top: 15px;
+			-webkit-filter: grayscale(77%);
+			filter: grayscale(100%);
+		}
 	}
 
 	&-filter {

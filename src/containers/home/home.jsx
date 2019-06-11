@@ -288,6 +288,20 @@ class Home extends Settings {
             </li>
             <li>
               <a
+                href="https://www.rbcgrp.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  className="trans-image"
+                  title="Transparency UA"
+                  src="../../assets/images/partners/transparency_ua-1.png"
+                  alt="Transparency UA"
+                />
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://www.giz.de"
                 rel="noopener noreferrer"
                 target="_blank"

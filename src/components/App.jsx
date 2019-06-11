@@ -11,6 +11,7 @@ import { setLocalization } from '../middlewares/localization';
 import Header from '../containers/header/Header';
 import Footer from '../containers/footer/footer';
 
+import Dev from './dev';
 import SOE from '../pages/seo/seo';
 import Home from '../pages/home/home';
 import Risk from '../pages/risk/risk';
@@ -31,6 +32,7 @@ const App = () => (
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/dev" component={Dev} />
           <Route exact path="/country" component={Country} />
           <Route exact path="/industry" component={Industry} />
           <Route exact path="/ownership" component={Ownership} />
