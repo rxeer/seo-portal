@@ -86,6 +86,10 @@
 			letter-spacing: 1.2px;
 			color: #fff !important;
 			font-size: 24px !important;
+
+			@media all and (max-width: 574px) {
+				margin-left: 100px;
+			}
 		}
 	}
 
