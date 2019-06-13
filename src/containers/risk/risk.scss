@@ -86,10 +86,6 @@
 			letter-spacing: 1.2px;
 			color: #fff !important;
 			font-size: 24px !important;
-
-			@media all and (max-width: 574px) {
-				margin-left: 100px;
-			}
 		}
 	}
 
@@ -217,6 +213,10 @@
 				& .qv-interactive > div {
 					color: #ffffff !important;
 					text-align: left !important;
+				}
+
+				@media all and (max-width: 575px) {
+					display: none;
 				}
 			}
 		}
