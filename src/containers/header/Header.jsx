@@ -113,7 +113,7 @@ class Header extends Settings {
                   src={
                     currentLocale === "ua"
                       ? "../../assets/images/logo/logo@1x.jpg"
-                      : "../../assets/images/logo/logo-eng.png"
+                      : "../../assets/images/logo/logo-eng.svg"
                   }
                 />
               </Link>

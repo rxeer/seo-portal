@@ -285,7 +285,7 @@ class Home extends Settings {
             </li>
             <li>
               <a
-                href="https://www.rbcgrp.com"
+                href="https://ti-ukraine.org"
                 rel="noopener noreferrer"
                 target="_blank"
               >
