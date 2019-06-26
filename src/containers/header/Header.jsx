@@ -107,15 +107,16 @@ class Header extends Settings {
           <div className="container navigation">
             <h1 className="navigation__logo">
               <Link to="/">
-                <img
-                  className="navigation__logo-link-img"
-                  alt="logo"
-                  src={
-                    currentLocale === "ua"
-                      ? "../../assets/images/logo/logo@1x.jpg"
-                      : "../../assets/images/logo/logo-eng.svg"
-                  }
-                />
+                {
+                  currentLocale === "ua" &&  <img
+                    className="navigation__logo-link-img"
+                    alt="logo"
+                    src="../../assets/images/logo/logo@1x.jpg"
+                  />
+                }
+                {
+                  currentLocale === 'en' && <div className="bg-logo"></div>
+                }
               </Link>
             </h1>
             {this.state.isMobile ? (
