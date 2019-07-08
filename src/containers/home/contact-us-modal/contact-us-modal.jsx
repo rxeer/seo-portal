@@ -1,4 +1,6 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faTimesCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 import axios from 'axios';
 
@@ -23,6 +25,8 @@ class ContactUsModalForm extends PureComponent {
     message: '',
     email: '',
     isLoading: false,
+    isSentError: false,
+    isSentSuccess: false,
     isContactUsModalOpen: false,
   };
 
@@ -46,12 +50,66 @@ class ContactUsModalForm extends PureComponent {
     this.setState({ isLoading: true });
     axios.post('https://mokup.herokuapp.com/message', data)
       .then(() => {
-        this.closeModal();
-        this.setState({ isLoading: false });
+        this.setState({
+          isLoading: false,
+          isSentSuccess: true,
+        });
       }).catch(() => {
-        alert(t('contact-us.error'));
-        this.setState({ isLoading: false });
+        this.setState({
+          isLoading: false,
+          isSentError: true,
+        });
       });
+  }
+
+  renderSuccessMessage() {
+    return (
+      <div className="success-block">
+        <span
+          className="sent-icon"
+          dangerouslySetInnerHTML={{ __html: icon(faCheckCircle).html}}>
+        </span>
+        <p>
+          <Trans i18nKey="contact-us.success-sent">
+            Повідомлення успішно відправлено
+          </Trans>
+        </p>
+        <button
+          onClick={() => this.closeModal()}
+          type="button"
+          className="back-btn"
+        >
+          <Trans i18nKey="contact-us.actions.cancel">
+            Назад
+          </Trans>
+        </button>
+      </div>
+    );
+  }
+
+  renderErrorMessage() {
+    return (
+      <div className="error-block">
+        <span
+          className="sent-icon"
+          dangerouslySetInnerHTML={{ __html: icon(faTimesCircle).html }}>
+        </span>
+        <p>
+          <Trans i18nKey="contact-us.error-sent">
+            Щось пішло не так. Спробуйте буль ласка пізніше
+          </Trans>
+        </p>
+        <button
+          onClick={() => this.closeModal()}
+          type="button"
+          className="back-btn"
+        >
+          <Trans i18nKey="contact-us.actions.cancel">
+            Назад
+          </Trans>
+        </button>
+      </div>
+    );
   }
 
   render() {
@@ -63,72 +121,82 @@ class ContactUsModalForm extends PureComponent {
           closeModal={() => this.closeModal()}
           open={this.state.isContactUsModalOpen}
         >
-          <p className="contact-us-form__title">
-            <Trans i18nKey="contact-us.title">
-              Зв&aposяжіться з нами
-            </Trans>
-          </p>
-          <form
-            className="contact-us-form"
-            onSubmit={this.sendMessage.bind(this)}
-          >
-            <FormGroup className="half-width">
-              <InputControl
-                type="text"
-                required
-                minLength={2}
-                maxLength={35}
-                value={this.state.name}
-                label={t('contact-us.name.label')}
-                title={t('contact-us.name.label')}
-                change={value => this.setState({ name: value })}
-                placeholder={t('contact-us.name.placeholder')}
-              />
-            </FormGroup>
-            <FormGroup className="half-width">
-              <InputControl
-                type="email"
-                required
-                minLength={7}
-                value={this.state.email}
-                label={t('contact-us.email.label')}
-                title={t('contact-us.email.label')}
-                change={value => this.setState({ email: value })}
-                placeholder={t('contact-us.email.placeholder')}
-              />
-            </FormGroup>
-            <FormGroup className="full-width">
-              <InputControl
-                type="text"
-                multiple
-                required
-                minLength={35}
-                maxLength={3000}
-                value={this.state.message}
-                label={t('contact-us.question.label')}
-                title={t('contact-us.question.label')}
-                change={value => this.setState({ message: value })}
-                placeholder={t('contact-us.question.placeholder')}
-              />
-            </FormGroup>
-            <FormGroup className="full-width">
-              <div className="contact-us-form__actions">
-                <button
-                  onClick={() => this.closeModal()}
-                  type="button"
-                >
-                  <Trans i18nKey="contact-us.actions.cancel">
-                    Назад
-                  </Trans>
-                </button>
-                <button type="submit">
-                  <Trans i18nKey="contact-us.actions.submit">
-                    Відправити
-                  </Trans>
-                </button>
-              </div>
-            </FormGroup>
-          </form>
+          {
+            !this.state.isSentSuccess && !this.state.isSentError && <Fragment>
+              <p className="contact-us-form__title">
+                <Trans i18nKey="contact-us.title">
+                  Зв&aposяжіться з нами
+                </Trans>
+              </p>
+              <form
+                className="contact-us-form"
+                onSubmit={this.sendMessage.bind(this)}
+              >
+                <FormGroup className="half-width">
+                  <InputControl
+                    type="text"
+                    required
+                    minLength={2}
+                    maxLength={35}
+                    value={this.state.name}
+                    label={t('contact-us.name.label')}
+                    title={t('contact-us.name.label')}
+                    change={value => this.setState({name: value})}
+                    placeholder={t('contact-us.name.placeholder')}
+                  />
+                </FormGroup>
+                <FormGroup className="half-width">
+                  <InputControl
+                    type="email"
+                    required
+                    minLength={7}
+                    value={this.state.email}
+                    label={t('contact-us.email.label')}
+                    title={t('contact-us.email.label')}
+                    change={value => this.setState({email: value})}
+                    placeholder={t('contact-us.email.placeholder')}
+                  />
+                </FormGroup>
+                <FormGroup className="full-width">
+                  <InputControl
+                    type="text"
+                    multiple
+                    required
+                    minLength={35}
+                    maxLength={3000}
+                    value={this.state.message}
+                    label={t('contact-us.question.label')}
+                    title={t('contact-us.question.label')}
+                    change={value => this.setState({message: value})}
+                    placeholder={t('contact-us.question.placeholder')}
+                  />
+                </FormGroup>
+                <FormGroup className="full-width">
+                  <div className="contact-us-form__actions">
+                    <button
+                      onClick={() => this.closeModal()}
+                      type="button"
+                    >
+                      <Trans i18nKey="contact-us.actions.cancel">
+                        Назад
+                      </Trans>
+                    </button>
+                    <button type="submit">
+                      <Trans i18nKey="contact-us.actions.submit">
+                        Відправити
+                      </Trans>
+                    </button>
+                  </div>
+                </FormGroup>
+              </form>
+            </Fragment>
+          }
+          {
+            this.state.isSentSuccess && this.renderSuccessMessage()
+          }
+          {
+            this.state.isSentError && this.renderErrorMessage()
+          }
         </Modal>
         <Spinner show={this.state.isLoading} />
       </div>

@@ -53,6 +53,8 @@
       "label": "Your Email",
       "placeholder": "Enter your email to contact to you"
     },
+    "success-sent": "Message was send successfully",
+    "error-sent": "Something went wrong. Try to please later",
     "name": {
       "label": "Your Name",
       "placeholder": "Enter your name"

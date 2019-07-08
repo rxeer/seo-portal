@@ -3,7 +3,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
-  faTimes, faHome, faDatabase, faChartBar,
+  faTimes, faHome, faDatabase, faChartBar, faTimesCircle, faCheckCircle
 } from '@fortawesome/free-solid-svg-icons';
 
 import { setLocalization } from '../middlewares/localization';
@@ -23,7 +23,7 @@ import Ownership from '../pages/ownership/ownership';
 import Analytics from '../pages/analytics/analytics';
 import NotFoundPage from '../pages/not-found/not-found';
 
-library.add(faTimes, faDatabase, faHome, faChartBar);
+library.add(faTimes, faDatabase, faHome, faChartBar, faTimesCircle, faCheckCircle);
 
 const App = () => (
   <div>

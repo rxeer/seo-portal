@@ -54,6 +54,72 @@
 		}
 	}
 
+	.sent-icon {
+		margin-bottom: 1rem;
+		display: inline-block;
+
+		svg {
+			width: 70px;
+			height: 70px;
+		}
+	}
+
+	.success-block {
+		text-align: center;
+		height: 100%;
+		margin-top: 5rem;
+
+		.sent-icon > svg {
+			color: map-get($colors, default-green);
+		}
+
+		p {
+			text-align: center;
+			color: map-get($colors, default-green);
+			font-size: 20px;
+			font-weight: bold;
+		}
+	}
+
+	.error-block {
+		height: 100%;
+		margin-top: 5rem;
+		text-align: center;
+
+		.sent-icon > svg {
+			color: map-get($colors, default-red);
+		}
+
+		p {
+			text-align: center;
+			color: map-get($colors, default-red);
+			font-size: 20px;
+			font-weight: bold;
+		}
+	}
+
+	.back-btn {
+		cursor: pointer;
+		border: 0;
+		outline: 0;
+		font-size: 1rem;
+		color: #fff;
+		background: #8d9496;
+		display: inline-block;
+		border-radius: 4px;
+		padding: 11px 30px;
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+		transition: all .15s;
+		font-weight: 700;
+		font-family: Lato,sans-serif;
+		margin-right: 12px;
+		margin-top: 2rem;
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+
 	@media all and (max-width: 650px) {
 		.form-group {
 			flex-basis: 100%;
