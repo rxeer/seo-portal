@@ -462,7 +462,7 @@ class Header extends Settings {
                       </a>
                       <a
                         className="navigation__dropdown-content-link"
-                        href="http://www.me.gov.ua/Documents/Detail?lang=uk-UA&id=4d3ccfda-18b5-4dc2-8f74-51b84d976eb0&title=Top100-NaibilshikhDerzhavnikhPidprimstvUkrainiZa6-Misiatsiv2015-roku"
+                        href="http://www.me.gov.ua/Documents/Download?id=6e691647-b153-442d-b60e-29c91efcda2a"
                       >
                         <span className="navigation__dropdown-content-link-title top100Text">
                            <Trans i18nKey="top-100-menu-items.6m15">
