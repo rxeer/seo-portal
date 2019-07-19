@@ -134,6 +134,10 @@ $cubic-menu-open: cubic-bezier(0.4, 0.01, 0.165, 0.99);
   -ms-flex-pack: justify;
   justify-content: space-between;
 
+  & > .container {
+    display: flex !important;
+  }
+
   &__logo {
     margin: 0;
 

@@ -10,7 +10,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '',
-    filename: 'bundle.js',
+    filename: 'js/app.[hash:6].js',
+    chunkFilename: 'js/[name].[chunkhash:6].js',
   },
   devServer: {
     contentBase: './build',
@@ -26,7 +27,13 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [['@babel/preset-env', { modules: false }], '@babel/preset-react'],
-            plugins: [['@babel/plugin-proposal-decorators', { legacy: true }], '@babel/plugin-proposal-object-rest-spread', 'transform-class-properties', 'react-hot-loader/babel'],
+            plugins: [[
+              '@babel/plugin-proposal-decorators', { legacy: true }],
+              '@babel/plugin-proposal-object-rest-spread',
+              '@babel/plugin-syntax-dynamic-import',
+              'transform-class-properties',
+              'react-hot-loader/babel'
+            ],
           },
         },
       },

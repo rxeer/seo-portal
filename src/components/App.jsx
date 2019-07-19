@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Suspense, lazy } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -8,25 +8,26 @@ import {
 
 import { setLocalization } from '../middlewares/localization';
 
+import Spinner from '../components/spinner/spinner';
 import Header from '../containers/header/Header';
 import Footer from '../containers/footer/footer';
 
-import Dev from './dev';
-import SOE from '../pages/seo/seo';
-import Home from '../pages/home/home';
-import Risk from '../pages/risk/risk';
-import Balance from '../pages/balance/balance';
-import Finance from '../pages/finance/finance';
-import Country from '../pages/country/country';
-import Industry from '../pages/industry/Industry';
-import Ownership from '../pages/ownership/ownership';
-import Analytics from '../pages/analytics/analytics';
-import NotFoundPage from '../pages/not-found/not-found';
+const Dev = lazy(() => import('./dev'));
+const SOE = lazy(() => import('../pages/seo/seo'));
+const Home = lazy(() => import('../pages/home/home'));
+const Risk = lazy(() => import('../pages/risk/risk'));
+const Balance = lazy(() => import('../pages/balance/balance'));
+const Finance = lazy(() => import('../pages/finance/finance'));
+const Country = lazy(() => import('../pages/country/country'));
+const Industry = lazy(() => import('../pages/industry/Industry'));
+const Ownership = lazy(() => import('../pages/ownership/ownership'));
+const Analytics = lazy(() => import('../pages/analytics/analytics'));
+const NotFoundPage = lazy(() => import('../pages/not-found/not-found'));
 
 library.add(faTimes, faDatabase, faHome, faChartBar, faTimesCircle, faCheckCircle);
 
 const App = () => (
-  <div>
+  <Suspense fallback={<Spinner show/>}>
     <Router>
       <Fragment>
         <Header />
@@ -46,7 +47,7 @@ const App = () => (
         <Footer />
       </Fragment>
     </Router>
-  </div>
+  </Suspense>
 );
 
 setLocalization();

@@ -2,14 +2,14 @@ import React, { PureComponent, Fragment } from 'react';
 import { icon } from '@fortawesome/fontawesome-svg-core';
 import { faTimesCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
-import axios from 'axios';
 
 import { Trans } from 'react-i18next';
 
-import { connectTranslation } from '../../../middlewares/connect-translation';
+import api from './../../../middlewares/api';
+import { connectTranslation } from './../../../middlewares/connect-translation';
 
 import { Modal } from '../../../components/modal/modal';
-import { Spinner } from '../../../components/spinner/spinner';
+import Spinner from '../../../components/spinner/spinner';
 import { FormGroup } from '../../../components/form-group/form-group';
 import { InputControl } from '../../../components/input-control/input-control';
 
@@ -48,7 +48,7 @@ class ContactUsModalForm extends PureComponent {
     event.preventDefault();
     const data = new ContactUsDto(this.state);
     this.setState({ isLoading: true });
-    axios.post('https://mokup.herokuapp.com/message', data)
+    api.post('https://mokup.herokuapp.com/message', data)
       .then(() => {
         this.setState({
           isLoading: false,
